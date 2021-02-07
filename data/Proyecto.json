@@ -1,0 +1,438 @@
+{
+  "Proyectos": [
+    {
+      "Titulo": "Modificando Proyecto",
+      "Descripcion": "Usando la opci\u00f3n de mostrar el titulo anterior antes de cambiarlo",
+      "Tickets": [
+        {
+          "Tipo": 5,
+          "Titulo": "Dise\u00f1ar auto deportivo",
+          "Descripcion": "Hacer el dise\u00f1o de un auto deportivo con estilo cartoon",
+          "Items": [
+            [
+              1,
+              "Colores"
+            ],
+            [
+              1,
+              "Pera"
+            ]
+          ]
+        },
+        {
+          "Tipo": 11,
+          "Titulo": "Un nuevo Ticket",
+          "Descripcion": "Creando un nuevo Ticket desde el bot\u00f3n de creaci\u00f3n de nuevo ticket.",
+          "Items": [
+            [
+              1,
+              "Un Item"
+            ],
+            [
+              0,
+              "nombre posta"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "La NUEVA prueba de la verdad",
+      "Descripcion": "Usando la combinaci\u00f3n para verificar la cantidad de proyectos existentes en el archivo JSON.",
+      "Tickets": [
+        {
+          "Tipo": 3,
+          "Titulo": "Cambiar colores",
+          "Descripcion": "Cambiar los colores del personaje Pepito.",
+          "Items": [
+            [
+              0,
+              "Le cambio los colores"
+            ],
+            [
+              0,
+              "Verifico que funciona"
+            ],
+            [
+              0,
+              "Agregando otro"
+            ]
+          ]
+        },
+        {
+          "Tipo": 0,
+          "Titulo": "Cap - Changing colors",
+          "Descripcion": "Los personajes intercambian sus colores originales con los otros personajes.",
+          "Items": [
+            [
+              1,
+              "Idea"
+            ],
+            [
+              0,
+              "Gui\u00f3n"
+            ],
+            [
+              0,
+              "Limpiar"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Probando con cambios",
+      "Descripcion": "Pruebo si agrega proyectos sin usar una variable extra. Y ahora agregando mucho mas texto porque quiero ver si pasa a varios renglones o hay que hacer mas modificaciones en el codigo o en la ui_contenedor, ya que ahora vemos si pasa al siguiente renglon o no. As\u00ed de f\u00e1cil.",
+      "Tickets": [
+        {
+          "Tipo": 8,
+          "Titulo": "Cambiar Titulo 01",
+          "Descripcion": "Cambiando el nombre \"0000\" por algo mejor.",
+          "Items": [
+            [
+              1,
+              "Editar Video"
+            ],
+            [
+              0,
+              "Agregar sonido"
+            ]
+          ]
+        },
+        {
+          "Tipo": 10,
+          "Titulo": "Cambiar Titulo 02",
+          "Descripcion": "Cambiando el nombre \"11\" por algo mejor",
+          "Items": [
+            [
+              0,
+              "Un item"
+            ],
+            [
+              0,
+              "Otro item"
+            ]
+          ]
+        },
+        {
+          "Tipo": 9,
+          "Titulo": "Cambiando Titulo 03",
+          "Descripcion": "Cambiando el nombre de \"22\" por algo mejor",
+          "Items": [
+            [
+              0,
+              "Ver si funciona"
+            ],
+            [
+              0,
+              "Agregando Items"
+            ],
+            [
+              0,
+              "Veamos"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Viendo el proyecto",
+      "Descripcion": "Ver si genera una lista de trabajos o no",
+      "Tickets": [
+        {
+          "Tipo": 3,
+          "Titulo": "El sapo Ram\u00f3n",
+          "Descripcion": "Dise\u00f1ar al sapo Ram\u00f3n",
+          "Items": [
+            [
+              1,
+              "Bocetar"
+            ],
+            [
+              1,
+              "Seleccion de color"
+            ],
+            [
+              0,
+              "Pasar a limpio"
+            ],
+            [
+              0,
+              "Riggin en After"
+            ]
+          ]
+        },
+        {
+          "Tipo": 3,
+          "Titulo": "La vaca Marta",
+          "Descripcion": "Dise\u00f1ar a la vaca Marta",
+          "Items": [
+            [
+              0,
+              "Bocetar"
+            ],
+            [
+              0,
+              "Selecci\u00f3n de color"
+            ],
+            [
+              0,
+              "Modelar"
+            ]
+          ]
+        },
+        {
+          "Tipo": 3,
+          "Titulo": "Le\u00f3n Bartolo",
+          "Descripcion": "Dise\u00f1ar al le\u00f3n Bartolo.",
+          "Items": [
+            [
+              1,
+              "Bocetar"
+            ],
+            [
+              1,
+              "Colorear"
+            ],
+            [
+              0,
+              "Modelar"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ],
+            [
+              0,
+              "Texturas"
+            ]
+          ]
+        },
+        {
+          "Tipo": 3,
+          "Titulo": "Yegua Antonia",
+          "Descripcion": "Dise\u00f1ar a la yegua Antonia",
+          "Items": [
+            [
+              1,
+              "Bocetar"
+            ],
+            [
+              0,
+              "Colorear"
+            ],
+            [
+              0,
+              "Modelar"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Simplificando una funsi\u00f3n",
+      "Descripcion": "Simplificando la funcion de modificar proyecto en desde casi",
+      "Tickets": [
+        {
+          "Tipo": 4,
+          "Titulo": "Animar a Pedro",
+          "Descripcion": "Crear la animaci\u00f3n de caimnata de Pedro",
+          "Items": [
+            [
+              0,
+              "Fotogramas clave"
+            ],
+            [
+              0,
+              "Intermedios"
+            ],
+            [
+              0,
+              "Ajustes"
+            ]
+          ]
+        },
+        {
+          "Tipo": 3,
+          "Titulo": "Dise\u00f1ar a Roberto",
+          "Descripcion": "Crear el dise\u00f1o de Roberto.",
+          "Items": [
+            [
+              0,
+              "Bocetos"
+            ],
+            [
+              0,
+              "Pruebas color"
+            ],
+            [
+              0,
+              "Detalles"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Casi terminado ahora",
+      "Descripcion": "Estamos testeando para empezar con la GUI",
+      "Tickets": [
+        {
+          "Tipo": 3,
+          "Titulo": "Mamertos",
+          "Descripcion": "Crear el Gui\u00f3n para el corto \"Mamertos\"",
+          "Items": [
+            [
+              1,
+              "Bocetar"
+            ],
+            [
+              1,
+              "Colorear"
+            ],
+            [
+              0,
+              "Modelar"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ],
+            [
+              0,
+              "Texturas"
+            ]
+          ]
+        },
+        {
+          "Tipo": 4,
+          "Titulo": "Sapo Rigoberto",
+          "Descripcion": "Un nuevo trabajo a realizar.",
+          "Items": [
+            [
+              1,
+              "Pollo"
+            ],
+            [
+              1,
+              "Papas"
+            ],
+            [
+              1,
+              "Vino"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Proyecto desde bot\u00f3n o consola",
+      "Descripcion": "Un proyecto creados desde el bot\u00f3n de la UI que realmente fue desde la consola.",
+      "Tickets": [
+        {
+          "Tipo": 9,
+          "Titulo": "Musica Video Caballitos",
+          "Descripcion": "Crear la m\u00fasica de acci\u00f3n para el video de los caballitos.",
+          "Items": []
+        }
+      ]
+    },
+    {
+      "Titulo": "Todos los tickets",
+      "Descripcion": "Muestra todos los tipos de Tickets creados.",
+      "Tickets": [
+        {
+          "Tipo": 0,
+          "Titulo": "Guion / Ideas",
+          "Descripcion": "Ejemplo de Ticket de Guion / Ideas.",
+          "Items": []
+        },
+        {
+          "Tipo": 1,
+          "Titulo": "Storyboard",
+          "Descripcion": "Ejemplo de Ticket de Storyboard.",
+          "Items": []
+        },
+        {
+          "Tipo": 2,
+          "Titulo": "Boceto",
+          "Descripcion": "Ejemplo de Ticket de Boceto.",
+          "Items": []
+        },
+        {
+          "Tipo": 3,
+          "Titulo": "Dise\u00f1o 2D",
+          "Descripcion": "Ejemplo de Ticket de Dise\u00f1o 2D.",
+          "Items": []
+        },
+        {
+          "Tipo": 4,
+          "Titulo": "Animacion 2D",
+          "Descripcion": "Ejemplo de Ticket de Animacion 2D.",
+          "Items": []
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Dise\u00f1o 3D",
+          "Descripcion": "Ejemplo de Ticket de Dise\u00f1o 3D.",
+          "Items": []
+        },
+        {
+          "Tipo": 6,
+          "Titulo": "Animacion 3D",
+          "Descripcion": "Ejemplo de Ticket de Animacion 3D.",
+          "Items": []
+        },
+        {
+          "Tipo": 7,
+          "Titulo": "Render 3D",
+          "Descripcion": "Ejemplo de Ticket de Render 3D.",
+          "Items": []
+        },
+        {
+          "Tipo": 8,
+          "Titulo": "Edicion Video",
+          "Descripcion": "Ejemplo de Ticket de Edicion Video.",
+          "Items": []
+        },
+        {
+          "Tipo": 9,
+          "Titulo": "Audio",
+          "Descripcion": "Ejemplo de Ticket de Audio.",
+          "Items": []
+        },
+        {
+          "Tipo": 10,
+          "Titulo": "Render Video",
+          "Descripcion": "Ejemplo de Ticket de Render Video.",
+          "Items": []
+        },
+        {
+          "Tipo": 11,
+          "Titulo": "Otros",
+          "Descripcion": "Ejemplo de Ticket de Otros.",
+          "Items": []
+        },
+        {
+          "Tipo": 12,
+          "Titulo": "Sin identificar (else)",
+          "Descripcion": "Ejemplo de Ticket de Sin identificar (else).",
+          "Items": []
+        }
+      ]
+    },
+    {
+      "Titulo": "Projecto de test 500",
+      "Descripcion": "Probando que al crear un proyecto, el indice se acomoda con respecto al valor final y se muestra este mismo proyecto.",
+      "Tickets": []
+    }
+  ]
+}
