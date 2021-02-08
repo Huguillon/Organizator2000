@@ -4,8 +4,8 @@ from PyQt5.QtGui import *
 from PyQt5.Qt import *
 
 class ui_assets():
-    # *************************************************** BOTONES ******************************************************
-    # ---- Boton de Proyecto que va en la botonera ----
+    # ********************************************** BOTONES PROYECTOS *************************************************
+    # ---- Boton de Proyecto que va en la botonera ---------------------------------------------------------------------
     def BotonProyecto(self, texto, click_btn_proj, click_btn_del, scrollContainer, layoutContainer):
         # ---- WIDGET de base que contiene al resto de los objetos y da color y forma al fondo del botón
         #      y se lo agrega al contenedor pasado por parametro (scrollContainer) ----
@@ -17,10 +17,10 @@ class ui_assets():
         self.w_base.setSizePolicy(sizePolicy)
         self.w_base.setMinimumSize(QSize(265, 75))
 
-        # ---- HORIZONTAL LAYOUT 1 conteniendo el Boton de Eliminar (btn_del) y el Label con el titulo ----
+        # ---- HORIZONTAL LAYOUT 1 conteniendo el Boton de Eliminar (btn_del) y el Label con el titulo -----------------
         self.hL_w_base1 = QHBoxLayout(self.w_base)
-        self.hL_w_base1.setContentsMargins(30, 0, 12, 0)
-        self.hL_w_base1.setSpacing(0)
+        self.hL_w_base1.setContentsMargins(12, 0, 25, 0)
+        self.hL_w_base1.setSpacing(6)
         #self.hL_w_base1.setAlignment(Qt.AlignLeading|Qt.AlignHCenter|Qt.AlignVCenter)
 
         # ---- HORIZONTAL LAYOUT 2 conteniendo el Boton de Proyectos (btn_proj) ----
@@ -28,25 +28,7 @@ class ui_assets():
         self.hL_w_base2.setContentsMargins(0, 0, 0, 0)
         self.hL_w_base2.setSpacing(0)
 
-        # ---- LABEL con el Titulo del Proyecto ----
-        self.lbl = QLabel("", self.w_base)
-        self.lbl.setStyleSheet("background-color:rgba(255, 0, 0, 0);\n"
-                               "color:rgb(85, 85, 85);\n"
-                               "border-radius:0px;")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy.setHeightForWidth(self.lbl.sizePolicy().hasHeightForWidth())
-        self.lbl.setSizePolicy(sizePolicy)
-        self.lbl.setMinimumSize(QSize(0, 75))
-        font = QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(15)
-        self.lbl.setFont(font)
-        self.lbl.setAlignment(Qt.AlignLeading|Qt.AlignHCenter|Qt.AlignVCenter)
-        self.lbl.setWordWrap(True)
-        self.lbl.setText(texto)
-        self.hL_w_base1.addWidget(self.lbl, 0, Qt.AlignRight)
-
-        # ---- PUSH BUTTON para eliminar Proyecto ----
+        # ---- PUSH BUTTON para eliminar Proyecto ----------------------------------------------------------------------
         self.btn_del = QPushButton("", self.w_base)
         self.btn_del.setStyleSheet("QPushButton{\n"
                                     "background-image:url('images/del_project.png');\n"
@@ -68,13 +50,31 @@ class ui_assets():
         sizePolicy.setHeightForWidth(self.btn_del.sizePolicy().hasHeightForWidth())
         self.btn_del.setSizePolicy(sizePolicy)
         self.btn_del.setMinimumSize(QSize(52, 52))
-        self.hL_w_base1.addWidget(self.btn_del, 0, Qt.AlignRight)
+        self.hL_w_base1.addWidget(self.btn_del, 0, Qt.AlignLeft)
         self.btn_del.clicked.connect(click_btn_del)
 
-        # ---- PUSH BUTTON para ver el Proyecto ----
+        # ---- LABEL con el Titulo del Proyecto ------------------------------------------------------------------------
+        self.lbl = QLabel("", self.w_base)
+        self.lbl.setStyleSheet("background-color:rgba(255, 0, 0, 0);\n"
+                               "color:rgb(85, 85, 85);\n"
+                               "border-radius:0px;")
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy.setHeightForWidth(self.lbl.sizePolicy().hasHeightForWidth())
+        self.lbl.setSizePolicy(sizePolicy)
+        self.lbl.setMinimumSize(QSize(0, 75))
+        font = QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(15)
+        self.lbl.setFont(font)
+        self.lbl.setAlignment(Qt.AlignLeading|Qt.AlignHCenter|Qt.AlignVCenter)
+        self.lbl.setWordWrap(True)
+        self.lbl.setText(texto)
+        self.hL_w_base1.addWidget(self.lbl, 0, Qt.AlignLeft)
+
+        # ---- PUSH BUTTON para ver el Proyecto ------------------------------------------------------------------------
         self.btn_proj = QPushButton("", self.w_base)
         self.btn_proj.setGeometry(QRect(0, 0, 285, 75))
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHeightForWidth(self.btn_proj.sizePolicy().hasHeightForWidth())
         self.btn_proj.setSizePolicy(sizePolicy)
         self.btn_proj.setMinimumSize(QSize(0, 75))
@@ -90,16 +90,16 @@ class ui_assets():
         self.hL_w_base2.addWidget(self.btn_proj)
         self.btn_proj.clicked.connect(click_btn_proj)
 
-        # ---- Pone el Boton Eliminar (btn_del) por delante del resto ----
+        # ---- Pone el Boton Eliminar (btn_del) por delante del resto --------------------------------------------------
         self.btn_del.raise_()
 
-        # ---- Agrega el Contenedor (w_base) al Layout pasado por parametro (layoutContainer) ----
+        # ---- Agrega el Contenedor (w_base) al Layout pasado por parametro (layoutContainer) --------------------------
         layoutContainer.addWidget(self.w_base)
 
-    # ---- Boton de Proyecto ACTIVO, que no es clickeable y muestra el proyecto que se ha seleccionado ----
+    # ---- Boton de Proyecto ACTIVO, que no es clickeable y muestra el proyecto que se ha seleccionado -----------------
     def BotonActivo(self, texto, click_btn_del, scrollContainer, layoutContainer):
         # ---- WIDGET de base que contiene al resto de los objetos y da color y forma al fondo del botón
-        #      y se lo agrega al contenedor pasado por parametro (scrollContainer) ----
+        #      y se lo agrega al contenedor pasado por parametro (scrollContainer) -------------------------------------
         self.w_base = QWidget(scrollContainer)
         self.w_base.setStyleSheet("background-color:rgba(37, 37, 37, 0); border-radius:18px;")
         self.w_base.setGeometry(QRect(0, 0, 285, 75))
@@ -107,28 +107,11 @@ class ui_assets():
         sizePolicy.setHeightForWidth(self.w_base.sizePolicy().hasHeightForWidth())
         self.w_base.setSizePolicy(sizePolicy)
         self.w_base.setMinimumSize(QSize(265, 75))
-        # ---- HORIZONTAL LAYOUT 1 conteniendo el Boton de Eliminar (btn_del) y el Label con el titulo ----
+        # ---- HORIZONTAL LAYOUT 1 conteniendo el Boton de Eliminar (btn_del) y el Label con el titulo -----------------
         self.hL_w_base1 = QHBoxLayout(self.w_base)
-        self.hL_w_base1.setContentsMargins(30, 0, 12, 0)
-        self.hL_w_base1.setSpacing(0)
-        # ---- LABEL con el Titulo del Proyecto ----
-        self.lbl = QLabel("", self.w_base)
-        self.lbl.setStyleSheet("background-color:rgba(0, 0, 0, 0);\n"
-                               "color:rgb(125, 200, 25);\n"
-                               "border-radius:none;")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy3.setHeightForWidth(self.lbl.sizePolicy().hasHeightForWidth())
-        self.lbl.setSizePolicy(sizePolicy3)
-        self.lbl.setMinimumSize(QSize(0, 75))
-        font = QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(15)
-        self.lbl.setFont(font)
-        self.lbl.setAlignment(Qt.AlignLeading|Qt.AlignHCenter|Qt.AlignVCenter)
-        self.lbl.setWordWrap(True)
-        self.lbl.setText(texto)
-        self.hL_w_base1.addWidget(self.lbl, 0, Qt.AlignRight)
-        # ---- PUSH BUTTON para eliminar Proyecto ----
+        self.hL_w_base1.setContentsMargins(12, 0, 25, 0)
+        self.hL_w_base1.setSpacing(6)
+        # ---- PUSH BUTTON para eliminar Proyecto ----------------------------------------------------------------------
         self.btn_del = QPushButton("", self.w_base)
         self.btn_del.setStyleSheet("QPushButton{\n"
                                     "background-image:url('images/del_project.png');\n"
@@ -150,20 +133,37 @@ class ui_assets():
         sizePolicy.setHeightForWidth(self.btn_del.sizePolicy().hasHeightForWidth())
         self.btn_del.setSizePolicy(sizePolicy)
         self.btn_del.setMinimumSize(QSize(0, 52))
-        self.hL_w_base1.addWidget(self.btn_del, 0, Qt.AlignRight)
+        self.hL_w_base1.addWidget(self.btn_del, 0, Qt.AlignLeft)
         self.btn_del.clicked.connect(click_btn_del)
-        # ---- Pone el Boton Eliminar (btn_del) por delante del resto ----
+        # ---- LABEL con el Titulo del Proyecto ------------------------------------------------------------------------
+        self.lbl = QLabel("", self.w_base)
+        self.lbl.setStyleSheet("background-color:rgba(0, 0, 0, 0);\n"
+                               "color:rgb(125, 200, 25);\n"
+                               "border-radius:none;")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy3.setHeightForWidth(self.lbl.sizePolicy().hasHeightForWidth())
+        self.lbl.setSizePolicy(sizePolicy3)
+        self.lbl.setMinimumSize(QSize(0, 75))
+        font = QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(15)
+        self.lbl.setFont(font)
+        self.lbl.setAlignment(Qt.AlignLeading|Qt.AlignHCenter|Qt.AlignVCenter)
+        self.lbl.setWordWrap(True)
+        self.lbl.setText(texto)
+        self.hL_w_base1.addWidget(self.lbl, 0, Qt.AlignLeft)
+        # ---- Pone el Boton Eliminar (btn_del) por delante del resto --------------------------------------------------
         self.btn_del.raise_()
-        # ---- Agrega el Contenedor (w_base) al Layout pasado por parametro (layoutContainer) ----
+        # ---- Agrega el Contenedor (w_base) al Layout pasado por parametro (layoutContainer) --------------------------
         layoutContainer.addWidget(self.w_base)
 
-    # ---- Boton para generar un nuevo Proyecto que va en la botonera ----
+    # ---- Boton para generar un nuevo Proyecto que va en la botonera --------------------------------------------------
     def BotonAgregar(self, click_btn_add, scrollContainer, layoutContainer):
         self.btn_add = QPushButton("Nuevo\n Proyecto", scrollContainer)
         self.btn_add.setStyleSheet("QPushButton{\n"
                                     "background-image:url('images/add_project.png');\n"
                                     "background-repeat: no-repeat;\n"
-                                    "background-position: right;\n"
+                                    "background-position: left;\n"
                                     "background-color:rgba(125, 0, 0, 255);\n"
                                     "color:rgba(255, 255, 255, 75);\n"
                                     "border-radius:20px;\n"
