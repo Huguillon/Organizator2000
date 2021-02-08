@@ -1,16 +1,9 @@
 import sys
-from PyQt5 import QtWidgets
-from PyQt5 import QtCore
-from PyQt5 import QtGui
+from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.Qt import *
 
-import ui_Dialog_Proyecto
-import ui_Dialog_Ticket
-import ui_Dialog_Item
-import ui_splash
 import dataManager
-import ui_contenedor
-import ui_assets
+import ui_contenedor, ui_assets, ui_Dialog_Proyecto, ui_Dialog_Ticket, ui_Dialog_Item, ui_splash
 assets = ui_assets.ui_assets
 
 indice = int(0)
@@ -24,7 +17,7 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         super(Organizator, self).__init__(parent)
         self.setupUi(self)
 
-        self.setWindowTitle("Organizator 2000 (v1.0)")
+        self.setWindowTitle("Organizator 2000 (v1.01)")
         self.setWindowIcon(QtGui.QIcon('data/organizator.ico'))
         self.showMaximized()
         self.clockGet()
@@ -347,8 +340,8 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         Dialogo = QtWidgets.QDialog()
         splash = ui_splash.Ui_d_Splash()
         splash.setupUi(Dialogo)
-        Dialogo.setWindowTitle("Organizator 2000")
-        Dialogo.setWindowIcon(QtGui.QIcon('data/organizator.ico'))
+        #Dialogo.setWindowTitle("Organizator 2000")
+        #Dialogo.setWindowIcon(QtGui.QIcon('data/organizator.ico'))
         pixmap = QtGui.QPixmap("data/splash_img_big.png")
         splash.l_img.setPixmap(pixmap)
         Dialogo.setWindowFlags(Dialogo.windowFlags() | QtCore.Qt.FramelessWindowHint)
