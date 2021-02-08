@@ -4,20 +4,11 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.Qt import *
 
-import json
-from pathlib import Path, PureWindowsPath
-from filecmp import dircmp, cmp
-
 # ---- Importa los modulos que estan dentro del directorio "data" ----
 sys.path.insert(0, '/data/')
 from data import fileManager
 fileManager = fileManager.FileManager()
 from data import gui_MainWindow, gui_MenuBotones, gui_Reloj, gui_ProyectoBoton, gui_TrabajoBoton, gui_Spacers, gui_Ticket, gui_Dialogos, gui_Splash
-
-# ---- Modalidad primera para importar modulos ----
-# import fileManager
-# fileManager = fileManager.FileManager()
-# import gui_MainWindow, gui_MenuBotones, gui_Reloj, gui_ProyectoBoton, gui_TrabajoBoton, gui_Spacers, gui_Ticket, gui_Dialogos, gui_Splash
 
 btnMenu = gui_MenuBotones.Ui_MenuBotones()
 reloj = gui_Reloj.Ui_Reloj()
@@ -45,7 +36,7 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
 
         self.mainWindow(self, skin)
         # ---- Setea el titulo y el icono de la ventana ----
-        self.textoFijo = "Organizator 2000 (v2.1.3) - "
+        self.textoFijo = "Organizator 2000 (v2.1.4) - "
         if fileManager.igualData:
             self.setWindowTitle(self.textoFijo + fileManager.actual_file)
             self.setWindowIcon(QIcon('images/icon256.png'))
@@ -438,12 +429,15 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         self.centralwidget.setStyleSheet(skin['centralwidget'])
         self.w_Menu.setStyleSheet(skin['w_Menu'])
         self.w_Reloj.setStyleSheet(skin['w_Reloj'])
+        self.sA_Botonera.setStyleSheet(skin['sA_Botonera'])
         self.sAWC_Botonera.setStyleSheet(skin['sAWC_Botonera'])
         self.w_ticketsTitulo.setStyleSheet(skin['w_ticketsTitulo'])
         self.l_ticketsTitulo.setStyleSheet(skin['l_ticketsTitulo'])
         self.line_Tickets.setStyleSheet(skin['line_Tickets'])
         self.l_ticketsDescripcion.setStyleSheet(skin['l_ticketsDescripcion'])
         self.sAWC_Tickets.setStyleSheet(skin['sAWC_Tickets'])
+        self.sArea_Tickets.setStyleSheet(skin['sArea_Tickets'])
+        self.w_Tickets.setStyleSheet(skin['w_Tickets'])
         self.menuBar.setStyleSheet(skin['menuBar'])
         # ---- Limpia el menuBar para que no se ponga lento todito ----
         self.limpiaMenu()

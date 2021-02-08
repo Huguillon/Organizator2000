@@ -1,8 +1,5 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.Qt import *
+# from PyQt5.Qt import *
+from PyQt5.Qt import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QMenuBar, QMetaObject, QSizePolicy, QSize, QScrollArea, QAbstractScrollArea, QLabel, QFrame, QRect, QAction, Qt
 
 # import gui_Spacers
 # spacers = gui_Spacers.Ui_Spacers()
@@ -74,6 +71,7 @@ class Ui_MainWindow(object):
         self.sA_Botonera.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.sA_Botonera.setWidgetResizable(True)
         self.sA_Botonera.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.sA_Botonera.setStyleSheet(estilo['sA_Botonera'])
 
         # ---- Widget Contenedor de los Botones Proyectos ----
         self.sAWC_Botonera = QWidget()
@@ -144,15 +142,23 @@ class Ui_MainWindow(object):
         self.l_ticketsDescripcion.setStyleSheet(estilo['l_ticketsDescripcion'])
         self.vL_Tickets.addWidget(self.l_ticketsDescripcion)
 
+        # --------------------------------------------------------------------------------------------------------------
+        # --------------------------------------------------------------------------------------------------------------
+        # ----------------------------------------- LA SOLUCION ESTA POR ACA -------------------------------------------
+
         self.sArea_Tickets = QScrollArea(self.centralwidget)
+        self.sArea_Tickets.setStyleSheet(estilo['sArea_Tickets'])
         self.sArea_Tickets.setFrameShape(QFrame.NoFrame)
         self.sArea_Tickets.setWidgetResizable(True)
 
         self.w_Tickets = QWidget()
+        self.w_Tickets.setStyleSheet(estilo['w_Tickets'])
         self.vL_w_Tickets = QGridLayout(self.w_Tickets)
         self.vL_w_Tickets.setContentsMargins(0, 0, 0, 0)
         self.vL_w_Tickets.setSpacing(0)
 
+        # --------------------------------------------------------------------------------------------------------------
+        # --------------------------------------------------------------------------------------------------------------
 
         self.sAWC_Tickets = QWidget(self.w_Tickets)
         self.sAWC_Tickets.setStyleSheet(estilo['sAWC_Tickets'])
@@ -253,25 +259,3 @@ class Ui_MainWindow(object):
         self.tickets.addAction(audio_action)
 
         self.presets.triggered.connect(respTicket)
-
-        # # ---- Agrega los items a "SKINS / PIELES"
-        # self.skins.clear()
-        # listaPieles = fileManager.skins
-        # for ac in listaPieles:
-        #     unAction = QAction(ac, self)
-        #     unAction.setCheckable(True)
-        #     if ac == fileManager.dataInicial['Skin']:
-        #         unAction.setChecked(True)
-        #     else:
-        #         unAction.setChecked(False)
-        #     self.skins.addAction(unAction)
-        # # ---- Click de los items de "SKINS / PIELES"
-        # self.skins.triggered.connect(respSkins)
-
-        # # ---- Agrega los items a "RECIENTES"
-        # listaRecientes = fileManager.dataInicial['Recientes']
-        # for ac in listaRecientes:
-        #     laAction = QAction(ac, self)
-        #     self.recents.addAction(laAction)
-        # # ---- Click de los items de "RECIENTES"
-        # self.recents.triggered.connect(respRecents)
