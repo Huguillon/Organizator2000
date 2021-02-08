@@ -1,9 +1,11 @@
 Version 2.1.6
+---------------------------------------
 2020-01-28
 [FIXS]
 * Al seleccionar un archivo de la lista de "Recientes" que se ha movido o eliminado, si se quería seguir editando el archivo que estaba abierto anteriormente el programa
 crasheaba, ahora vuelve a abrir el último archivo en el que estaba trabajando para que no crashee.
 
+---------------------------------------
 2020-01-27
 [FIXS]
 * Si se selecciona un archivo de la lista de "Recientes" que se ha movido o eliminado, ya no creashea el programa, muestra una ventana de advertencia y elimina el link de la lista de "Recientes".
@@ -12,11 +14,13 @@ Ahora el "indiceP" e "indiceT" los obtiene buscando el largo de la correspondien
 * Al crear un trabajo desde "Preseteo > Trabajos > Base de la Serie / Capitulo" el programa agregaba los tickets en el trabajo erroneo.
 * Si hay un archivo abierto al cual se le realizaron cambios y no se guardaron, si se selecciona un archivo de la lista de "Recientes", aparece una advertencia
 preguntando si se quieren guardar los cambios en el archivo.
+
 [FEATURES]
 * Al seleccionar un archivo de la lista de "Recientes" este link ahora se ubica en la parte superior de la lista.
 * Al abrir un archivo desde "Abrir" el link se agrega al inicio de la lista de "Recientes".
 * Al guardar un archivo nuevo se agrega al inicio de la lista de "Recientes".
 
+---------------------------------------
 2020-01-18
 [FIXS]
 * Si el "indiceT" era diferente a 0, al crear un proyecto nuevo desde "Preseteo > Trabajos > Base de la Serie" el programa Crasheaba.
