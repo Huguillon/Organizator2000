@@ -36,7 +36,7 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
 
         self.mainWindow(self, skin)
         # ---- Setea el titulo y el icono de la ventana ----
-        self.textoFijo = "Organizator 2000 (v2.1.5) - "
+        self.textoFijo = "Organizator 2000 (v2.1.6) - "
         if fileManager.igualData:
             self.setWindowTitle(self.textoFijo + fileManager.actual_file)
             self.setWindowIcon(QIcon('images/icon256.png'))
@@ -169,6 +169,11 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
     # ------------------------------------------------------------------------------------------------------------------
     # ----------------------------------------------------- Menu ---------------------------------------------------
     def btnNuevo(self):
+        # ---- Resetea los indices
+        global indiceP
+        global indiceT
+        indiceP = 0
+        indiceT = 0
         if fileManager.igualData == False:
             if fileManager.actual_file == "":
                 # Pregunta y abre DIALOGO para guardar
@@ -215,6 +220,9 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         indiceP = fileManager.data['Indice']
         indiceT = fileManager.data['Proyectos'][p][2]
         self.limpiaPantalla()
+        print("P:", indiceP)
+        print("T:", indiceT)
+        print(len(fileManager.data['Proyectos'][indiceP][3]))
     def btnDelP(self, p):
         global indiceP
         choise = QMessageBox.question(self, "Eliminar Trabajo", "¿Seguro que quiere eliminar el Proyecto?", QMessageBox.Yes | QMessageBox.No)
@@ -391,16 +399,34 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         # ---- Vacía el menu "Recientes" ----
         self.recents.clear()
         # ---- Agrega los items a "RECIENTES" ----
-        listaRecientes = list(set(fileManager.dataInicial['Recientes']))
+        # listaRecientes = list(set(fileManager.dataInicial['Recientes']))
+        listaRecientes = list(fileManager.dataInicial['Recientes'])
         for ac in listaRecientes:
             laAction = QAction(ac, self)
             self.recents.addAction(laAction)
         # ---- Click de los items de "RECIENTES" ----
         self.recents.triggered.connect(self.respRecents)
 
+    # ---- Agregar un "try" para que no crashee al seleccionar un archivo que ya no existe, tambien eliminarlo de la lista en fileManager.py ----
     def respRecents(self, q):
         signal = q.text()
-        fileManager.abreReciente(signal)
+        try:
+            if fileManager.igualData == False:
+                if fileManager.actual_file == "":
+                    # Pregunta y abre DIALOGO para guardar
+                    choise = QMessageBox.question(self, "Advertencia", "La pizarra actual no se ha guardado ¿Guardar el archivo?", QMessageBox.Yes | QMessageBox.No)
+                    if choise == QMessageBox.Yes:
+                        fileManager.guardarComoDialogo(self)
+                else:
+                    # Pregunta y GUARDA
+                    choise = QMessageBox.question(self, "Advertencia", 'Los cambios en "' + str(fileManager.archivo) + '" no se han guardado ¿Guardar el archivo?', QMessageBox.Yes | QMessageBox.No)
+                    if choise == QMessageBox.Yes:
+                        fileManager.guardar()
+            fileManager.abreReciente(signal)
+        except:
+            aviso = QMessageBox.warning(self, "Información", "El archivo seleccionado no existe o se ha movido a otra Ruta", QMessageBox.Ok)
+            fileManager.missingReciente(signal)
+            fileManager.abreReciente(fileManager.dataInicial['Recientes'][0])
         self.limpiaMenu()
         self.limpiaCabezal()
         self.limpiaPantalla()
@@ -475,20 +501,21 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
             self.limpiaPantalla()
         # ---- Trabajos ----
         elif signal == 'Base de la Serie':
+            indiceT = len(fileManager.data['Proyectos'][indiceP][3])
             fileManager.creaTrabajo(indiceP, "Base de la serie", "***Descripción temporal***")
-            fileManager.eliminaTrabajo(indiceP, indiceT)
             fileManager.creaTicket(indiceP, indiceT, 0, "Ideas generales", "(En un TXT) Cerrar las ideas generales de lo que sería la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.", [[1, "Ideas generales"], [1, "Ideas de Capitulos"]])
             fileManager.creaTicket(indiceP, indiceT, 2, "Ideas de la Serie", "Bocetar ideas generales de la serie.", [[1, "Estilos"], [1, "Ideas"]])
             self.limpiaPantalla()
         elif signal == 'Capitulo':
+            indiceT = len(fileManager.data['Proyectos'][indiceP][3])
             fileManager.creaTrabajo(indiceP, "Cap X - ", "***Descripción temporal***")
-            indiceT += 1
             fileManager.creaTicket(indiceP, indiceT, 0, "Guión", "Crear el guión.", [[1, "Idea general"], [1, "Refinamiento"]])
             fileManager.creaTicket(indiceP, indiceT, 1, "Storyboard / Animatic", "Crear el Storyboard y el Animatic.", [[1, "Storyboard"], [1, "Animatic"]])
             self.limpiaPantalla()
         # ---- Proyectos ----
         elif signal == 'Proyecto Serie':
             indiceP = len(fileManager.data['Proyectos'])
+            indiceT = 0
             fileManager.creaProyecto("Titulo del proyecto", "Descripción del proyecto")
             fileManager.creaTrabajo(indiceP, "Base de la serie", "***Descripción temporal***")
             fileManager.creaTicket(indiceP, indiceT, 0, "Ideas generales", "(En un TXT) Cerrar las ideas generales de lo que sería la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.", [[1, "Ideas generales"], [1, "Ideas de Capitulos"]])
@@ -498,6 +525,7 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
             fileManager.creaTicket(indiceP, indiceT, 0, "Guión", "Crear el guión.", [[1, "Idea general"], [1, "Refinamiento"]])
             fileManager.creaTicket(indiceP, indiceT, 1, "Storyboard / Animatic", "Crear el Storyboard y el Animatic.", [[1, "Storyboard"], [1, "Animatic"]])
             self.limpiaPantalla()
+            indiceT = 0
 
     # ------------------------------------------------------------------------------------------------------------------
     # ////////////////////////////////////////// LIMPIA Y REINICIA LA PANTALLA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

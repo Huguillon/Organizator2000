@@ -96,8 +96,10 @@ class FileManager():
                 # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente la siguiente vez que se inicia el programa ----
                 self.dataInicial['Ultimo'] = my_file
                 # ---- Guarda la ruta del archivo abierto en la lista de "archivos recientes" ----
-                self.dataInicial['Recientes'].append(my_file)
-                self.dataInicial['Recientes'] = list(set(self.dataInicial['Recientes']))
+                # # ---- Organiza la lista de recientes para ubicar el ultimo abierto en la parte superior
+                if my_file in self.dataInicial['Recientes']:
+                    self.dataInicial['Recientes'].remove(my_file)
+                self.dataInicial['Recientes'].insert(0, my_file)
                 # ---- Guarda las modificaciones en el archivo "init_file" ----
                 with open(init_file, 'w') as d:
                     json.dump(self.dataInicial, d, indent=tabulacion)
@@ -112,15 +114,34 @@ class FileManager():
         global my_file
         with open(elArchivo) as f:
             self.data = json.load(f)
-        # ---- Copia el  contenido del diccionario "data" en el JSON temporal ----
+        # ---- Copia el contenido del diccionario "data" en el JSON temporal ----
         with open(temp_file, 'w') as t:
             json.dump(self.data, t, indent=tabulacion)
-        #----- Obtiene la ruta del archivo abierto y Guardar la ruta (Path) del archivo original abierto "filename"
+        # ---- Obtiene la ruta del archivo abierto y Guardar la ruta (Path) del archivo original abierto "filename"
         my_file = elArchivo
         self.actual_file = my_file
         self.igualData = True
+        # ---- Organiza la lista de recientes para ubicar el ultimo abierto en la parte superior
+        tempList = self.dataInicial['Recientes'].copy()
+        tempList.remove(my_file)
+        tempList.insert(0, my_file)
+        self.dataInicial['Recientes'] = tempList
         # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente la siguiente vez que se inicia el programa ----
         self.dataInicial['Ultimo'] = my_file
+        # ---- Guarda las modificaciones en el archivo "init_file" ----
+        with open(init_file, 'w') as d:
+            json.dump(self.dataInicial, d, indent=tabulacion)
+
+    def missingReciente(self, elArchivo):
+        global my_file
+        # ---- Obtiene la ruta del archivo abierto y Guardar la ruta (Path) del archivo original abierto "filename"
+        my_file = elArchivo
+        # ---- Organiza la lista de recientes para ubicar el ultimo abierto en la parte superior
+        self.dataInicial['Recientes'].remove(my_file)
+        # tempList = self.dataInicial['Recientes'].copy()
+        # tempList.remove(my_file)
+        # tempList.insert(0, my_file)
+        # self.dataInicial['Recientes'] = tempList
         # ---- Guarda las modificaciones en el archivo "init_file" ----
         with open(init_file, 'w') as d:
             json.dump(self.dataInicial, d, indent=tabulacion)
@@ -149,12 +170,10 @@ class FileManager():
             my_file = filename[0]
             self.actual_file = my_file
             self.igualData = True
-
             # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente la siguiente vez que se inicia el programa ----
             self.dataInicial['Ultimo'] = my_file
             # ---- Guarda la ruta del archivo abierto en la lista de "archivos recientes" ----
-            self.dataInicial['Recientes'].append(my_file)
-            self.dataInicial['Recientes'] = list(set(self.dataInicial['Recientes']))
+            self.dataInicial['Recientes'].insert(0, my_file)
             # ---- Guarda las modificaciones en el archivo "init_file" ----
             with open(init_file, 'w') as d:
                 json.dump(self.dataInicial, d, indent=tabulacion)

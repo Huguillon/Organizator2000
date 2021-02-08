@@ -20,18 +20,14 @@
         735
     ],
     "PosWindow": [
-        440,
-        47
+        -1,
+        -8
     ],
     "Recientes": [
-        "D:/Activos/Software/Organizador/Codigo/_BACKUPs 2.0/v2-00 - copia (2)/proyecto_full.json",
-        "D:/Activos/Software/Organizador/Codigo/_BACKUPs 2.0/v2-00 - copia (8)/nuevo proyecto.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/nuevoTest.json",
-        "D:/Activos/Software/Organizador/Codigo/_BACKUPs 2.0/v2-00 +/Otro nuevo.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-15/test.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/test.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/pizarraNueva.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/Organizator datos.json"
+        "D:/Activos/Software/Organizador/Codigo/v2-16/AAA.json",
+        "D:/Activos/Software/Organizador/Codigo/v2-16/BBB.json",
+        "D:/Activos/Software/Organizador/Codigo/v2-16/Prueba2.json",
+        "D:/Activos/Software/Organizador/Codigo/v2-16/Prueba1.json"
     ],
-    "Ultimo": "D:/Activos/Software/Organizador/Codigo/v2-10/nuevoTest.json"
+    "Ultimo": "D:/Activos/Software/Organizador/Codigo/v2-16/AAA.json"
 }
