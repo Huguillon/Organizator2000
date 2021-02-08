@@ -82,10 +82,17 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
                         for k in range(canItems):
                             estado = bool(proyActual['Tickets'][h]['Items'][k][0])
                             if estado == True:
-                                color = "color: rgb(60, 105, 0);"
+                                #color = "color: rgb(60, 105, 0);"
+                                color = "color: rgb(160, 160, 160);"
+                                boldText = False
+                                italicText = False
                             else:
-                                color = "color: rgb(119, 0, 0);"
-                            self.btnCreaItems(proyActual['Tickets'][h]['Items'][k][1], estado, n, h, k, proyActual['Tickets'][h]['Items'][k][0], color)
+                                #color = "color: rgb(119, 0, 0);"
+                                color = "color: rgb(185, 0, 0);"
+                                boldText = True
+                                italicText = True
+                                #color = "color: rgb(235, 0, 0);"
+                            self.btnCreaItems(proyActual['Tickets'][h]['Items'][k][1], estado, n, h, k, proyActual['Tickets'][h]['Items'][k][0], color, boldText, italicText)
                     self.spacerItemItems = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
                     self.vL_w_Trabajo.addItem(self.spacerItemItems)
             self.btnTicketNew(posFila, posColumna)
@@ -119,8 +126,8 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
     def btnTicketNew(self, posF, posC):
         tckt_new = assets.BotonTicketNuevo(self, lambda: self.CreaTicket(), posF, posC, self.sAWC_Tickets, self.vL_sAWC_Tickets)
 
-    def btnCreaItems(self, texto, estado, indP, indT, indI, chck, color):
-        itm = assets.CreaItem(self, texto, estado, lambda: self.Checkeado(indP, indT, indI, chck), color)
+    def btnCreaItems(self, texto, estado, indP, indT, indI, chck, color, boldText, italicText):
+        itm = assets.CreaItem(self, texto, estado, lambda: self.Checkeado(indP, indT, indI, chck), color, boldText, italicText)
 
     def btnItem(self, texto, itemI, itemIE, ventana, wCont, lCont):
         assets.Items(self, texto, lambda: self.EliminaItem(itemI, ventana, wCont, lCont), lambda: self.EditaItem(texto, itemIE, ventana, wCont, lCont), wCont, lCont)

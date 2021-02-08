@@ -435,7 +435,7 @@ class ui_assets():
         self.btn_del.setMinimumSize(QSize(52, 52))
         self.vL_w_Botones.addWidget(self.btn_del, 0, Qt.AlignCenter)
         self.btn_del.clicked.connect(click_btn_del)
-        # ------------------------------------------------------------------------------------------------- BOTON DUPLICAR -----------------
+        # ----------------------------------------------------------------------------------------------- BOTON DUPLICAR -----------------
         self.btn_copy = QPushButton("", self.w_Botones)
         self.btn_copy.setStyleSheet("QPushButton{\n"
                                    "background-image:url('images/copy_ticket.png');\n"
@@ -491,11 +491,15 @@ class ui_assets():
         self.btn_tck_add.clicked.connect(accion)
         layoutContainer.addWidget(self.btn_tck_add, posFila, posCol, 1, 1, Qt.AlignTop)
 
-    def CreaItem(self, texto, estado, chck_click, color):
+    def CreaItem(self, texto, estado, chck_click, color, boldText, italicText):
         self.cBox = QCheckBox(self.w_Trabajo)
         font = QFont()
         font.setFamily("Calibri")
         font.setPointSize(13)
+        #font.setBold(True)
+        font.setBold(boldText)
+        #font.setItalic(True)
+        font.setItalic(italicText)
         self.cBox.setFont(font)
         self.cBox.setText(texto)
         self.cBox.setChecked(estado)
@@ -525,6 +529,7 @@ class ui_assets():
         font = QFont()
         font.setFamily("Calibri")
         font.setPointSize(12)
+        #font.setBold(True)
         self.ltxt.setFont(font)
         self.ltxt.setText(str(texto))
         self.editB = QPushButton("Editar", self.w_unItem)
