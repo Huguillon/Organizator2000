@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d0b70c2c-1a0c-4e38-85c7-cc9b967f164f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="40" column="73" lean-forward="true" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/fileManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="288" column="54" selection-start-line="288" selection-start-column="54" selection-end-line="288" selection-end-column="54" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+                <element signature="e#1029#1416#0" />
+                <element signature="e#1491#2655#0" />
+                <element signature="e#2741#3935#0" />
+                <element signature="e#3999#4235#0" />
+                <element signature="e#4329#5376#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/gui_MainWindow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1008">
+              <caret line="214" column="44" selection-start-line="214" selection-start-column="35" selection-end-line="214" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+                <element signature="e#614#9028#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/skins.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="752" column="14" selection-start-line="752" selection-start-column="14" selection-end-line="752" selection-end-column="14" />
+              <folding>
+                <element signature="n#!!block;n#Tickets Color 01#0;n#!!top" />
+                <element signature="n#!!block;n#Tickets Color 02#0;n#!!top" />
+                <element signature="n#!!block;n#Tickets Cristal 01#0;n#!!top" />
+                <element signature="n#!!block;n#Tickets Cristal 02#0;n#!!top" />
+                <element signature="n#!!block;n#Tickets Papel#0;n#!!top" />
+                <element signature="n#!!block;n#Blanco#0;n#!!top" />
+                <element signature="n#!!block;n#Organizator v1#0;n#!!top" />
+                <element signature="n#!!block;n#Moderno Verde#0;n#!!top" />
+                <element signature="n#!!block;n#Moderno Naranja#0;n#!!top" />
+                <element signature="n#!!block;n#Moderno Azul#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dialogoProyecto</find>
+      <find>dialogTicket</find>
+      <find>btnDialogItem</find>
+      <find>iniciaItems</find>
+      <find>dialogItem</find>
+      <find>dTicket</find>
+      <find>btnMenu</find>
+      <find>botonTrabajo</find>
+      <find>botonTrabActivo</find>
+      <find>botonTrabajoNuevo</find>
+      <find>listaItems</find>
+      <find>pieles</find>
+      <find>items</find>
+      <find>ticketNuevo</find>
+      <find>Splash</find>
+      <find>QToolTip</find>
+      <find>ticket</find>
+      <find>border-radius</find>
+      <find>82, 131, 16</find>
+      <find>82,131,16</find>
+      <find>26, 26, 26</find>
+      <find>26,26,26</find>
+      <find>guardaIndTrab</find>
+      <find>guardaIndTrabajo</find>
+      <find>signal</find>
+      <find>respond</find>
+      <find>menuBarFull</find>
+      <find>respSkins</find>
+      <find>creaItem</find>
+      <find>setWindowTitle</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>iniciaItems</replace>
+      <replace>btnItemEdit</replace>
+      <replace>btnItem</replace>
+      <replace>clickAddItem</replace>
+      <replace>clickDelItem</replace>
+      <replace>clickEditItem</replace>
+      <replace>fileManager.temp</replace>
+      <replace>fileManager.temp_file</replace>
+      <replace>fileManager.data</replace>
+      <replace>btnMenu</replace>
+      <replace>btnProyecto</replace>
+      <replace>btnTrabajo</replace>
+      <replace>spacers</replace>
+      <replace>click_pb_del</replace>
+      <replace>click_pb_edit</replace>
+      <replace>click_pb_copy</replace>
+      <replace>dialogT</replace>
+      <replace>dialogI</replace>
+      <replace>btnAddI</replace>
+      <replace>btnDelI</replace>
+      <replace>btnNuevo</replace>
+      <replace>btnAbre</replace>
+      <replace>btnGuarda</replace>
+      <replace>btnGuardaComo</replace>
+      <replace>actual_file</replace>
+      <replace>255,100,0</replace>
+      <replace>82,131,16</replace>
+      <replace>0,90,200</replace>
+      <replace>26,26,26</replace>
+      <replace>206,206,206</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/proyecto_LD.json" />
+        <option value="$PROJECT_DIR$/data/proyecto_L.json" />
+        <option value="$PROJECT_DIR$/data/ui_Dialog_Proyecto.py" />
+        <option value="$PROJECT_DIR$/main_test.py" />
+        <option value="$PROJECT_DIR$/data/ui_base_2.py" />
+        <option value="$PROJECT_DIR$/data/proyecto_full.json" />
+        <option value="$PROJECT_DIR$/data/proy_test.json" />
+        <option value="$PROJECT_DIR$/data/dataManager.py" />
+        <option value="$PROJECT_DIR$/data/dataManager_b.py" />
+        <option value="$PROJECT_DIR$/main_b.py" />
+        <option value="$PROJECT_DIR$/data/dataManager_test.py" />
+        <option value="$PROJECT_DIR$/data/ui_container.py" />
+        <option value="$PROJECT_DIR$/main_test_2.py" />
+        <option value="$PROJECT_DIR$/main_test_3.py" />
+        <option value="$PROJECT_DIR$/data/ui_base.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/data/ui_contenedor.py" />
+        <option value="$PROJECT_DIR$/data/prueba_LabelMouse.py" />
+        <option value="$PROJECT_DIR$/data/ui_assets_original.py" />
+        <option value="$PROJECT_DIR$/data/temp.json" />
+        <option value="$PROJECT_DIR$/data/prueba_main.py" />
+        <option value="$PROJECT_DIR$/data/prueba.py" />
+        <option value="$PROJECT_DIR$/data/ComboBox Ejemplo.txt" />
+        <option value="$PROJECT_DIR$/data/ComboBox Ejemplo Oficial.txt" />
+        <option value="$PROJECT_DIR$/data/combo.py" />
+        <option value="$PROJECT_DIR$/data/ui_Dialog_Ticket.py" />
+        <option value="$PROJECT_DIR$/data/test.json" />
+        <option value="$PROJECT_DIR$/data/scroll.py" />
+        <option value="$PROJECT_DIR$/data/scroll_D.py" />
+        <option value="$PROJECT_DIR$/data/ui_assets.py" />
+        <option value="$PROJECT_DIR$/organizator.py" />
+        <option value="$PROJECT_DIR$/data/gui_spacers.py" />
+        <option value="$PROJECT_DIR$/data/gui_mainwindow.py" />
+        <option value="$PROJECT_DIR$/data/gui_ticket.py" />
+        <option value="$PROJECT_DIR$/Main_test.py" />
+        <option value="$PROJECT_DIR$/data/gui_dialogos.py" />
+        <option value="$PROJECT_DIR$/data/gui_MenuBar.py" />
+        <option value="$PROJECT_DIR$/data/dataInicial.json" />
+        <option value="$PROJECT_DIR$/data/gui_ProyectoBoton.py" />
+        <option value="$PROJECT_DIR$/data/gui_MenuBotones.py" />
+        <option value="$PROJECT_DIR$/data/gui_Spacers.py" />
+        <option value="$PROJECT_DIR$/data/gui_Splash.py" />
+        <option value="$PROJECT_DIR$/data/gui_Dialogos.py" />
+        <option value="$PROJECT_DIR$/data/gui_Ticket.py" />
+        <option value="$PROJECT_DIR$/data/gui_TrabajoBoton.py" />
+        <option value="$PROJECT_DIR$/data/gui_Reloj.py" />
+        <option value="$PROJECT_DIR$/data/skins.json" />
+        <option value="$PROJECT_DIR$/data/gui_MainWindow.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/data/fileManager.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-6" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="v2-00" type="b2602c69:ProjectViewProjectNode" />
+              <item name="v2-00" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="v2-00" type="b2602c69:ProjectViewProjectNode" />
+              <item name="v2-00" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Activos\Software\Organizador\Codigo\v2-00\data" />
+      <recent name="D:\Activos\Software\Organizador\Codigo\v2-00 (otro)\data" />
+      <recent name="D:\Activos\Software\Organizador\Codigo\v2-00 (otro)" />
+      <recent name="D:\Activos\Software\Organizador\Codigo\v2-00" />
+      <recent name="D:\Activos\Software\Organizador\Codigo\v2-00\_backups" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Activos\Software\Organizador\Codigo\v2-00\data" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Main">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="v2-00" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="v2-00" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="v2-00" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fileManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="v2-00" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/fileManager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="organizator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="v2-00" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/organizator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prueba" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="v2-00" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/prueba.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Main" />
+      <item itemvalue="Python.Main_test" />
+      <item itemvalue="Python.fileManager" />
+      <item itemvalue="Python.organizator" />
+      <item itemvalue="Python.prueba" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Main_test" />
+        <item itemvalue="Python.organizator" />
+        <item itemvalue="Python.fileManager" />
+        <item itemvalue="Python.prueba" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0b70c2c-1a0c-4e38-85c7-cc9b967f164f" name="Default Changelist" comment="" />
+      <created>1541296980216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541296980216</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.10115912" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.22751896" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23293608" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.29252437" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.10115912" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.22751896" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23293608" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.29252437" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/data/dataManager_test.py" />
+    <entry file="file://$PROJECT_DIR$/data/dataManager.py" />
+    <entry file="file://$PROJECT_DIR$/data/proy_test.json" />
+    <entry file="file://$PROJECT_DIR$/Datos.json" />
+    <entry file="file://$PROJECT_DIR$/nuevo proyecto.json" />
+    <entry file="file://$PROJECT_DIR$/proyecto_b.json" />
+    <entry file="file://$PROJECT_DIR$/proyecto_full.json" />
+    <entry file="file://$PROJECT_DIR$/proyecto_re_armando.json" />
+    <entry file="file://$PROJECT_DIR$/temp.json" />
+    <entry file="file://$PROJECT_DIR$/data/ui_textos_ejemplos.py" />
+    <entry file="file://$PROJECT_DIR$/data/prueba_LabelMouse.py" />
+    <entry file="file://$PROJECT_DIR$/data/texto_maxlength.py" />
+    <entry file="file://$PROJECT_DIR$/data/prueba_main.py" />
+    <entry file="file://$PROJECT_DIR$/data/ComboBox Ejemplo.txt" />
+    <entry file="file://$PROJECT_DIR$/data/ComboBox Ejemplo Oficial.txt" />
+    <entry file="file://$PROJECT_DIR$/data/combo.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_contenedor.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_menuBar.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_container.py" />
+    <entry file="file://$PROJECT_DIR$/data/prueba.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_Dialog_Proyecto.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_assets_back01.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_assets_original.py" />
+    <entry file="file://$PROJECT_DIR$/data/_test_menuBotones_01.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_Dialog_Ticket.py" />
+    <entry file="file://$PROJECT_DIR$/data/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/scroll.py" />
+    <entry file="file://$PROJECT_DIR$/data/scroll_b.py" />
+    <entry file="file://$PROJECT_DIR$/data/scroll_D.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_Dialog_Item.py" />
+    <entry file="file://$PROJECT_DIR$/data/_test_menuBotones_02.py" />
+    <entry file="file://$PROJECT_DIR$/Main_test.py" />
+    <entry file="file://$PROJECT_DIR$/data/ui_assets.py" />
+    <entry file="file://$PROJECT_DIR$/Organizator.py" />
+    <entry file="file://$PROJECT_DIR$/data/temp.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1533">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding>
+            <element signature="e#29#9373#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ui_splash.py" />
+    <entry file="file://$PROJECT_DIR$/data/gui_MenuBar.py" />
+    <entry file="file://$PROJECT_DIR$/data/gui_Spacers.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_Splash.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dataInicial.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_Dialogos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="387" column="69" lean-forward="true" selection-start-line="387" selection-start-column="69" selection-end-line="387" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#291#5173#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_ProyectoBoton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="164" column="79" selection-start-line="164" selection-start-column="79" selection-end-line="164" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_TrabajoBoton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="84" column="73" lean-forward="true" selection-start-line="84" selection-start-column="73" selection-end-line="84" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_Ticket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_Reloj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_MenuBotones.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="7" column="109" lean-forward="true" selection-start-line="7" selection-start-column="109" selection-end-line="7" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gui_MainWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="214" column="44" selection-start-line="214" selection-start-column="35" selection-end-line="214" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#614#9028#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/skins.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="752" column="14" selection-start-line="752" selection-start-column="14" selection-end-line="752" selection-end-column="14" />
+          <folding>
+            <element signature="n#!!block;n#Tickets Color 01#0;n#!!top" />
+            <element signature="n#!!block;n#Tickets Color 02#0;n#!!top" />
+            <element signature="n#!!block;n#Tickets Cristal 01#0;n#!!top" />
+            <element signature="n#!!block;n#Tickets Cristal 02#0;n#!!top" />
+            <element signature="n#!!block;n#Tickets Papel#0;n#!!top" />
+            <element signature="n#!!block;n#Blanco#0;n#!!top" />
+            <element signature="n#!!block;n#Organizator v1#0;n#!!top" />
+            <element signature="n#!!block;n#Moderno Verde#0;n#!!top" />
+            <element signature="n#!!block;n#Moderno Naranja#0;n#!!top" />
+            <element signature="n#!!block;n#Moderno Azul#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/VunnyBoom.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding>
+            <element signature="e#29#9373#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/fileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="288" column="54" selection-start-line="288" selection-start-column="54" selection-end-line="288" selection-end-column="54" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#1029#1416#0" />
+            <element signature="e#1491#2655#0" />
+            <element signature="e#2741#3935#0" />
+            <element signature="e#3999#4235#0" />
+            <element signature="e#4329#5376#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="40" column="73" lean-forward="true" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
