@@ -214,7 +214,7 @@ class ui_assets():
     # ******************************************************************************************************************************************************************
     # **************************************************** TICKETS *****************************************************************************************************
 
-    def Ticket(self, tipoSel, titulo, descripcion, click_btn_edit, click_btn_del, posFila, posCol, scrollContainer, layoutContainer):
+    def Ticket(self, tipoSel, titulo, descripcion, click_btn_edit, click_btn_del, click_btn_copy, posFila, posCol, scrollContainer, layoutContainer):
         # ---- WIDGET contenedor y color base de los tickets ----
         self.w_Ticket = QWidget(scrollContainer)
         self.w_Ticket.setGeometry(QRect(0, 0, 504, 230))
@@ -435,6 +435,30 @@ class ui_assets():
         self.btn_del.setMinimumSize(QSize(52, 52))
         self.vL_w_Botones.addWidget(self.btn_del, 0, Qt.AlignCenter)
         self.btn_del.clicked.connect(click_btn_del)
+        # ------------------------------------------------------------------------------------------------- BOTON DUPLICAR -----------------
+        self.btn_copy = QPushButton("", self.w_Botones)
+        self.btn_copy.setStyleSheet("QPushButton{\n"
+                                   "background-image:url('images/copy_ticket.png');\n"
+                                   "background-color:rgba(0, 0, 0, 0);\n"
+                                   "border-radius:none;\n"
+                                   "width:52px;\n"
+                                   "height:52px;\n"
+                                   "}\n"
+                                   "\n"
+                                   "QPushButton:Hover{\n"
+                                   "background-image:url('images/copy_ticket_over.png');\n"
+                                   "color:black;\n"
+                                   "}\n"
+                                   "QPushButton:Pressed{\n"
+                                   "background-image:url('images/copy_ticket.png');\n"
+                                   "color:white;\n"
+                                   "}")
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy.setHeightForWidth(self.btn_copy.sizePolicy().hasHeightForWidth())
+        self.btn_copy.setSizePolicy(sizePolicy)
+        self.btn_copy.setMinimumSize(QSize(52, 52))
+        self.vL_w_Botones.addWidget(self.btn_copy, 0, Qt.AlignCenter)
+        self.btn_copy.clicked.connect(click_btn_copy)
 
         # -------------------------------------------------------------------------- EL LAYOUT DEL MAIN AGREGA EL TICKET -----------------
         layoutContainer.addWidget(self.w_Ticket, posFila, posCol, 1, 1, Qt.AlignTop)

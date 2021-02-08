@@ -20,7 +20,7 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
 
         #dataManager.my_file = Path("Proyecto.json")
 
-        self.setWindowTitle("Organizator 2000 (v1.02)")
+        self.setWindowTitle("Organizator 2000 (v1.04)")
         self.setWindowIcon(QtGui.QIcon('images/icon256.png'))
         self.showMaximized()
         self.clockGet()
@@ -115,7 +115,7 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         btn_new = assets.BotonAgregar(self, lambda: self.CreaProyecto(largo), self.sAWC_Botonera, self.vL_sAWC_Botonera)
 
     def btnTicket(self, tipo, vT, vD, vI, vTckt, posF, posC):
-        tckt = assets.Ticket(self, tipo, vT, vD, lambda: self.EditaTicket(tipo, vT, vD, vTckt, vI), lambda: self.EliminaTicket(vTckt), posF, posC, self.sAWC_Tickets, self.vL_sAWC_Tickets)
+        tckt = assets.Ticket(self, tipo, vT, vD, lambda: self.EditaTicket(tipo, vT, vD, vTckt, vI), lambda: self.EliminaTicket(vTckt), lambda: self.CopiaTicket(vTckt), posF, posC, self.sAWC_Tickets, self.vL_sAWC_Tickets)
     def btnTicketNew(self, posF, posC):
         tckt_new = assets.BotonTicketNuevo(self, lambda: self.CreaTicket(), posF, posC, self.sAWC_Tickets, self.vL_sAWC_Tickets)
 
@@ -276,6 +276,11 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
             self.funciones.eliminaTicket(self, self.funciones.cargaArchivo(self), indice, h)
             self.LimpiaPantalla()
 
+    def CopiaTicket(self, h):
+        global indice
+        self.funciones.copiaTicket(self, self.funciones.cargaArchivo(self), indice, h)
+        self.LimpiaPantalla()
+
 
     def AgregaItem(self, valorI, valorITxt, ventana, wCont, lCont):
         global unaLista
@@ -355,10 +360,19 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         pixmap = QtGui.QPixmap("images/splash_80s.png")
         splash.l_img.setPixmap(pixmap)
         Dialogo.setWindowFlags(Dialogo.windowFlags() | QtCore.Qt.FramelessWindowHint)
-        splash.pb_close.clicked.connect(lambda: self.btn_close(Dialogo))
         Dialogo.show()
-        #Dialogo.close()
+        self.clockGetClose(Dialogo)
+        splash.pb_close.clicked.connect(lambda: self.btn_close(Dialogo))
         Dialogo.exec_()
+
+    def clockGetClose(self, ventanaClose):
+        # ---- Timer ----
+        self.timerClose = QtCore.QTimer()
+        # ---- Connect timer ----
+        self.timerClose.timeout.connect(lambda: self.btn_close(ventanaClose))
+        # ---- start ----
+        self.timerClose.start(2000)
+
     def btn_close(self, ventana):
         ventana.close()
         assets.Menues(self, self.l_Encabezado, self.dateTimeEdit, self.line_Tickets)

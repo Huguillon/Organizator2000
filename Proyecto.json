@@ -1,202 +1,71 @@
 {
   "Proyectos": [
     {
-      "Titulo": "Modificando Proyecto",
-      "Descripcion": "Usando la opci\u00f3n de mostrar el titulo anterior antes de cambiarlo",
+      "Titulo": "DinUs - Dinosaurios",
+      "Descripcion": "Serie animada 3D de Dinosaurios estilo \"Cartoon\" en el cual se ene\u00f1an colores, formas y m\u00e1s.",
       "Tickets": [
+        {
+          "Tipo": 0,
+          "Titulo": "Ideas generales",
+          "Descripcion": "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+          "Items": [
+            [
+              1,
+              "Ideas generales"
+            ],
+            [
+              0,
+              "Ideas de capitulos"
+            ]
+          ]
+        },
+        {
+          "Tipo": 2,
+          "Titulo": "Bocetar Dinosaurios",
+          "Descripcion": "Bocetar a los Personajes.",
+          "Items": [
+            [
+              1,
+              "Tiranosaurio Rex"
+            ],
+            [
+              1,
+              "Triceratop"
+            ],
+            [
+              0,
+              "Velociraptor"
+            ],
+            [
+              1,
+              "Diplodocus"
+            ],
+            [
+              0,
+              "Espinosaurio"
+            ],
+            [
+              0,
+              "Anquilosaurio"
+            ],
+            [
+              0,
+              "Parasaurolofus"
+            ],
+            [
+              0,
+              "Pterodactilo"
+            ]
+          ]
+        },
         {
           "Tipo": 5,
-          "Titulo": "Dise\u00f1ar auto deportivo",
-          "Descripcion": "Hacer el dise\u00f1o de un auto deportivo con estilo cartoon",
+          "Titulo": "Crear Tiranosaurio Rex",
+          "Descripcion": "Crear al Tiranosaurio Rex",
           "Items": [
             [
               1,
-              "Colores"
-            ],
-            [
-              1,
-              "Pera"
-            ]
-          ]
-        },
-        {
-          "Tipo": 11,
-          "Titulo": "Un nuevo Ticket",
-          "Descripcion": "Creando un nuevo Ticket desde el bot\u00f3n de creaci\u00f3n de nuevo ticket.",
-          "Items": [
-            [
-              1,
-              "Un Item"
-            ],
-            [
-              0,
-              "nombre posta"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "Titulo": "La NUEVA prueba de la verdad",
-      "Descripcion": "Usando la combinaci\u00f3n para verificar la cantidad de proyectos existentes en el archivo JSON.",
-      "Tickets": [
-        {
-          "Tipo": 3,
-          "Titulo": "Cambiar colores",
-          "Descripcion": "Cambiar los colores del personaje Pepito.",
-          "Items": [
-            [
-              0,
-              "Le cambio los colores"
-            ],
-            [
-              0,
-              "Verifico que funciona"
-            ],
-            [
-              0,
-              "Agregando otro"
-            ]
-          ]
-        },
-        {
-          "Tipo": 0,
-          "Titulo": "Cap - Changing colors",
-          "Descripcion": "Los personajes intercambian sus colores originales con los otros personajes.",
-          "Items": [
-            [
-              1,
-              "Idea"
-            ],
-            [
-              0,
-              "Gui\u00f3n"
-            ],
-            [
-              0,
-              "Limpiar"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "Titulo": "Probando con cambios",
-      "Descripcion": "Pruebo si agrega proyectos sin usar una variable extra. Y ahora agregando mucho mas texto porque quiero ver si pasa a varios renglones o hay que hacer mas modificaciones en el codigo o en la ui_contenedor, ya que ahora vemos si pasa al siguiente renglon o no. As\u00ed de f\u00e1cil.",
-      "Tickets": [
-        {
-          "Tipo": 8,
-          "Titulo": "Cambiar Titulo 01",
-          "Descripcion": "Cambiando el nombre \"0000\" por algo mejor.",
-          "Items": [
-            [
-              1,
-              "Editar Video"
-            ],
-            [
-              0,
-              "Agregar sonido"
-            ]
-          ]
-        },
-        {
-          "Tipo": 10,
-          "Titulo": "Cambiar Titulo 02",
-          "Descripcion": "Cambiando el nombre \"11\" por algo mejor",
-          "Items": [
-            [
-              0,
-              "Un item"
-            ],
-            [
-              0,
-              "Otro item"
-            ]
-          ]
-        },
-        {
-          "Tipo": 9,
-          "Titulo": "Cambiando Titulo 03",
-          "Descripcion": "Cambiando el nombre de \"22\" por algo mejor",
-          "Items": [
-            [
-              0,
-              "Ver si funciona"
-            ],
-            [
-              0,
-              "Agregando Items"
-            ],
-            [
-              0,
-              "Veamos"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "Titulo": "Viendo el proyecto",
-      "Descripcion": "Ver si genera una lista de trabajos o no",
-      "Tickets": [
-        {
-          "Tipo": 3,
-          "Titulo": "El sapo Ram\u00f3n",
-          "Descripcion": "Dise\u00f1ar al sapo Ram\u00f3n",
-          "Items": [
-            [
-              1,
-              "Bocetar"
-            ],
-            [
-              1,
-              "Seleccion de color"
-            ],
-            [
-              0,
-              "Pasar a limpio"
-            ],
-            [
-              0,
-              "Riggin en After"
-            ]
-          ]
-        },
-        {
-          "Tipo": 3,
-          "Titulo": "La vaca Marta",
-          "Descripcion": "Dise\u00f1ar a la vaca Marta",
-          "Items": [
-            [
-              0,
-              "Bocetar"
-            ],
-            [
-              0,
-              "Selecci\u00f3n de color"
-            ],
-            [
-              0,
-              "Modelar"
-            ]
-          ]
-        },
-        {
-          "Tipo": 3,
-          "Titulo": "Le\u00f3n Bartolo",
-          "Descripcion": "Dise\u00f1ar al le\u00f3n Bartolo.",
-          "Items": [
-            [
-              1,
-              "Bocetar"
-            ],
-            [
-              1,
-              "Colorear"
-            ],
-            [
-              0,
-              "Modelar"
+              "Modelado"
             ],
             [
               0,
@@ -204,99 +73,22 @@
             ],
             [
               0,
+              "Textura"
+            ],
+            [
+              0,
               "Rigging"
-            ],
-            [
-              0,
-              "Texturas"
             ]
           ]
         },
         {
-          "Tipo": 3,
-          "Titulo": "Yegua Antonia",
-          "Descripcion": "Dise\u00f1ar a la yegua Antonia",
-          "Items": [
-            [
-              1,
-              "Bocetar"
-            ],
-            [
-              0,
-              "Colorear"
-            ],
-            [
-              0,
-              "Modelar"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "Titulo": "Simplificando una funsi\u00f3n",
-      "Descripcion": "Simplificando la funcion de modificar proyecto en desde casi",
-      "Tickets": [
-        {
-          "Tipo": 4,
-          "Titulo": "Animar a Pedro",
-          "Descripcion": "Crear la animaci\u00f3n de caimnata de Pedro",
+          "Tipo": 5,
+          "Titulo": "Crear Triceraptop",
+          "Descripcion": "Crear al Triceraptor.",
           "Items": [
             [
               0,
-              "Fotogramas clave"
-            ],
-            [
-              0,
-              "Intermedios"
-            ],
-            [
-              0,
-              "Ajustes"
-            ]
-          ]
-        },
-        {
-          "Tipo": 3,
-          "Titulo": "Dise\u00f1ar a Roberto",
-          "Descripcion": "Crear el dise\u00f1o de Roberto.",
-          "Items": [
-            [
-              0,
-              "Bocetos"
-            ],
-            [
-              0,
-              "Pruebas color"
-            ],
-            [
-              0,
-              "Detalles"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "Titulo": "Casi terminado ahora",
-      "Descripcion": "Estamos testeando para empezar con la GUI",
-      "Tickets": [
-        {
-          "Tipo": 3,
-          "Titulo": "Mamertos",
-          "Descripcion": "Crear el Gui\u00f3n para el corto \"Mamertos\"",
-          "Items": [
-            [
-              1,
-              "Bocetar"
-            ],
-            [
-              1,
-              "Colorear"
-            ],
-            [
-              0,
-              "Modelar"
+              "Modelado"
             ],
             [
               0,
@@ -304,136 +96,918 @@
             ],
             [
               0,
-              "Rigging"
+              "Textura"
             ],
             [
               0,
-              "Texturas"
-            ]
-          ]
-        },
-        {
-          "Tipo": 4,
-          "Titulo": "Sapo Rigoberto",
-          "Descripcion": "Un nuevo trabajo a realizar.",
-          "Items": [
-            [
-              1,
-              "Pollo"
-            ],
-            [
-              1,
-              "Papas"
-            ],
-            [
-              1,
-              "Vino"
+              "Rigging"
             ]
           ]
         }
       ]
     },
     {
-      "Titulo": "Proyecto desde bot\u00f3n o consola",
-      "Descripcion": "Un proyecto creados desde el bot\u00f3n de la UI que realmente fue desde la consola.",
-      "Tickets": [
-        {
-          "Tipo": 9,
-          "Titulo": "Musica Video Caballitos",
-          "Descripcion": "Crear la m\u00fasica de acci\u00f3n para el video de los caballitos.",
-          "Items": []
-        }
-      ]
-    },
-    {
-      "Titulo": "Todos los tickets",
-      "Descripcion": "Muestra todos los tipos de Tickets creados.",
+      "Titulo": "Unicornios - Zebras - Caballos",
+      "Descripcion": "Serie animada de Unicornios / Cebras / Caballos, cada uno con su respectivo color, que ense\u00f1an colores, formas, etc.",
       "Tickets": [
         {
           "Tipo": 0,
-          "Titulo": "Guion / Ideas",
-          "Descripcion": "Ejemplo de Ticket de Guion / Ideas.",
-          "Items": []
+          "Titulo": "Ideas generales",
+          "Descripcion": "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+          "Items": [
+            [
+              1,
+              "Ideas generales"
+            ],
+            [
+              0,
+              "Ideas de capitulos"
+            ]
+          ]
         },
         {
-          "Tipo": 1,
-          "Titulo": "Storyboard",
-          "Descripcion": "Ejemplo de Ticket de Storyboard.",
+          "Tipo": 3,
+          "Titulo": "Cambiar a Zebras",
+          "Descripcion": "Cambiar todos los personajes para hacerlos Zebras en lugar de caballos y ver si funciona.",
+          "Items": [
+            [
+              0,
+              "Red"
+            ],
+            [
+              0,
+              "Blue"
+            ],
+            [
+              0,
+              "Green"
+            ],
+            [
+              0,
+              "Orange"
+            ],
+            [
+              0,
+              "Yellow"
+            ],
+            [
+              0,
+              "Purple"
+            ],
+            [
+              0,
+              "Pink"
+            ],
+            [
+              0,
+              "Brown"
+            ],
+            [
+              0,
+              "White"
+            ],
+            [
+              0,
+              "Black"
+            ],
+            [
+              0,
+              "Baby Blue"
+            ],
+            [
+              0,
+              "Violet"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Working Belts - Community Helpers",
+      "Descripcion": "Serie animada 3D de chicos con cinturones m\u00e1gicos que les permite convertirse en Bomberos, le\u00f1adores, m\u00e9dicos, etc. seg\u00fan la situaci\u00f3n y el cap\u00edtulo lo requiera.",
+      "Tickets": [
+        {
+          "Tipo": 0,
+          "Titulo": "Ideas generales",
+          "Descripcion": "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+          "Items": [
+            [
+              1,
+              "Ideas generales"
+            ],
+            [
+              0,
+              "Ideas de capitulos"
+            ]
+          ]
+        },
+        {
+          "Tipo": 2,
+          "Titulo": "Personajes Ni\u00f1os",
+          "Descripcion": "Crear a los personajes Ni\u00f1os, ambos generos, diferentes razas en parejas.",
+          "Items": [
+            [
+              1,
+              "Ni\u00f1o Blanco"
+            ],
+            [
+              1,
+              "Ni\u00f1a Blanca"
+            ],
+            [
+              0,
+              "Ni\u00f1o Negro"
+            ],
+            [
+              0,
+              "Ni\u00f1a Negra"
+            ],
+            [
+              0,
+              "Ni\u00f1o Asiatico"
+            ],
+            [
+              0,
+              "Ni\u00f1a Asiatica"
+            ],
+            [
+              0,
+              "Ni\u00f1o Latino"
+            ],
+            [
+              0,
+              "Ni\u00f1a Latina"
+            ]
+          ]
+        },
+        {
+          "Tipo": 2,
+          "Titulo": "Personajes Padres",
+          "Descripcion": "Crear a los personajes padres de los personajes Ni\u00f1os",
+          "Items": [
+            [
+              1,
+              "Padre Blanco"
+            ],
+            [
+              1,
+              "Madre Blanca"
+            ],
+            [
+              1,
+              "Padre Negro"
+            ],
+            [
+              0,
+              "Madre Negra"
+            ],
+            [
+              1,
+              "Padre Asiatico"
+            ],
+            [
+              0,
+              "Madre Asiatica"
+            ],
+            [
+              0,
+              "Padre Latino"
+            ],
+            [
+              0,
+              "Madre Latina"
+            ]
+          ]
+        },
+        {
+          "Tipo": 2,
+          "Titulo": "Personajes adultos",
+          "Descripcion": "Crear a los personajes adultos extras (vecinos, maestros/as, policias, etc.)",
           "Items": []
         },
         {
           "Tipo": 2,
-          "Titulo": "Boceto",
-          "Descripcion": "Ejemplo de Ticket de Boceto.",
-          "Items": []
-        },
-        {
-          "Tipo": 3,
-          "Titulo": "Dise\u00f1o 2D",
-          "Descripcion": "Ejemplo de Ticket de Dise\u00f1o 2D.",
-          "Items": []
-        },
-        {
-          "Tipo": 4,
-          "Titulo": "Animacion 2D",
-          "Descripcion": "Ejemplo de Ticket de Animacion 2D.",
+          "Titulo": "Cinturones",
+          "Descripcion": "Dise\u00f1ar los cinturones y el modo de uso.",
           "Items": []
         },
         {
           "Tipo": 5,
-          "Titulo": "Dise\u00f1o 3D",
-          "Descripcion": "Ejemplo de Ticket de Dise\u00f1o 3D.",
-          "Items": []
-        },
-        {
-          "Tipo": 6,
-          "Titulo": "Animacion 3D",
-          "Descripcion": "Ejemplo de Ticket de Animacion 3D.",
-          "Items": []
-        },
-        {
-          "Tipo": 7,
-          "Titulo": "Render 3D",
-          "Descripcion": "Ejemplo de Ticket de Render 3D.",
-          "Items": []
-        },
-        {
-          "Tipo": 8,
-          "Titulo": "Edicion Video",
-          "Descripcion": "Ejemplo de Ticket de Edicion Video.",
-          "Items": []
-        },
-        {
-          "Tipo": 9,
-          "Titulo": "Audio",
-          "Descripcion": "Ejemplo de Ticket de Audio.",
-          "Items": []
-        },
-        {
-          "Tipo": 10,
-          "Titulo": "Render Video",
-          "Descripcion": "Ejemplo de Ticket de Render Video.",
-          "Items": []
-        },
-        {
-          "Tipo": 11,
-          "Titulo": "Otros",
-          "Descripcion": "Ejemplo de Ticket de Otros.",
-          "Items": []
-        },
-        {
-          "Tipo": 12,
-          "Titulo": "Sin identificar (else)",
-          "Descripcion": "Ejemplo de Ticket de Sin identificar (else).",
-          "Items": []
+          "Titulo": "Cinturones",
+          "Descripcion": "Modelar el cinturon y prepararlo para ser animado.",
+          "Items": [
+            [
+              0,
+              "Modelado"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Texturizado"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
         }
       ]
     },
     {
-      "Titulo": "Projecto de test 500",
-      "Descripcion": "Probando que al crear un proyecto, el indice se acomoda con respecto al valor final y se muestra este mismo proyecto.",
-      "Tickets": []
+      "Titulo": "Constructores",
+      "Descripcion": "Serie animada 3D de personajes que construyen con bloques Lego lo que sea necesario para la ciudad en la que viven.",
+      "Tickets": [
+        {
+          "Tipo": 0,
+          "Titulo": "Ideas generales",
+          "Descripcion": "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+          "Items": [
+            [
+              0,
+              "Ideas generales"
+            ],
+            [
+              0,
+              "Ideas de capitulos"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "ColorIns - Lapices y pinceles",
+      "Descripcion": "Serie animada de herramientas de pintura que crean objetos (ilustrandolos y pintandolos) seg\u00fan su necesidad.",
+      "Tickets": [
+        {
+          "Tipo": 0,
+          "Titulo": "Ideas generales",
+          "Descripcion": "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+          "Items": [
+            [
+              1,
+              "Ideas generales"
+            ],
+            [
+              0,
+              "Ideas de capitulos"
+            ]
+          ]
+        },
+        {
+          "Tipo": 2,
+          "Titulo": "Personajes",
+          "Descripcion": "Bocetar a los personajes.",
+          "Items": [
+            [
+              0,
+              "Lapiz"
+            ],
+            [
+              0,
+              "Pincel Fino"
+            ],
+            [
+              0,
+              "Goma"
+            ],
+            [
+              0,
+              "Pasta pintura"
+            ],
+            [
+              0,
+              "Pincel Grueso"
+            ],
+            [
+              0,
+              "Lapiz Grueso"
+            ],
+            [
+              0,
+              "Lapiz color"
+            ],
+            [
+              0,
+              "Crayon"
+            ],
+            [
+              0,
+              "Marcadores"
+            ]
+          ]
+        },
+        {
+          "Tipo": 3,
+          "Titulo": "Personajes",
+          "Descripcion": "Dibujar y armar a los personajes.",
+          "Items": [
+            [
+              0,
+              "Lapiz"
+            ],
+            [
+              0,
+              "Pincel Fino"
+            ],
+            [
+              0,
+              "Goma"
+            ],
+            [
+              0,
+              "Pasta pintura"
+            ],
+            [
+              0,
+              "Pincel Grueso"
+            ],
+            [
+              0,
+              "Lapiz Grueso"
+            ],
+            [
+              0,
+              "Lapiz color"
+            ],
+            [
+              0,
+              "Crayon"
+            ],
+            [
+              0,
+              "Marcadores"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Animal Clay / Clay Zoo",
+      "Descripcion": "Serie animada 3D",
+      "Tickets": [
+        {
+          "Tipo": 0,
+          "Titulo": "Ideas generales",
+          "Descripcion": "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+          "Items": [
+            [
+              1,
+              "Ideas generales"
+            ],
+            [
+              0,
+              "Ideas de capitulos"
+            ]
+          ]
+        },
+        {
+          "Tipo": 12,
+          "Titulo": "Preparar para ALEMBIC",
+          "Descripcion": "Preparar a los personajes para poder ser exportados / importados como archivos Alembic.",
+          "Items": [
+            [
+              0,
+              "Turtle"
+            ],
+            [
+              0,
+              "Elephant"
+            ],
+            [
+              0,
+              "Rabbit"
+            ],
+            [
+              0,
+              "Lion"
+            ],
+            [
+              0,
+              "Zebra"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Tortuga",
+          "Descripcion": "Armar al personaje de la Tortuga y dejarlo listo para animar.",
+          "Items": [
+            [
+              1,
+              "Boceto"
+            ],
+            [
+              1,
+              "Escultura"
+            ],
+            [
+              1,
+              "Retopologia"
+            ],
+            [
+              1,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Conejo",
+          "Descripcion": "Armar al personaje del Conejo y dejarlo listo para animar.",
+          "Items": [
+            [
+              1,
+              "Boceto"
+            ],
+            [
+              1,
+              "Escultura"
+            ],
+            [
+              1,
+              "Retopologia"
+            ],
+            [
+              1,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Elefante",
+          "Descripcion": "Armar al personaje del Elefante y dejarlo listo para animar.",
+          "Items": [
+            [
+              1,
+              "Boceto"
+            ],
+            [
+              1,
+              "Escultura"
+            ],
+            [
+              1,
+              "Retopologia"
+            ],
+            [
+              1,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Gacela",
+          "Descripcion": "Armar al personaje de la Gacela y dejarlo listo para animar.",
+          "Items": [
+            [
+              0,
+              "Boceto"
+            ],
+            [
+              0,
+              "Escultura"
+            ],
+            [
+              0,
+              "Retopologia"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Le\u00f3n",
+          "Descripcion": "Armar al personaje del Le\u00f3n y dejarlo listo para animar.",
+          "Items": [
+            [
+              1,
+              "Boceto"
+            ],
+            [
+              1,
+              "Escultura"
+            ],
+            [
+              1,
+              "Retopologia"
+            ],
+            [
+              1,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Zebra",
+          "Descripcion": "Armar al personaje de la Zebra y dejarlo listo para animar.",
+          "Items": [
+            [
+              1,
+              "Boceto"
+            ],
+            [
+              1,
+              "Escultura"
+            ],
+            [
+              1,
+              "Retopologia"
+            ],
+            [
+              1,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Tigre",
+          "Descripcion": "Armar al personaje del Tigre y dejarlo listo para animar.",
+          "Items": [
+            [
+              1,
+              "Boceto"
+            ],
+            [
+              1,
+              "Escultura"
+            ],
+            [
+              1,
+              "Retopologia"
+            ],
+            [
+              1,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Cocodrilo",
+          "Descripcion": "Armar al personaje del Cocodrilo y dejarlo listo para animar.",
+          "Items": [
+            [
+              0,
+              "Boceto"
+            ],
+            [
+              0,
+              "Escultura"
+            ],
+            [
+              0,
+              "Retopologia"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Rana",
+          "Descripcion": "Armar al personaje de la Rana y dejarlo listo para animar.",
+          "Items": [
+            [
+              1,
+              "Boceto"
+            ],
+            [
+              1,
+              "Escultura"
+            ],
+            [
+              0,
+              "Retopologia"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Mono",
+          "Descripcion": "Armar al personaje del Mono y dejarlo listo para animar.",
+          "Items": [
+            [
+              0,
+              "Boceto"
+            ],
+            [
+              0,
+              "Escultura"
+            ],
+            [
+              0,
+              "Retopologia"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Personaje Koala",
+          "Descripcion": "Armar al personaje del Koala y dejarlo listo para animar.",
+          "Items": [
+            [
+              0,
+              "Boceto"
+            ],
+            [
+              0,
+              "Escultura"
+            ],
+            [
+              0,
+              "Retopologia"
+            ],
+            [
+              0,
+              "UVW"
+            ],
+            [
+              0,
+              "Rigging"
+            ]
+          ]
+        },
+        {
+          "Tipo": 2,
+          "Titulo": "Fondo para HDRi",
+          "Descripcion": "Bocetar varios fondos que despu\u00e9s ser\u00e1n ilustrador para usar como HDRi en las animaciones.",
+          "Items": [
+            [
+              0,
+              "Pradera"
+            ],
+            [
+              0,
+              "Pradera + Ciudad"
+            ],
+            [
+              0,
+              "Pradera + Pueblo"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "YOUTUBE!!!!",
+      "Descripcion": "Ordenar las carpetas y sub carpetas de los canales de Youtube para estar mejor organizado.",
+      "Tickets": [
+        {
+          "Tipo": 11,
+          "Titulo": "Juani Fun Kids Tv",
+          "Descripcion": "Ordenar la carpeta, crear una carpeta \"old\" donde pongo todo el material viejo. Crear las carpetas correspondientes.",
+          "Items": [
+            [
+              1,
+              "00 Canal"
+            ],
+            [
+              0,
+              "01 Pre Produccion"
+            ],
+            [
+              0,
+              "02 Produccion"
+            ],
+            [
+              0,
+              "03 Videos"
+            ],
+            [
+              1,
+              "old"
+            ]
+          ]
+        },
+        {
+          "Tipo": 11,
+          "Titulo": "Vunny Toys Tv",
+          "Descripcion": "Ordenar la carpeta, crear una carpeta \"old\" donde pongo todo el material viejo. Crear las carpetas correspondientes.",
+          "Items": [
+            [
+              1,
+              "00 Canal"
+            ],
+            [
+              0,
+              "01 Pre Produccion"
+            ],
+            [
+              0,
+              "02 Produccion"
+            ],
+            [
+              0,
+              "03 Videos"
+            ],
+            [
+              0,
+              "old"
+            ]
+          ]
+        },
+        {
+          "Tipo": 11,
+          "Titulo": "Colorful Park",
+          "Descripcion": "Crear las carpetas correspondientes.",
+          "Items": [
+            [
+              1,
+              "00 Canal"
+            ],
+            [
+              1,
+              "01 Pre Produccion"
+            ],
+            [
+              1,
+              "02 Produccion"
+            ],
+            [
+              1,
+              "03 Videos"
+            ]
+          ]
+        },
+        {
+          "Tipo": 11,
+          "Titulo": "JFKTv - Contenido temporal",
+          "Descripcion": "Crear contenido temporal para el canal, usando mis personajes nuevos para hacer frascos con colores, cambios de cabezas, encastres en mesa de madera, etc.",
+          "Items": [
+            [
+              0,
+              "Unicornios - Frascos"
+            ],
+            [
+              0,
+              "Unicornios - Cabezas"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Test 3D Alembics",
+      "Descripcion": "Hacer una animaci\u00f3n en Maya, exportar como archivo \"Alembic\" e importar en Blender y en Cinema4D para testear que funciona correctamente y ver que inconvenientes aparecen y como solucionarlo. Crear una lista de pasos a seguir para pasar el Alembic a los otros programas.",
+      "Tickets": [
+        {
+          "Tipo": 6,
+          "Titulo": "Alembic a Cinema4D",
+          "Descripcion": "Crear la animaci\u00f3n y pasarla a Cinema4D",
+          "Items": [
+            [
+              1,
+              "Animaci\u00f3n"
+            ],
+            [
+              1,
+              "Exportar"
+            ],
+            [
+              0,
+              "Abrir animaci\u00f3n"
+            ],
+            [
+              0,
+              "Lista de pasos"
+            ]
+          ]
+        },
+        {
+          "Tipo": 5,
+          "Titulo": "Alembic de C4D a Blender",
+          "Descripcion": "Probar crear una animacion y exportarla en archivo Alembic para importar en Blender",
+          "Items": [
+            [
+              0,
+              "Animaci\u00f3n"
+            ],
+            [
+              0,
+              "Exportar"
+            ],
+            [
+              0,
+              "Importar Animaciones"
+            ],
+            [
+              0,
+              "Documentar seteo"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "One Man Work",
+      "Descripcion": "Dise\u00f1o de marca para las animaciones que creo solo por mi cuenta.",
+      "Tickets": [
+        {
+          "Tipo": 3,
+          "Titulo": "Logo",
+          "Descripcion": "Dise\u00f1ar el logo",
+          "Items": [
+            [
+              0,
+              "Boceto"
+            ],
+            [
+              0,
+              "Limpio"
+            ],
+            [
+              0,
+              "Paleta de color"
+            ],
+            [
+              0,
+              "Variables aplicables"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Titulo": "Astronaut",
+      "Descripcion": "Ni\u00f1o astronauta que viaja por diferentes planetas y se encuentra con variedad de fauna y flora, con los cuales interactua obteniendo diferentes experiencias.",
+      "Tickets": [
+        {
+          "Tipo": 0,
+          "Titulo": "Ideas generales",
+          "Descripcion": "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+          "Items": [
+            [
+              0,
+              "Ideas generales"
+            ],
+            [
+              0,
+              "Ideas de capitulos"
+            ]
+          ]
+        }
+      ]
     }
   ],
-  "Indice": 7
+  "Indice": 5
 }

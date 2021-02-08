@@ -78,6 +78,16 @@ class ManejaArchivos():
         with open(my_file, 'w') as f:
             json.dump(mDatos, f, indent=2)
 
+    # ****************** DUPLICAR UN TRABAJO EN UN PROYECTO Y LO GUARDA EN EL ARCHIVO ******************
+    def copiaTicket(self, mDatos, indProyecto, indTicket):
+        # ---- Cuenta la cantidad de proyectos que hay en la archivo JSON ----
+        # ---- Mete los valores pedidos en un nuevo diccionario temporal ----
+        add_data = mDatos['Proyectos'][indProyecto]['Tickets'][indTicket]
+        # ---- Agrega el diccionario temporal "add_data" a mDatos y luego al JSON ----
+        mDatos['Proyectos'][indProyecto]['Tickets'].append(add_data)
+        with open(my_file, 'w') as f:
+            json.dump(mDatos, f, indent=2)
+
     # ****************************************************************************************************************
     # ****************** CREA UN ITEM DENTRO DE UN TRABAJO EN UN PROYECTO Y LO GUARDA EN EL ARCHIVO ******************
     def checkItem(self, mDatos, indProyecto, indTrabajo, indItem, valor):
