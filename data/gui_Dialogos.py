@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.Qt import *
 
 class Ui_Dialogos(object):
-    def dialogoProyecto(self, ubicacion, vPlaceHolder, txtTitulo, txtDescripcion, txtEncabezado, estilo):
+    def dialogoProyecto(self, ubicacion, vPlaceHolder, txtTitulo, txtDescripcion, txtEncabezado, ubicacionAnterior, maximo, estilo):
         # ---- Ventana de Dialogo ----
         self.dialogP = QDialog(ubicacion)
         self.dialogP.resize(480, 400)
@@ -27,7 +27,7 @@ class Ui_Dialogos(object):
         self.l_dialogEncP.setAlignment(Qt.AlignCenter)
         self.l_dialogEncP.setStyleSheet(estilo['l_dialogEncP'])
         self.vL_DialogP.addWidget(self.l_dialogEncP)
-
+        # ------------------------------------------------------------------------------------------- CAMPO TEXTO TITULO -------------------------
         # ---- Widget base para el campo de texto del "TITULO" ----
         self.w_baseTituloP = QWidget(self.dialogP)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
@@ -56,7 +56,7 @@ class Ui_Dialogos(object):
         else:
             self.le_TituloP.setText(txtTitulo)
         self.vL_w_baseTituloP.addWidget(self.le_TituloP)
-
+        # -------------------------------------------------------------------------------------- CAMPO TEXTO DESCRIPCION -------------------------
         # ---- Widget base para el campo de texto de la "DESCRIPCION" ----
         self.w_baseDescripcionP = QWidget(self.dialogP)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
@@ -82,7 +82,81 @@ class Ui_Dialogos(object):
         else:
             self.te_DescripcionP.setText(txtDescripcion)
         self.vL_w_baseDescripcionP.addWidget(self.te_DescripcionP)
+        # --------------------------------------------------------------------------------------------- SPINBOX POSICION -------------------------
+        # ---- Widget base para el campo de texto de la "POSICION" ----
+        self.w_basePosicion = QWidget(self.dialogP)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy.setHeightForWidth(self.w_basePosicion.sizePolicy().hasHeightForWidth())
+        self.w_basePosicion.setMinimumSize(QSize(0, 0))
+        self.w_basePosicion.setStyleSheet(estilo['w_baseDescripcionP'])
+        self.vL_w_basePosicion = QHBoxLayout(self.w_basePosicion)
+        self.vL_w_basePosicion.setContentsMargins(10, 10, 10, 10)
+        self.vL_w_basePosicion.setSpacing(10)
+        self.vL_DialogP.addWidget(self.w_basePosicion)
 
+        # ---- Label con texto "Posición" ----
+        self.l_Posicion = QLabel("Posición", self.w_basePosicion)
+        self.l_Posicion.setStyleSheet(estilo['l_DescripcionP'])
+        self.vL_w_basePosicion.addWidget(self.l_Posicion, 0, Qt.AlignHCenter)
+
+        # ---- Widget base para el "SPINBOX" ----
+        self.w_spinBox = QWidget(self.w_basePosicion)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy.setHeightForWidth(self.w_spinBox.sizePolicy().hasHeightForWidth())
+        self.w_spinBox.setMinimumSize(QSize(0, 0))
+        self.w_spinBox.setMaximumSize(QSize(75, 50))
+        self.w_spinBox.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.hL_w_spinBox = QHBoxLayout(self.w_spinBox)
+        self.hL_w_spinBox.setContentsMargins(0, 10, 0, 10)
+        self.hL_w_spinBox.setSpacing(10)
+        self.vL_w_basePosicion.addWidget(self.w_spinBox)
+
+        # # ---- Label con texto ----
+        # self.l_Posicion = QLabel("Mover el objeto a la posición: ", self.w_basePosicion)
+        # self.l_Posicion.setStyleSheet(estilo['te_DescripcionP'])
+        # self.hL_w_spinBox.addWidget(self.l_Posicion, 0, Qt.AlignHCenter)
+        #
+        # # ---- mySpinBox ----
+        # self.w_mySpinBox = QWidget(self.w_basePosicion)
+        # sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        # sizePolicy.setHeightForWidth(self.w_spinBox.sizePolicy().hasHeightForWidth())
+        # # self.w_spinBox.setMinimumSize(QSize(5, 2))
+        # # self.w_spinBox.setMaximumSize(QSize(100, 50))
+        # self.w_spinBox.setStyleSheet("background-color:red;")
+        # self.hL_w_mySpinBox = QHBoxLayout(self.w_mySpinBox)
+        # self.hL_w_mySpinBox.setContentsMargins(10, 10, 10, 10)
+        # self.hL_w_mySpinBox.setSpacing(10)
+        # self.hL_w_spinBox.addWidget(self.w_mySpinBox)
+        # # ----
+
+        # ---- SpinBox ----
+        self.spinBox = QSpinBox(self.w_spinBox)
+        # self.spinBox.setGeometry(QRect(100, 10, 41, 21))
+        self.spinBox.setGeometry(QRect(0, 0, 30, 30))
+        self.spinBox.setFrame(False)
+        self.spinBox.setAlignment(Qt.AlignCenter)
+        self.spinBox.setButtonSymbols(QAbstractSpinBox.UpDownArrows)
+        self.spinBox.setAccelerated(True)
+        self.spinBox.setMinimum(0)
+        # self.spinBox.setMaximum(500)
+        self.spinBox.setMaximum(maximo)
+        self.spinBox.setProperty("value", ubicacionAnterior)
+        self.spinBox.setStyleSheet("QSpinBox {\b"
+                                   "background-color: yellow;"
+                                   "font-color:red;"
+                                   "padding-right: 15px;\b"
+                                   "border-image: url(:/images/frame.png) 4;\b"
+                                   "border-width: 3;}\b"
+                                   ""
+                                   "QSpinBox::up-button{\b"
+                                   "subcontrol-origin: border;\b"
+                                   "subcontrol-position: top right;\b"
+                                   "width: 16px;\b"
+                                   "border-image: url(:/images/spinup.png) 1;\b"
+                                   "border-width: 1px;}")
+        # self.spinBox.setObjectName("spinBox")
+        self.hL_w_spinBox.addWidget(self.spinBox, 0, Qt.AlignHCenter)
+        # ----------------------------------------------------------------------------------- BOTONES ACEPTAR / CANCELAR -------------------------
         # ---- Botones ----
         self.bb_dialogP = QDialogButtonBox(self.dialogP)
         self.bb_dialogP.setOrientation(Qt.Horizontal)
@@ -398,6 +472,52 @@ class Ui_Dialogos(object):
         self.lE_Item.setSizePolicy(sizePolicy)
         self.lE_Item.setStyleSheet(estilo['lE_Item'])
         self.lE_Item.setText(itemAnterior)
+
+        self.buttonBox.accepted.connect(dialogI.accept)
+        self.buttonBox.rejected.connect(dialogI.reject)
+        QMetaObject.connectSlotsByName(dialogI)
+
+    def dialogSort(self, dialogI, ubicacionAnterior, maximo, estilo):
+        dialogI.resize(240, 95)
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(dialogI.sizePolicy().hasHeightForWidth())
+        dialogI.setSizePolicy(sizePolicy)
+        dialogI.setMinimumSize(QtCore.QSize(240, 95))
+        dialogI.setMaximumSize(QtCore.QSize(240, 95))
+
+        self.buttonBox = QDialogButtonBox(dialogI)
+        self.buttonBox.setGeometry(QtCore.QRect(20, 50, 199, 23))
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
+        self.buttonBox.setCenterButtons(True)
+        # ---- Cambia el texto escrito en los Botones
+        self.buttonBox.button(QDialogButtonBox.Ok).setText("Re ordenar")
+        self.buttonBox.button(QDialogButtonBox.Cancel).setText("Cancelar")
+        self.buttonBox.setStyleSheet(estilo['buttonBox'])
+
+        self.spinBox = QSpinBox(dialogI)
+        self.spinBox.setGeometry(QRect(100, 10, 41, 21))
+        self.spinBox.setFrame(False)
+        self.spinBox.setAlignment(Qt.AlignCenter)
+        self.spinBox.setButtonSymbols(QAbstractSpinBox.UpDownArrows)
+        self.spinBox.setAccelerated(True)
+        self.spinBox.setMinimum(0)
+        # self.spinBox.setMaximum(500)
+        self.spinBox.setMaximum(maximo)
+        self.spinBox.setProperty("value", ubicacionAnterior)
+        # self.spinBox.setObjectName("spinBox")
+
+        # self.lE_Item = QLineEdit(dialogI)
+        # self.lE_Item.setGeometry(QtCore.QRect(20, 20, 201, 20))
+        # sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        # sizePolicy.setHorizontalStretch(0)
+        # sizePolicy.setVerticalStretch(0)
+        # sizePolicy.setHeightForWidth(self.lE_Item.sizePolicy().hasHeightForWidth())
+        # self.lE_Item.setSizePolicy(sizePolicy)
+        # self.lE_Item.setStyleSheet(estilo['lE_Item'])
+        # self.lE_Item.setText(ubicacionAnterior)
 
         self.buttonBox.accepted.connect(dialogI.accept)
         self.buttonBox.rejected.connect(dialogI.reject)

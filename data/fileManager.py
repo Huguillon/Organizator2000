@@ -22,6 +22,7 @@ class FileManager():
     igualData = True
     archivo = ""
     skins = {}
+    # recientes = []
     def __init__(self):
         self.iniciaSkin()
         self.iniciaData()
@@ -32,20 +33,6 @@ class FileManager():
     # ------------------------------------------------------------------------------------------------------------------
     # ///////////////////////////////////////////////////// ARCHIVOS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------------------------------------------------------------------------
-    # ---- Nuevo Archivo ----
-    def nuevo(self):
-        global temp_file
-        global my_file
-        # ---- Genera el diccionario Base para meter en el JSON ----
-        self.data = {"Proyectos": [], "Indice": 0}
-        my_file = ""
-        self.actual_file = my_file
-        # ----  ----
-        with open(temp_file, 'w') as f:
-            json.dump(self.data, f, indent=tabulacion)
-        self.igualData = False
-        return self.data
-
     # ---- Inicia el programa ----
     def iniciaPrograma(self):
         global temp_file
@@ -63,9 +50,10 @@ class FileManager():
                 my_file = archivoInicial
                 self.actual_file = archivoInicial
                 self.igualData = True
-                filename_ruta = os.path.basename(self.actual_file)
-                filename = os.path.split(filename_ruta)
-                self.archivo = filename[1]
+                # filename_ruta = os.path.basename(self.actual_file)
+                # filename = os.path.split(filename_ruta)
+                # self.archivo = filename[1]
+                # self.archivo = filename_ruta
             else:
                 self.nuevo()
         except:
@@ -73,6 +61,20 @@ class FileManager():
             self.dataInicial['Ultimo'] = ""
             with open(init_file, 'w') as d:
                 json.dump(self.dataInicial, d, indent=tabulacion)
+
+    # ---- Nuevo Archivo ----
+    def nuevo(self):
+        global temp_file
+        global my_file
+        # ---- Genera el diccionario Base para meter en el JSON ----
+        self.data = {"Proyectos": [], "Indice": 0}
+        my_file = ""
+        self.actual_file = my_file
+        # ----  ----
+        with open(temp_file, 'w') as f:
+            json.dump(self.data, f, indent=tabulacion)
+        self.igualData = False
+        return self.data
 
     # ---- Abre Archivo Dialogo ----
     def abrirDialogo(self, ubicacion):
@@ -91,14 +93,37 @@ class FileManager():
                 my_file = filename[0]
                 self.actual_file = my_file
                 self.igualData = True
-
-                # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente
-                # la siguiente vez que se inicia el programa ----
+                # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente la siguiente vez que se inicia el programa ----
                 self.dataInicial['Ultimo'] = my_file
+                # ---- Guarda la ruta del archivo abierto en la lista de "archivos recientes" ----
+                self.dataInicial['Recientes'].append(my_file)
+                self.dataInicial['Recientes'] = list(set(self.dataInicial['Recientes']))
+                # ---- Guarda las modificaciones en el archivo "init_file" ----
                 with open(init_file, 'w') as d:
                     json.dump(self.dataInicial, d, indent=tabulacion)
         except:
             pass
+
+
+    # ------------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------- Carga archivo version original del v1.00 ----
+    def abreReciente(self, elArchivo):
+        global temp_file
+        global my_file
+        with open(elArchivo) as f:
+            self.data = json.load(f)
+        # ---- Copia el  contenido del diccionario "data" en el JSON temporal ----
+        with open(temp_file, 'w') as t:
+            json.dump(self.data, t, indent=tabulacion)
+        #----- Obtiene la ruta del archivo abierto y Guardar la ruta (Path) del archivo original abierto "filename"
+        my_file = elArchivo
+        self.actual_file = my_file
+        self.igualData = True
+        # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente la siguiente vez que se inicia el programa ----
+        self.dataInicial['Ultimo'] = my_file
+        # ---- Guarda las modificaciones en el archivo "init_file" ----
+        with open(init_file, 'w') as d:
+            json.dump(self.dataInicial, d, indent=tabulacion)
 
     # ---- Guarda Archivo ----
     def guardar(self):
@@ -125,9 +150,12 @@ class FileManager():
             self.actual_file = my_file
             self.igualData = True
 
-            # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente
-            # la siguiente vez que se inicia el programa ----
+            # ---- Guarda la ruta del archivo abierto para volver a abrirlo automaticamente la siguiente vez que se inicia el programa ----
             self.dataInicial['Ultimo'] = my_file
+            # ---- Guarda la ruta del archivo abierto en la lista de "archivos recientes" ----
+            self.dataInicial['Recientes'].append(my_file)
+            self.dataInicial['Recientes'] = list(set(self.dataInicial['Recientes']))
+            # ---- Guarda las modificaciones en el archivo "init_file" ----
             with open(init_file, 'w') as d:
                 json.dump(self.dataInicial, d, indent=tabulacion)
         except:
@@ -173,6 +201,11 @@ class FileManager():
             # ---- Copia el  contenido del diccionario "dataTemp" en el JSON ORIGINAL ----
             with open(my_file, 'w') as t:
                 json.dump(self.dataTemp, t, indent=tabulacion)
+
+    # # ---- Guarda Archivos abiertos recientes ----
+    # def guardaRecientes(self):
+    #     listaTemp = self.dataInicial['Recientes']
+
 
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -290,6 +323,58 @@ class FileManager():
 
 
     # ------------------------------------------------------------------------------------------------------------------
+    # ///////////////////////////////////////////////// ORDENA LISTA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    # ------------------------------------------------------------------------------------------------------------------
+    # ---- Re ordena los archivos ----
+    def ordenaLista(self, listaCambia, itemCambiado, ubicacionNueva):
+        # ---- Quita el item pedido de la lista ----
+        elDato = listaCambia.pop(itemCambiado)
+        # Agrega el dato en la lista
+        listaCambia.insert(ubicacionNueva, elDato)
+
+    def ordenaProyecto(self, itemCambiado, ubicacionNueva):
+        global temp_file
+        self.igualData = False
+        # ---- Metodo que ordena la lista
+        self.ordenaLista(self.data['Proyectos'], itemCambiado, ubicacionNueva)
+        # ---- Hace que el PROYECTO seleccionado siga seleccionado si se modifica en la posición de la lista ----
+        if self.data['Indice'] < itemCambiado and self.data['Indice'] >= ubicacionNueva:
+            self.data['Indice'] += 1
+        elif self.data['Indice'] > itemCambiado and self.data['Indice'] <= ubicacionNueva:
+            self.data['Indice'] -= 1
+        elif self.data['Indice'] == itemCambiado:
+            self.data['Indice'] = ubicacionNueva
+        # ---- Guarda las modificaciones en el archivo temporal a la espera de guardar el proyecto ----
+        with open(temp_file, 'w') as f:
+            json.dump(self.data, f, indent=tabulacion)
+
+    def ordenaTrabajo(self, indProyecto, itemCambiado, ubicacionNueva):
+        global temp_file
+        self.igualData = False
+        # ---- Metodo que ordena la lista
+        self.ordenaLista(self.data['Proyectos'][indProyecto][3], itemCambiado, ubicacionNueva)
+        # ---- Hace que el TRABAJO seleccionado siga seleccionado si se modifica en la posición de la lista ----
+        if self.data['Proyectos'][indProyecto][2] < itemCambiado and self.data['Proyectos'][indProyecto][2] >= ubicacionNueva:
+                self.data['Proyectos'][indProyecto][2] += 1
+        elif self.data['Proyectos'][indProyecto][2] > itemCambiado and self.data['Proyectos'][indProyecto][2] <= ubicacionNueva:
+            self.data['Proyectos'][indProyecto][2] -= 1
+        elif self.data['Proyectos'][indProyecto][2] == itemCambiado:
+            self.data['Proyectos'][indProyecto][2] = ubicacionNueva
+        # ---- Guarda las modificaciones en el archivo temporal a la espera de guardar el proyecto ----
+        with open(temp_file, 'w') as f:
+            json.dump(self.data, f, indent=tabulacion)
+
+    def ordenaTicket(self, indProyecto, indTrabajo, itemCambiado, ubicacionNueva):
+        global temp_file
+        self.igualData = False
+        # ---- Metodo que ordena la lista
+        self.ordenaLista(self.data['Proyectos'][indProyecto][3][indTrabajo][2], itemCambiado, ubicacionNueva)
+        # ---- Guarda las modificaciones en el archivo temporal a la espera de guardar el proyecto ----
+        with open(temp_file, 'w') as f:
+            json.dump(self.data, f, indent=tabulacion)
+
+
+    # ------------------------------------------------------------------------------------------------------------------
     # ///////////////////////////////////////////////////// ITEMS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------------------------------------------------------------------------
     # ---- Nuevo Item ----
@@ -317,6 +402,11 @@ class FileManager():
     # ------------------------------------------------------------------------------------------------------------------
     # ////////////////////////////////////////////////// DATA GENERAL \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------------------------------------------------------------------------
+    # ---- Carga los datos iniciales del archivo "init_file" para usar en el seteo inicial del programa ----
+    def iniciaData(self):
+        with open(init_file, encoding="utf-8") as f:
+            self.dataInicial = json.load(f)
+
     # ---- Guarda en el archivo "init_file" la posición X e Y de la ventana ----
     def guardaPos(self, posicionX, posicionY):
         self.dataInicial['PosWindow'][0] = posicionX
@@ -324,10 +414,14 @@ class FileManager():
         with open(init_file, 'w') as f:
             json.dump(self.dataInicial, f, indent=tabulacion)
 
-    # ---- Carga los datos iniciales del archivo "init_file" para usar en el seteo inicial del programa ----
-    def iniciaData(self):
-        with open(init_file, encoding="utf-8") as f:
-            self.dataInicial = json.load(f)
+    # ---- Guarda en el archivo "init_file" la posición X e Y de la ventana ----
+    def guardaMedida(self, ancho, alto):
+        if ancho < 1600:
+            self.dataInicial['MedidaWindow'][0] = ancho
+        if alto < 870:
+            self.dataInicial['MedidaWindow'][1] = alto
+        with open(init_file, 'w') as f:
+            json.dump(self.dataInicial, f, indent=tabulacion)
 
 
     # ---- Carga los datos iniciales del archivo "init_file" para usar en el seteo inicial del programa ----

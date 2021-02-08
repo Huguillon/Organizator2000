@@ -4,10 +4,10 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.Qt import *
 
-import gui_Spacers
-spacers = gui_Spacers.Ui_Spacers()
-import fileManager
-fileManager = fileManager.FileManager()
+# import gui_Spacers
+# spacers = gui_Spacers.Ui_Spacers()
+# import fileManager
+# fileManager = fileManager.FileManager()
 # Combobox
 # listaItems = ["Guión / Ideas", "Storyboard", "Boceto", "Diseño 2D", "Animación 2D", "Diseño 3D", "Animación 3D", "Render 3D", "Edición Video", "Audio", "Render Video", "Otros", ""]
 # pieles = ["Cristal 01", "Cristal 02", "Papel", "Color 01", "Color 02"]
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
         self.vL_Tickets = QVBoxLayout()
         self.vL_Tickets.setContentsMargins(0, 5, 20, 20)
         self.vL_Tickets.setSpacing(10)
-        # ---- Widget conteniendo el area del "Titulo" (contiene titulo del proyecto y boton para editar el proyecto) ----
+        # ---- Widget conteniendo el area del "Titulo" (contiene titulo del proyecto) ----
         self.w_ticketsTitulo = QWidget(self.centralwidget)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -174,17 +174,18 @@ class Ui_MainWindow(object):
 
 
         # ------------------------------------------------- MENU BAR ---------------------------------------------------
-        self.menuBar = QtWidgets.QMenuBar(MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1310, 30))
+        self.menuBar = QMenuBar(MainWindow)
+        self.menuBar.setGeometry(QRect(0, 0, 1310, 30))
         MainWindow.setMenuBar(self.menuBar)
         self.menuBar.setStyleSheet(estilo['menuBar'])
 
         QMetaObject.connectSlotsByName(MainWindow)
 
-    def menuBarFull(self, quit_trigger, respFile, respSkins, respTicket):
+    def menuBarFull(self, quit_trigger, respFile, respTicket):
         self.bar = self.menuBar
         self.file = self.bar.addMenu('Archivo')
-        self.tickets = self.bar.addMenu('Tickets')
+        # self.tickets = self.bar.addMenu('Tickets')
+        self.presets = self.bar.addMenu('Preseteos')
         self.skins = self.bar.addMenu('Pieles')
 
         # ---- Agrega los items a FILE / ARCHIVO
@@ -204,30 +205,73 @@ class Ui_MainWindow(object):
         self.file.addAction(open_action)
         self.file.addAction(save_action)
         self.file.addAction(save_as_action)
+
+        # ---- Agrega el menu "Recientes" ----
+        self.recents = self.file.addMenu('Recientes')
+        self.file.addSeparator()
+        # print(fileManager.dataInicial['Recientes'])
+
+        # ---- Agrega la accion "Salir" ----
         self.file.addAction(quit_action)
-        # ---- Click de los items de FILE / ARCHIVO
+
+        # ---- Click de los items de FILE / ARCHIVO ----
         quit_action.triggered.connect(quit_trigger)
         self.file.triggered.connect(respFile)
 
+        # ---- Agrega los sub menus en el menu "Preseteos" ----
+        self.projects = self.presets.addMenu('Proyectos')
+        self.works = self.presets.addMenu('Trabajos')
+        self.tickets = self.presets.addMenu('Tickets')
+        # ---- Crea las acciones del menu "Preseteos" ----
+        # ---- Proyectos ----
+        seriep_action = QAction('Proyecto Serie', self)
+        # ---- Trabajos ----
+        baseserie_action = QAction('Base de la Serie', self)
+        capitulo_action = QAction('Capitulo', self)
+        # ---- Tickets ----
         ideas_action = QAction('Ideas Generales', self)
+        ideasbocetos_action = QAction('Ideas de la Serie', self)
         guion_action = QAction('Guión', self)
         story_action = QAction('Storyboard', self)
         modelado_action = QAction('Diseño 3D', self)
+        render3d_action = QAction('Render 3D', self)
+        edicion_action = QAction('Edición', self)
+        audio_action = QAction('Audio', self)
+        # ---- Agrega los proyectos al sub menu "Proyectos" ----
+        self.projects.addAction(seriep_action)
+        # ---- Agrega los trabajos al sub menu "Trabajos" ----
+        self.works.addAction(baseserie_action)
+        self.works.addAction(capitulo_action)
+        # ---- Agrega los tickets al sub menu "Tickets" ----
         self.tickets.addAction(ideas_action)
         self.tickets.addAction(guion_action)
         self.tickets.addAction(story_action)
+        self.tickets.addAction(ideasbocetos_action)
         self.tickets.addAction(modelado_action)
-        self.tickets.triggered.connect(respTicket)
+        self.tickets.addAction(render3d_action)
+        self.tickets.addAction(edicion_action)
+        self.tickets.addAction(audio_action)
 
-        # ---- Agrega los items a SKINS / PIELES
-        listaPieles = fileManager.skins
-        for ac in listaPieles:
-            unAction = QAction(ac, self)
-            # unAction.setCheckable(True)
-            # if ac == fileManager.dataInicial['Skin']:
-            #     unAction.setChecked(True)
-            # else:
-            #     unAction.setChecked(False)
-            self.skins.addAction(unAction)
-        # ---- Click de los items de SKINS / PIELES
-        self.skins.triggered.connect(respSkins)
+        self.presets.triggered.connect(respTicket)
+
+        # # ---- Agrega los items a "SKINS / PIELES"
+        # self.skins.clear()
+        # listaPieles = fileManager.skins
+        # for ac in listaPieles:
+        #     unAction = QAction(ac, self)
+        #     unAction.setCheckable(True)
+        #     if ac == fileManager.dataInicial['Skin']:
+        #         unAction.setChecked(True)
+        #     else:
+        #         unAction.setChecked(False)
+        #     self.skins.addAction(unAction)
+        # # ---- Click de los items de "SKINS / PIELES"
+        # self.skins.triggered.connect(respSkins)
+
+        # # ---- Agrega los items a "RECIENTES"
+        # listaRecientes = fileManager.dataInicial['Recientes']
+        # for ac in listaRecientes:
+        #     laAction = QAction(ac, self)
+        #     self.recents.addAction(laAction)
+        # # ---- Click de los items de "RECIENTES"
+        # self.recents.triggered.connect(respRecents)

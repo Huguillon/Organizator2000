@@ -1,10 +1,10 @@
 from PyQt5 import QtCore
 from PyQt5.Qt import *
 
-import gui_Spacers
-spacers = gui_Spacers.Ui_Spacers()
-import fileManager
-fileManager = fileManager.FileManager()
+# import gui_Spacers
+# spacers = gui_Spacers.Ui_Spacers()
+# import fileManager
+# fileManager = fileManager.FileManager()
 
 class Ui_Splash(object):
     def Splash(self, d_Splash, pixmap, clicked_pb_close, estilo):

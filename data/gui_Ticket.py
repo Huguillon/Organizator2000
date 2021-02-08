@@ -3,12 +3,15 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.Qt import *
+import sys
 
-import gui_Spacers
+# ---- Importa los modulos que estan dentro del directorio "data" ----
+sys.path.insert(0, '/data/')
+from data import gui_Spacers
 spacers = gui_Spacers.Ui_Spacers()
 
 class Ui_Ticket(object):
-    def ticket(self, listaItems, tipoSel, titulo, descripcion, click_pb_del, click_pb_edit, click_pb_copy, click_pb_infoT, container, layoutContainer, posFila, posCol, estilo):
+    def ticket(self, listaItems, tipoSel, titulo, descripcion, click_pb_del, click_pb_edit, click_pb_copy, click_pb_sort, click_pb_infoT, numIndex, container, layoutContainer, posFila, posCol, estilo):
         # ---- WIDGET contenedor y color base de los tickets ----
         self.w_Ticket = QWidget(container)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
@@ -93,6 +96,14 @@ class Ui_Ticket(object):
         self.pb_copyT.setStyleSheet(estilo['pb_copyT'])
         self.pb_copyT.clicked.connect(click_pb_copy)
         self.vL_w_Botones.addWidget(self.pb_copyT)
+        # ------------------------------------------------------------------------------------------- BOTON MOVER TICKET -----------------
+        self.pb_sortT = QPushButton(numIndex, self.w_Botones)
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy.setHeightForWidth(self.pb_sortT.sizePolicy().hasHeightForWidth())
+        self.pb_sortT.setMinimumSize(QSize(30, 30))
+        self.pb_sortT.setStyleSheet(estilo['pb_sortT'])
+        self.pb_sortT.clicked.connect(click_pb_sort)
+        self.vL_w_Botones.addWidget(self.pb_sortT)
         # -------------------------------------------------------------------------------------------- BOTON INFO TICKET -----------------
         self.pb_infoT = QPushButton(self.w_Botones)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -111,34 +122,6 @@ class Ui_Ticket(object):
             self.w_Ticket.setStyleSheet(estilo['w_Ticket_0'])
             self.l_Titulo.setStyleSheet(estilo['l_Titulo_0'])
             self.l_Tipo.setStyleSheet(estilo['l_Tipo_0'])
-            # self.w_Ticket.setStyleSheet("background-color: rgb(195, 156, 0); border-radius:24px; border:0px solid rgb(195, 156, 0);")
-            # self.l_Titulo.setStyleSheet("color:rgb(255, 255, 255); font: italic bold 19pt Calibri;")
-            # self.l_Tipo.setStyleSheet("color:rgba(255, 255, 255, 63); font: bold italic 14pt Calibri;")
-            # # -------- COLOR B
-            # self.w_Ticket.setStyleSheet("background-color: rgb(255, 241, 184); border-radius:24px; border:0px solid rgb(255, 241, 184);")
-            # self.l_Titulo.setStyleSheet("color:rgb(195, 156, 0); font: italic bold 19pt Calibri;")
-            # self.l_Tipo.setStyleSheet("color:rgba(0, 0, 0, 25); font: bold italic 14pt Calibri;")
-            # -------- CRISTAL A
-            # self.w_Ticket.setStyleSheet("background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.5, stop:0 rgb(225, 205, 126), stop:1 rgb(195, 156, 0)); border-radius:24px; border:4px solid rgb(195, 156, 0);")
-            # # self.w_Ticket.setStyleSheet("QWidget{background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.5, stop:0 rgb(225, 205, 126), stop:1 rgb(195, 156, 0)); border-radius:24px; border:4px solid rgb(195, 156, 0)}; QWidget:ToolTip{background-color:beige; color:darkblue; border:2px solid darkkhaki; padding:5px; border-radius:5px; font:12pt Calibri; opacity:100;}")
-            # self.l_Titulo.setStyleSheet("color:rgb(0, 0, 0); font: italic bold 19pt Calibri;")
-            # self.l_Tipo.setStyleSheet("color:rgba(255, 255, 255, 50); font: bold italic 14pt Calibri; margin-bottom:6px;")
-            # # -------- CRISTAL B
-            # self.w_Ticket.setStyleSheet("background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.5, stop:0 rgb(195, 187, 157), stop:1 rgb(136, 120, 59)); border-radius:24px; border:4px solid rgb(136, 120, 59);")
-            # self.l_Titulo.setStyleSheet("color:rgb(0, 0, 0); font: italic bold 19pt Calibri;")
-            # self.l_Tipo.setStyleSheet("color:rgba(255, 255, 255, 63); font: bold italic 14pt Calibri;")
-            # # -------- CRISTAL C
-            # self.w_Ticket.setStyleSheet("background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.5, stop:0 rgb(120, 109, 63), stop:1 rgb(76, 61, 0)); border-radius:24px; border:4px solid rgb(76, 61, 0);")
-            # self.l_Titulo.setStyleSheet("color:rgb(255, 255, 255); font: italic bold 19pt Calibri;")
-            # self.l_Tipo.setStyleSheet("color:rgba(255, 255, 255, 63); font: bold italic 14pt Calibri;")
-            # # -------- CRISTAL D
-            # self.w_Ticket.setStyleSheet("background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.5, stop:0 rgb(195, 156, 0), stop:1 rgb(76, 61, 0)); border-radius:24px; border:4px solid rgb(76, 61, 0);")
-            # self.l_Titulo.setStyleSheet("color:rgb(255, 255, 255); font: italic bold 19pt Calibri;")
-            # self.l_Tipo.setStyleSheet("color:rgba(255, 255, 255, 63); font: bold italic 14pt Calibri;")
-            # # -------- PAPEL
-            # self.w_Ticket.setStyleSheet("background-color: rgb(242, 242, 242); border-radius:24px; border:4px solid rgb(195, 156, 0);")
-            # self.l_Titulo.setStyleSheet("color:rgb(195, 156, 0); font: italic bold 19pt Calibri;")
-            # self.l_Tipo.setStyleSheet("color:rgba(195, 156, 0, 127); font: bold italic 14pt Calibri;")
         elif tipoSel == 1:
             self.w_Ticket.setStyleSheet(estilo['w_Ticket_1'])
             self.l_Titulo.setStyleSheet(estilo['l_Titulo_1'])

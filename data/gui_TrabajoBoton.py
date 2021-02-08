@@ -4,9 +4,9 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.Qt import *
 
-# Combobox
-listaItems = ["Guión / Ideas", "Storyboard", "Boceto", "Diseño 2D", "Animación 2D", "Diseño 3D", "Animación 3D", "Render 3D", "Edición Video", "Audio", "Render Video", "Otros", ""]
-pieles = ["Cristal 01", "Cristal 02", "Papel", "Color 01", "Color 02"]
+# # Combobox
+# listaItems = ["Guión / Ideas", "Storyboard", "Boceto", "Diseño 2D", "Animación 2D", "Diseño 3D", "Animación 3D", "Render 3D", "Edición Video", "Audio", "Render Video", "Otros", ""]
+# pieles = ["Cristal 01", "Cristal 02", "Papel", "Color 01", "Color 02"]
 
 class Ui_TrabajoBoton(object):
     def botonTrabajo(self, texto, click_pb_show, click_pb_edit, click_pb_del, container, layoutContainer, estilo):
@@ -21,7 +21,6 @@ class Ui_TrabajoBoton(object):
         self.hL_trabajo = QHBoxLayout(self.w_trabajo)
         self.hL_trabajo.setContentsMargins(0, 0, 0, 0)
         self.hL_trabajo.setSpacing(0)
-
         # ----------------------------------------------------------------------------------------- BOTON DELETE TRABAJO -----------------
         self.pb_trabajoDel = QPushButton(self.w_trabajo)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)

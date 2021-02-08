@@ -3,27 +3,12 @@
         [
             "Working Belts",
             "Serie animada 3D de chicos con cinturones m\u00e1gicos que les permite convertirse en Bomberos, le\u00f1adores, m\u00e9dicos, etc. seg\u00fan la situaci\u00f3n y el cap\u00edtulo lo requiera.",
-            1,
+            0,
             [
                 [
                     "Base de la serie",
-                    "Serie animada 3D de chicos con cinturones m\u00e1gicos que les permite convertirse en Bomberos, le\u00f1adores, m\u00e9dicos, etc. seg\u00fan la situaci\u00f3n y el cap\u00edtulo lo requiera.",
+                    "",
                     [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    0,
-                                    "Ideas Generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de Capitulos"
-                                ]
-                            ]
-                        ],
                         [
                             5,
                             "Cabellos Personajes Ni\u00f1os",
@@ -35,7 +20,7 @@
                                 ],
                                 [
                                     0,
-                                    "Ni\u00f1a Blanca"
+                                    "Ni\u00f1a Blanco"
                                 ],
                                 [
                                     0,
@@ -181,51 +166,22 @@
                         ],
                         [
                             2,
-                            "Personajes adultos genericos",
+                            "Personajes adultos",
                             "Crear a los personajes adultos extras (vecinos, maestros/as, policias, etc.)",
-                            [
-                                [
-                                    1,
-                                    "Gordo"
-                                ],
-                                [
-                                    1,
-                                    "Gorda"
-                                ],
-                                [
-                                    1,
-                                    "Musculoso"
-                                ],
-                                [
-                                    1,
-                                    "Atletica"
-                                ],
-                                [
-                                    1,
-                                    "Anciano"
-                                ],
-                                [
-                                    1,
-                                    "Anciana"
-                                ]
-                            ]
+                            []
                         ],
                         [
-                            5,
-                            "Arreglar Globos oculares",
-                            "Modificar los globos oculares para que tengan mejor dise\u00f1o.",
+                            0,
+                            "Ideas generales",
+                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
                             [
                                 [
-                                    1,
-                                    "Ni\u00f1os"
+                                    0,
+                                    "Ideas Generales"
                                 ],
                                 [
                                     1,
-                                    "Padres"
-                                ],
-                                [
-                                    1,
-                                    "Madres"
+                                    "Ideas de Capitulos"
                                 ]
                             ]
                         ]
@@ -272,127 +228,6 @@
                                     "Dormitorio padres"
                                 ]
                             ]
-                        ],
-                        [
-                            0,
-                            "Gui\u00f3n",
-                            "Crear el gui\u00f3n.",
-                            [
-                                [
-                                    1,
-                                    "Idea general"
-                                ],
-                                [
-                                    1,
-                                    "Refinamiento"
-                                ]
-                            ]
-                        ],
-                        [
-                            1,
-                            "Storyboard / Animatic",
-                            "Crear el Storyboard y el Animatic",
-                            [
-                                [
-                                    1,
-                                    "Storyboard"
-                                ],
-                                [
-                                    1,
-                                    "Animatic"
-                                ]
-                            ]
-                        ],
-                        [
-                            5,
-                            "Titulo temporal",
-                            "Descripci\u00f3n temporal",
-                            [
-                                [
-                                    1,
-                                    "Modelado"
-                                ],
-                                [
-                                    1,
-                                    "UVW"
-                                ],
-                                [
-                                    1,
-                                    "Texturas"
-                                ],
-                                [
-                                    1,
-                                    "Rigging"
-                                ]
-                            ]
-                        ],
-                        [
-                            0,
-                            "Gui\u00f3n",
-                            "Crear el gui\u00f3n.",
-                            [
-                                [
-                                    1,
-                                    "Idea general"
-                                ],
-                                [
-                                    1,
-                                    "Refinamiento"
-                                ]
-                            ]
-                        ],
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    1,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de Capitulos"
-                                ]
-                            ]
-                        ],
-                        [
-                            1,
-                            "Storyboard / Animatic",
-                            "Crear el Storyboard y el Animatic",
-                            [
-                                [
-                                    1,
-                                    "Storyboard"
-                                ],
-                                [
-                                    1,
-                                    "Animatic"
-                                ]
-                            ]
-                        ],
-                        [
-                            5,
-                            "Titulo temporal",
-                            "Descripci\u00f3n temporal",
-                            [
-                                [
-                                    1,
-                                    "Modelado"
-                                ],
-                                [
-                                    1,
-                                    "UVW"
-                                ],
-                                [
-                                    1,
-                                    "Texturas"
-                                ],
-                                [
-                                    1,
-                                    "Rigging"
-                                ]
-                            ]
                         ]
                     ]
                 ],
@@ -405,118 +240,13 @@
         ],
         [
             "Animal Clay",
-            "Serie animada 3D",
+            "",
             0,
             [
                 [
                     "Base de la serie",
-                    "Serie animada 3D",
-                    [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    1,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de Capitulos"
-                                ]
-                            ]
-                        ],
-                        [
-                            5,
-                            "Personaje Koala",
-                            "Armar al personaje del Koala y dejarlo listo para animar.",
-                            [
-                                [
-                                    0,
-                                    "Boceto"
-                                ],
-                                [
-                                    1,
-                                    "Escultura"
-                                ],
-                                [
-                                    1,
-                                    "Retopologia"
-                                ],
-                                [
-                                    1,
-                                    "UVW"
-                                ],
-                                [
-                                    1,
-                                    "Rigging"
-                                ]
-                            ]
-                        ],
-                        [
-                            5,
-                            "Personaje Oveja",
-                            "Armar al personaje de la Oveja y dejarlo listo para animar.",
-                            [
-                                [
-                                    0,
-                                    "Boceto"
-                                ],
-                                [
-                                    1,
-                                    "Escultura"
-                                ],
-                                [
-                                    1,
-                                    "Retopologia"
-                                ],
-                                [
-                                    1,
-                                    "UVW"
-                                ],
-                                [
-                                    1,
-                                    "Rigging"
-                                ]
-                            ]
-                        ],
-                        [
-                            2,
-                            "Fondos para HDRi",
-                            "Bocetar varios fondos que despu\u00e9s ser\u00e1n ilustrador para usar como HDRi en las animaciones.",
-                            [
-                                [
-                                    1,
-                                    "Pradera"
-                                ],
-                                [
-                                    1,
-                                    "Pradera + Ciudad"
-                                ],
-                                [
-                                    1,
-                                    "Pradera + Pueblo"
-                                ],
-                                [
-                                    1,
-                                    "Desierto"
-                                ],
-                                [
-                                    1,
-                                    "Playa"
-                                ],
-                                [
-                                    1,
-                                    "Monta\u00f1a"
-                                ],
-                                [
-                                    1,
-                                    "Selva"
-                                ]
-                            ]
-                        ]
-                    ]
+                    "",
+                    []
                 ],
                 [
                     "The mail arrives",
@@ -525,7 +255,7 @@
                         [
                             5,
                             "Camion Cartero",
-                            "Modelar y Riggear el autobus",
+                            "",
                             [
                                 [
                                     1,
@@ -556,368 +286,6 @@
                     "Tree of toys",
                     "",
                     []
-                ]
-            ]
-        ],
-        [
-            "Zebras",
-            "Serie animada de Cebras, cada uno con su respectivo color, que ense\u00f1an colores, formas, etc.",
-            0,
-            [
-                [
-                    "Base de la serie",
-                    "Serie animada de Cebras, cada uno con su respectivo color, que ense\u00f1an colores, formas, etc.",
-                    [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    1,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de capitulos"
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-        ],
-        [
-            "DinUs",
-            "Serie animada 3D de Dinosaurios estilo \"Cartoon\" en el cual se ense\u00f1an colores, formas y m\u00e1s.",
-            0,
-            [
-                [
-                    "Base de la serie",
-                    "Serie animada 3D de Dinosaurios estilo \"Cartoon\" en el cual se ense\u00f1an colores, formas y m\u00e1s.",
-                    [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    1,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de capitulos"
-                                ]
-                            ]
-                        ],
-                        [
-                            2,
-                            "Bocetar Dinosaurios",
-                            "Bocetar a los Personajes.",
-                            [
-                                [
-                                    0,
-                                    "Tiranosaurio Rex"
-                                ],
-                                [
-                                    0,
-                                    "Triceratop"
-                                ],
-                                [
-                                    1,
-                                    "Velociraptor"
-                                ],
-                                [
-                                    0,
-                                    "Diplodocus"
-                                ],
-                                [
-                                    1,
-                                    "Espinosaurio"
-                                ],
-                                [
-                                    1,
-                                    "Anquilosaurio"
-                                ],
-                                [
-                                    1,
-                                    "Parasaurolofus"
-                                ],
-                                [
-                                    1,
-                                    "Pterodactilo"
-                                ]
-                            ]
-                        ],
-                        [
-                            5,
-                            "Crear Tiranosaurio Rex",
-                            "Armar al Personaje del \"Tiranosaurio Rex\" y dejarlo listo para animar",
-                            [
-                                [
-                                    1,
-                                    "Modelado"
-                                ],
-                                [
-                                    1,
-                                    "UVW"
-                                ],
-                                [
-                                    1,
-                                    "Textura"
-                                ],
-                                [
-                                    1,
-                                    "Rigging"
-                                ]
-                            ]
-                        ],
-                        [
-                            5,
-                            "Crear Triceraptop",
-                            "Armar al Personaje del \"Triceraptop\" y dejarlo listo para animar",
-                            [
-                                [
-                                    1,
-                                    "Modelado"
-                                ],
-                                [
-                                    1,
-                                    "UVW"
-                                ],
-                                [
-                                    1,
-                                    "Textura"
-                                ],
-                                [
-                                    1,
-                                    "Rigging"
-                                ]
-                            ]
-                        ],
-                        [
-                            5,
-                            "Crear Diplodocus",
-                            "Armar al Personaje del \"Diplodocus\" y dejarlo listo para animar",
-                            [
-                                [
-                                    1,
-                                    "Modelado"
-                                ],
-                                [
-                                    1,
-                                    "UVW"
-                                ],
-                                [
-                                    1,
-                                    "Textura"
-                                ],
-                                [
-                                    1,
-                                    "Rigging"
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-        ],
-        [
-            "Astronauta",
-            "Ni\u00f1a astronauta que viaja por diferentes planetas y se encuentra con variedad de fauna y flora, con los cuales interactua obteniendo diferentes experiencias.",
-            0,
-            [
-                [
-                    "Base de la serie",
-                    "Ni\u00f1a astronauta que viaja por diferentes planetas y se encuentra con variedad de fauna y flora, con los cuales interactua obteniendo diferentes experiencias.",
-                    [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    1,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de capitulos"
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-        ],
-        [
-            "Robot Racers",
-            "Chicos que fabrican sus propios aviones robots y compiten entre si, pero tambien combates a enemigos robots.",
-            0,
-            [
-                [
-                    "Base de la serie",
-                    "Chicos que fabrican sus propios aviones robots y compiten entre si, pero tambien combates a enemigos robots.",
-                    [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    1,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de capitulos"
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-        ],
-        [
-            "ColorIns",
-            "Serie animada de herramientas de pintura que crean objetos (ilustrandolos y pintandolos) seg\u00fan su necesidad.",
-            0,
-            [
-                [
-                    "Base de la serie",
-                    "Serie animada de herramientas de pintura que crean objetos (ilustrandolos y pintandolos) seg\u00fan su necesidad.",
-                    [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    0,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de capitulos"
-                                ]
-                            ]
-                        ],
-                        [
-                            2,
-                            "Personajes",
-                            "Bocetar a los personajes.",
-                            [
-                                [
-                                    1,
-                                    "Lapiz"
-                                ],
-                                [
-                                    1,
-                                    "Pincel Fino"
-                                ],
-                                [
-                                    1,
-                                    "Goma"
-                                ],
-                                [
-                                    1,
-                                    "Pasta Pintura"
-                                ],
-                                [
-                                    1,
-                                    "Pincel Grueso"
-                                ],
-                                [
-                                    1,
-                                    "Lapiz Grueso"
-                                ],
-                                [
-                                    1,
-                                    "Lapiz Color"
-                                ],
-                                [
-                                    1,
-                                    "Crayon"
-                                ],
-                                [
-                                    1,
-                                    "Marcador"
-                                ]
-                            ]
-                        ],
-                        [
-                            3,
-                            "Personajes",
-                            "Dibujar y armar a los personajes.",
-                            [
-                                [
-                                    1,
-                                    "Lapiz"
-                                ],
-                                [
-                                    1,
-                                    "Pincel Fino"
-                                ],
-                                [
-                                    1,
-                                    "Goma"
-                                ],
-                                [
-                                    1,
-                                    "Pasta Pintura"
-                                ],
-                                [
-                                    1,
-                                    "Pincel Grueso"
-                                ],
-                                [
-                                    1,
-                                    "Lapiz Grueso"
-                                ],
-                                [
-                                    1,
-                                    "Lapiz Color"
-                                ],
-                                [
-                                    1,
-                                    "Crayon"
-                                ],
-                                [
-                                    1,
-                                    "Marcador"
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-        ],
-        [
-            "Constructores",
-            "Serie animada 3D de personajes que construyen con bloques Lego lo que sea necesario para la ciudad en la que viven.",
-            0,
-            [
-                [
-                    "Base de la serie",
-                    "Serie animada 3D de personajes que construyen con bloques Lego lo que sea necesario para la ciudad en la que viven.",
-                    [
-                        [
-                            0,
-                            "Ideas generales",
-                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
-                            [
-                                [
-                                    1,
-                                    "Ideas generales"
-                                ],
-                                [
-                                    1,
-                                    "Ideas de capitulos"
-                                ]
-                            ]
-                        ]
-                    ]
                 ]
             ]
         ]

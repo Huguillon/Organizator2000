@@ -3,8 +3,11 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.Qt import *
+import sys
 
-import gui_Spacers
+# ---- Importa los modulos que estan dentro del directorio "data" ----
+sys.path.insert(0, '/data/')
+from data import gui_Spacers
 guiSpacers = gui_Spacers.Ui_Spacers()
 # # Combobox
 # listaItems = ["Guión / Ideas", "Storyboard", "Boceto", "Diseño 2D", "Animación 2D", "Diseño 3D", "Animación 3D", "Render 3D", "Edición Video", "Audio", "Render Video", "Otros", ""]
@@ -12,7 +15,7 @@ guiSpacers = gui_Spacers.Ui_Spacers()
 
 
 class Ui_ProyectoBoton(object):
-    def botonProyecto(self, texto, toolTip, click_pb_show, click_pb_edit, click_pb_del, container, layoutContainer, estilo):
+    def botonProyecto(self, texto, numIndice, toolTip, click_pb_show, click_pb_edit, click_pb_del, container, layoutContainer, estilo):
         # --------------------------------------------- Widget base
         self.w_baseP = QWidget(container)
         self.w_baseP.setStyleSheet(estilo['w_baseP'])
@@ -25,8 +28,7 @@ class Ui_ProyectoBoton(object):
         self.hL_baseP = QHBoxLayout(self.w_baseP)
         self.hL_baseP.setContentsMargins(0, 0, 0, 0)
         self.hL_baseP.setSpacing(0)
-
-        # ------------------------------------------------------------------------------------- BASE BOTON EDIT PROYECTO -----------------
+        # -------------------------------------------------------------------------- BASE BOTONES EDIT / DELETE PROYECTO -----------------
         # --------------------------------------------- Widget botones base
         self.w_botonesPBase = QWidget(self.w_baseP)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
@@ -39,7 +41,6 @@ class Ui_ProyectoBoton(object):
         self.vL_botonesPBase.setContentsMargins(0, 0, 0, 0)
         self.vL_botonesPBase.setSpacing(0)
         self.hL_baseP.addWidget(self.w_botonesPBase, 0, Qt.AlignTop)
-
         # ------------------------------------------------------------------------------------------ BOTON EDIT PROYECTO -----------------
         self.pb_edit = QPushButton(self.w_baseP)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -52,11 +53,22 @@ class Ui_ProyectoBoton(object):
         sizePolicy.setHeightForWidth(self.pb_del.sizePolicy().hasHeightForWidth())
         self.pb_del.setGeometry(QRect(0, 0, 37, 37))
         self.pb_del.setStyleSheet(estilo['pb_del_P'])
+        # ---- Acciones de los botones EDIT y DELETE ----
         self.pb_edit.clicked.connect(click_pb_edit)
         self.pb_del.clicked.connect(click_pb_del)
+        # ---- Mete los botones EDIT y DELETE en el layout ----
         self.vL_botonesPBase.addWidget(self.pb_edit)
         self.vL_botonesPBase.addWidget(self.pb_del)
-
+        # # ---------------------------------------------------------------------------------------- BOTON ORDENA PROYECTO -----------------
+        # self.pb_ordenaP = QPushButton(numIndice, self.w_baseP)
+        # sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        # sizePolicy.setHeightForWidth(self.pb_ordenaP.sizePolicy().hasHeightForWidth())
+        # self.pb_ordenaP.setMaximumSize(QSize(30, 75))
+        # self.pb_ordenaP.setStyleSheet(estilo['pb_show_P'])
+        # # ---- Acciones del boton SHOW PROYECTO ----
+        # self.pb_ordenaP.clicked.connect(click_pb_sort)
+        # # ---- Mete el boton SHOW PROYECTO en el layout ----
+        # self.hL_baseP.addWidget(self.pb_ordenaP)
         # ---------------------------------------------------------------------------------------- LABEL NOMBRE PROYECTO -----------------
         self.l_proyecto = QLabel(texto, self.w_baseP)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
@@ -67,21 +79,22 @@ class Ui_ProyectoBoton(object):
         self.l_proyecto.setToolTip(toolTip)
         self.l_proyecto.setToolTipDuration(50000)
         self.l_proyecto.setStyleSheet(estilo['l_proyecto'])
-
         # ------------------------------------------------------------------------------------------ BOTON SHOW PROYECTO -----------------
         self.pb_show = QPushButton(self.w_baseP)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy.setHeightForWidth(self.pb_show.sizePolicy().hasHeightForWidth())
         self.pb_show.setMaximumSize(QSize(50, 75))
         self.pb_show.setStyleSheet(estilo['pb_show_P'])
+        # ---- Acciones del boton SHOW PROYECTO ----
+        self.pb_show.clicked.connect(click_pb_show)
+        # ---- Mete el label NOMBRE y el boton SHOW PROYECTO en el layout ----
         self.hL_baseP.addWidget(self.l_proyecto)
         self.hL_baseP.addWidget(self.pb_show)
-        self.pb_show.clicked.connect(click_pb_show)
 
         # ---- Agrega el Contenedor (w_base) al Layout pasado por parametro (layoutContainer) --------------------------
         layoutContainer.addWidget(self.w_baseP)
 
-    def botonProyActivo(self, texto, toolTip, click_pb_edit, click_pb_del, container, layoutContainer, estilo):
+    def botonProyActivo(self, texto, numIndice, toolTip, click_pb_edit, click_pb_del, container, layoutContainer, estilo):
         # --------------------------------------------- Widget w_baseActivoP
         self.w_baseActivoP = QWidget(container)
         self.w_baseActivoP.setStyleSheet(estilo['w_baseActivoP'])
@@ -90,7 +103,7 @@ class Ui_ProyectoBoton(object):
         sizePolicy.setHeightForWidth(self.w_baseActivoP.sizePolicy().hasHeightForWidth())
         self.w_baseActivoP.setSizePolicy(sizePolicy)
         self.w_baseActivoP.setMinimumSize(QSize(265, 75))
-        # --------------------------------------------- Layout del w_base
+        # --------------------------------------------- Layout del w_baseActivoP
         self.hL_baseActivoP = QHBoxLayout(self.w_baseActivoP)
         self.hL_baseActivoP.setContentsMargins(0, 0, 0, 0)
         self.hL_baseActivoP.setSpacing(0)
@@ -115,7 +128,6 @@ class Ui_ProyectoBoton(object):
         self.vL_trabajoActBase.setContentsMargins(0, 0, 0, 0)
         self.vL_trabajoActBase.setSpacing(0)
         self.hL_baseActivoP.addWidget(self.w_trabajoActBase)
-
         # ----------------------------------------------------------------------------------- BOTON EDIT PROYECTO ACTIVO -----------------
         self.pb_editAct = QPushButton(self.w_botonesActBase)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -132,7 +144,16 @@ class Ui_ProyectoBoton(object):
         self.pb_delAct.clicked.connect(click_pb_del)
         self.vL_botonesActBase.addWidget(self.pb_editAct)
         self.vL_botonesActBase.addWidget(self.pb_delAct)
-
+        # # --------------------------------------------------------------------------------- BOTON ORDENA PROYECTO ACTIVO -----------------
+        # self.pb_ordenaPAct = QPushButton(numIndice, self.w_trabajoActBase)
+        # sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        # sizePolicy.setHeightForWidth(self.pb_ordenaPAct.sizePolicy().hasHeightForWidth())
+        # self.pb_ordenaPAct.setMaximumSize(QSize(30, 75))
+        # self.pb_ordenaPAct.setStyleSheet(estilo['pb_show_P'])
+        # # ---- Acciones del boton SHOW PROYECTO ----
+        # self.pb_ordenaPAct.clicked.connect(click_pb_sort)
+        # # ---- Mete el boton SHOW PROYECTO en el layout ----
+        # self.vL_trabajoActBase.addWidget(self.pb_ordenaPAct)
         # ---------------------------------------------------------------------------------------- LABEL PROYECTO ACTIVO -----------------
         self.l_proyectoActivo = QLabel(texto, self.w_trabajoActBase)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)

@@ -8,9 +8,16 @@ import json
 from pathlib import Path, PureWindowsPath
 from filecmp import dircmp, cmp
 
-import fileManager
+# ---- Importa los modulos que estan dentro del directorio "data" ----
+sys.path.insert(0, '/data/')
+from data import fileManager
 fileManager = fileManager.FileManager()
-import gui_MainWindow, gui_MenuBotones, gui_Reloj, gui_ProyectoBoton, gui_TrabajoBoton, gui_Spacers, gui_Ticket, gui_Dialogos, gui_Splash
+from data import gui_MainWindow, gui_MenuBotones, gui_Reloj, gui_ProyectoBoton, gui_TrabajoBoton, gui_Spacers, gui_Ticket, gui_Dialogos, gui_Splash
+
+# ---- Modalidad primera para importar modulos ----
+# import fileManager
+# fileManager = fileManager.FileManager()
+# import gui_MainWindow, gui_MenuBotones, gui_Reloj, gui_ProyectoBoton, gui_TrabajoBoton, gui_Spacers, gui_Ticket, gui_Dialogos, gui_Splash
 
 btnMenu = gui_MenuBotones.Ui_MenuBotones()
 reloj = gui_Reloj.Ui_Reloj()
@@ -20,6 +27,8 @@ baseTicket = gui_Ticket.Ui_Ticket()
 dialogos = gui_Dialogos.Ui_Dialogos()
 spacers = gui_Spacers.Ui_Spacers()
 splash = gui_Splash.Ui_Splash()
+pantallazoX = int(0)
+pantallazoY = int(0)
 
 indiceP = int(0)
 indiceT = int(0)
@@ -35,8 +44,8 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         super(Organizator, self).__init__(parent)
 
         self.mainWindow(self, skin)
-        # ---- Setea el titulo y el icono de la ventana
-        self.textoFijo = "Organizator 2000 (v2.0.3) - "
+        # ---- Setea el titulo y el icono de la ventana ----
+        self.textoFijo = "Organizator 2000 (v2.1.3) - "
         if fileManager.igualData:
             self.setWindowTitle(self.textoFijo + fileManager.actual_file)
             self.setWindowIcon(QIcon('images/icon256.png'))
@@ -44,18 +53,22 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
             self.setWindowTitle(self.textoFijo + fileManager.actual_file + " (*)")
             self.setWindowIcon(QIcon('images/icon256_unsave.png'))
 
-        # ---- Maximiza la ventana a pantalla completa
-        posicionInicial = (fileManager.dataInicial['PosWindow'][0], fileManager.dataInicial['PosWindow'][1])
-        self.move(posicionInicial[0], posicionInicial[1])
+        # ---- Posiciona la ventana en la posición del escritorio guardado y la maximiza a pantalla completa ----
+        # posicionInicial = (fileManager.dataInicial['PosWindow'][0], fileManager.dataInicial['PosWindow'][1])
+        # self.move(posicionInicial[0], posicionInicial[1])
+        self.move(fileManager.dataInicial['PosWindow'][0], fileManager.dataInicial['PosWindow'][1])
+        self.resize(fileManager.dataInicial['MedidaWindow'][0], fileManager.dataInicial['MedidaWindow'][1])
         self.showMaximized()
+        # self.center()
 
-        # ---- Agrega la barra de Menu
-        self.menuBarFull(self.quit_trigger, self.respond, self.respSkins, self.respEdit)
+        # ---- Agrega la barra de Menu ----
+        # ---- Al iniciarla en el metodo "iniciaPizarra()" y no aca hace que el "menuBar" aparezca después, pero no afecta a la funcionalidad ----
+        # self.menuBarFull(self.quit_trigger, self.respond, self.respEdit)
 
         # ---- Agrega el reloj ----
         reloj.reloj(self.w_Reloj, self.hL_Reloj, skin)
 
-        # ---- Inicia el reloj y fecha
+        # ---- Inicia el reloj y fecha ----
         self.clockGet()
 
         # ---- Agrega los botones de Menu (Nuevo / Abrir / Guardar / Guardar Como...) ----
@@ -68,10 +81,25 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         self.iniciaPizarra()
 
 
+
+
+    # def center(self):
+    #     frameGm = self.frameGeometry()
+    #     screen = QApplication.desktop().screenNumber(QApplication.desktop().cursor().pos())
+    #     centerPoint = QApplication.desktop().screenGeometry(screen).center()
+    #     frameGm.moveCenter(centerPoint)
+    #     self.move(frameGm.topLeft())
     # ------------------------------------------------------------------------------------------------------------------
     # /////////////////////////////////////////////// INICIA LA PIZARRA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------------------------------------------------------------------------
     def iniciaPizarra(self):
+        # ---- Agrega la barra de Menu ----
+        # ---- Al iniciarla aca y no en __init__ hace que el "menuBar" aparezca después, pero no afecta a la funcionalidad ----
+        self.menuBarFull(self.quit_trigger, self.respond, self.respEdit)
+        # ---- Agrega los items del Menu "Recientes" ----
+        self.recentsFiles()
+        # ---- Agrega las lista de skins al menu "Pieles" ----
+        self.skinsLista()
         global indiceP
         global indiceT
         indiceP = fileManager.data['Indice']
@@ -128,17 +156,17 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
     # ///////////////////////////////////////////////// BASE DE BOTONES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------------------------------------------------------------------------
     def botonProyecto(self, p):
-        btnProyecto.botonProyecto(fileManager.data['Proyectos'][p][0], fileManager.data['Proyectos'][p][1], lambda: self.btnShowP(p), lambda: self.btnEditP(p), lambda: self.btnDelP(p), self.sAWC_Botonera, self.vL_sAWC_Botonera, skin)
+        btnProyecto.botonProyecto(fileManager.data['Proyectos'][p][0], str(p), fileManager.data['Proyectos'][p][1], lambda: self.btnShowP(p), lambda: self.btnEditP(p), lambda: self.btnDelP(p), self.sAWC_Botonera, self.vL_sAWC_Botonera, skin)
     def botonProyectoActivo(self, p):
-        btnProyecto.botonProyActivo(fileManager.data['Proyectos'][p][0], fileManager.data['Proyectos'][p][1], lambda: self.btnEditP(p), lambda: self.btnDelP(p), self.sAWC_Botonera, self.vL_sAWC_Botonera, skin)
+        btnProyecto.botonProyActivo(fileManager.data['Proyectos'][p][0], str(p), fileManager.data['Proyectos'][p][1], lambda: self.btnEditP(p), lambda: self.btnDelP(p), self.sAWC_Botonera, self.vL_sAWC_Botonera, skin)
 
     def botonTrabajo(self, p, t):
-        btnTrabajo.botonTrabajo(fileManager.data['Proyectos'][p][3][t][0], lambda: self.btnShowT(p, t), lambda: self.btnEditT(p, t), lambda: self.btnDelT(p, t), btnProyecto.w_btnTrabContainer, btnProyecto.vL_btnTrabContainer, skin)
+        btnTrabajo.botonTrabajo(fileManager.data['Proyectos'][p][3][t][0], lambda: self.btnShowT(t), lambda: self.btnEditT(t), lambda: self.btnDelT(t), btnProyecto.w_btnTrabContainer, btnProyecto.vL_btnTrabContainer, skin)
     def botonTrabajoActivo(self, p, t):
-        btnTrabajo.botonTrabActivo(fileManager.data['Proyectos'][p][3][t][0], lambda: self.btnEditT(p, t), lambda: self.btnDelT(p, t), btnProyecto.w_btnTrabContainer, btnProyecto.vL_btnTrabContainer, skin)
+        btnTrabajo.botonTrabActivo(fileManager.data['Proyectos'][p][3][t][0], lambda: self.btnEditT(t), lambda: self.btnDelT(t), btnProyecto.w_btnTrabContainer, btnProyecto.vL_btnTrabContainer, skin)
 
     def ticket(self, p, t, tk, pf, pc):
-        baseTicket.ticket(fileManager.dataInicial['listaItems'], fileManager.data['Proyectos'][p][3][t][2][tk][0], fileManager.data['Proyectos'][p][3][t][2][tk][1], fileManager.data['Proyectos'][p][3][t][2][tk][2], lambda: self.btnDelTk(tk), lambda: self.btnEditTk(tk), lambda: self.btnCopyTk(tk), lambda: self.btnInfoTk(fileManager.data['Proyectos'][p][3][t][2][tk][2]), self.sAWC_Tickets, self.vL_sAWC_Tickets, pf, pc, skin)
+        baseTicket.ticket(fileManager.dataInicial['listaItems'], fileManager.data['Proyectos'][p][3][t][2][tk][0], fileManager.data['Proyectos'][p][3][t][2][tk][1], fileManager.data['Proyectos'][p][3][t][2][tk][2], lambda: self.btnDelTk(tk), lambda: self.btnEditTk(tk), lambda: self.btnCopyTk(tk), lambda: self.btnSortTk(tk), lambda: self.btnInfoTk(fileManager.data['Proyectos'][p][3][t][2][tk][2]), str(tk), self.sAWC_Tickets, self.vL_sAWC_Tickets, pf, pc, skin)
     def item(self, p, t, tk, i, color):
         baseTicket.items(fileManager.data['Proyectos'][p][3][t][2][tk][3][i][1], fileManager.data['Proyectos'][p][3][t][2][tk][3][i][0], lambda: self.Checkeado(p, t, tk, i, fileManager.data['Proyectos'][p][3][t][2][tk][3][i][0]), color)
     def Checkeado(self, p, t, tk, i, chck):
@@ -204,41 +232,56 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
             indiceP = fileManager.data['Indice']
             self.limpiaPantalla()
     def btnEditP(self, p):
-        dialogos.dialogoProyecto(self, False, fileManager.data['Proyectos'][p][0], fileManager.data['Proyectos'][p][1], "Editar Proyecto\n" + str(fileManager.data['Proyectos'][p][0]), skin)
+        global indiceP
+        dialogos.dialogoProyecto(self, False, fileManager.data['Proyectos'][p][0], fileManager.data['Proyectos'][p][1], "Editar Proyecto\n" + str(fileManager.data['Proyectos'][p][0]), p, len(fileManager.data['Proyectos'])-1, skin)
         if dialogos.rspDialogP == QDialog.Accepted:
             fileManager.editaProyecto(p, dialogos.le_TituloP.text(), dialogos.te_DescripcionP.toPlainText())
+            fileManager.ordenaProyecto(p, dialogos.spinBox.value())
+            indiceP = fileManager.data['Indice']
             self.limpiaPantalla()
     def btnnewP(self):
         global indiceP
-        dialogos.dialogoProyecto(self, True, "Escribir un Titulo del Proyecto", "Describir el Proyecto", "Crear un nuevo Proyecto", skin)
+        global indiceT
+        agregaFinal = len(fileManager.data['Proyectos'])
+        # dialogos.dialogoProyecto(self, True, "Escribir un Titulo del Proyecto", "Describir el Proyecto", "Crear un nuevo Proyecto", agregaFinal, len(fileManager.data['Proyectos']), skin)
+        dialogos.dialogoProyecto(self, True, "Escribir un Titulo del Proyecto", "Describir el Proyecto", "Crear un nuevo Proyecto", agregaFinal, agregaFinal, skin)
         if dialogos.rspDialogP == QDialog.Accepted:
             fileManager.creaProyecto(dialogos.le_TituloP.text(), dialogos.te_DescripcionP.toPlainText())
+            fileManager.ordenaProyecto(agregaFinal, dialogos.spinBox.value())
             indiceP = fileManager.data['Indice']
+            # ---- Crea un Trabajo automaticamente para que no crashee al usar el menú "Tickets" ----
+            fileManager.creaTrabajo(indiceP, "Trabajo Base", "Descripción Base")
+            indiceT = fileManager.data['Proyectos'][indiceP][2]
             self.limpiaPantalla()
 
     # ----------------------------------------------------- Botonera Trabajos ------------------------------------------
-    def btnShowT(self, p, t):
+    def btnShowT(self, t):
         global indiceT
-        fileManager.guardaIndTrabajo(p, t)
-        indiceT = fileManager.data['Proyectos'][p][2]
+        fileManager.guardaIndTrabajo(indiceP, t)
+        indiceT = fileManager.data['Proyectos'][indiceP][2]
         self.limpiaPantalla()
-    def btnDelT(self, p, t):
+    def btnDelT(self, t):
         global indiceT
         choise = QMessageBox.question(self, "Eliminar Trabajo", "¿Seguro que quiere eliminar el Trabajo?", QMessageBox.Yes | QMessageBox.No)
         if choise == QMessageBox.Yes:
-            fileManager.eliminaTrabajo(p, t)
-            indiceT = fileManager.data['Proyectos'][p][2]
+            fileManager.eliminaTrabajo(indiceP, t)
+            indiceT = fileManager.data['Proyectos'][indiceP][2]
             self.limpiaPantalla()
-    def btnEditT(self, p, t):
-        dialogos.dialogoProyecto(self, False, fileManager.data['Proyectos'][p][3][t][0], fileManager.data['Proyectos'][p][3][t][1], "Editar Trabajo - " + str(fileManager.data['Proyectos'][p][3][t][0]), skin)
+    def btnEditT(self, t):
+        global indiceT
+        dialogos.dialogoProyecto(self, False, fileManager.data['Proyectos'][indiceP][3][t][0], fileManager.data['Proyectos'][indiceP][3][t][1], "Editar Trabajo - " + str(fileManager.data['Proyectos'][indiceP][3][t][0]), t, len(fileManager.data['Proyectos'][indiceP][3])-1, skin)
         if dialogos.rspDialogP == QDialog.Accepted:
-            fileManager.editaTrabajo(p, t, dialogos.le_TituloP.text(), dialogos.te_DescripcionP.toPlainText())
+            fileManager.editaTrabajo(indiceP, t, dialogos.le_TituloP.text(), dialogos.te_DescripcionP.toPlainText())
+            fileManager.ordenaTrabajo(indiceP, t, dialogos.spinBox.value())
+            indiceT = fileManager.data['Proyectos'][indiceP][2]
             self.limpiaPantalla()
     def btnnewT(self):
         global indiceT
-        dialogos.dialogoProyecto(self, True, "Escribir un Titulo del Trabajo", "Describir el Trabajo", "Crear un nuevo Trabajo", skin)
+        agregaFinal = len(fileManager.data['Proyectos'][indiceP][3])
+        dialogos.dialogoProyecto(self, True, "Escribir un Titulo del Trabajo", "Describir el Trabajo", "Crear un nuevo Trabajo", agregaFinal, agregaFinal, skin)
         if dialogos.rspDialogP == QDialog.Accepted:
             fileManager.creaTrabajo(indiceP, dialogos.le_TituloP.text(), dialogos.te_DescripcionP.toPlainText())
+            fileManager.ordenaTrabajo(indiceP, agregaFinal, dialogos.spinBox.value())
             indiceT = fileManager.data['Proyectos'][indiceP][2]
             self.limpiaPantalla()
 
@@ -263,6 +306,16 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
     def btnCopyTk(self, tk):
         fileManager.copiaTicket(indiceP, indiceT, tk)
         self.limpiaPantalla()
+    def btnSortTk(self, tk):
+        # ---- Abre la ventana de dialogo para configurar la nueva ubicación del proyecto ----
+        DialogoS = QDialog(self)
+        dialogos.dialogSort(DialogoS, tk, len(fileManager.data['Proyectos'][indiceP][3][indiceT][2])-1, skin)
+        DialogoS.setWindowTitle("Re ordenar Ticket")
+        DialogoS.show()
+        rsp = DialogoS.exec_()  # exec_() es para que no se cierre inmediatamente la ventana de Dialogo
+        if rsp == QDialog.Accepted:
+            fileManager.ordenaTicket(indiceP, indiceT, tk, dialogos.spinBox.value())
+            self.limpiaPantalla()
     def btnInfoTk(self, descripcion):
         aviso = QMessageBox.information(self, "Información", descripcion, QMessageBox.Ok)
     def btnnewTk(self):
@@ -317,6 +370,9 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         self.unfill(lCont)
         self.iniciaItems(wCont, lCont)
 
+    # ------------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------ MENU BAR --------------------------------------------------------
+    # ---- Salir ----
     def quit_trigger(self):
         if fileManager.igualData == False:
             choise = QMessageBox.question(self, "Salir", "¿Guardar la pizarra antes de salir?", QMessageBox.Yes | QMessageBox.No)
@@ -326,8 +382,9 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
                 else:
                     self.btnGuardaComo()
         fileManager.guardaPos(self.x(), self.y())
+        fileManager.guardaMedida(self.width(), self.height())
         sys.exit(qApp.exec_())
-
+    # ---- Archivos ----
     def respond(self, q):
         signal = q.text()
         if signal == 'Nuevo':
@@ -338,23 +395,66 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
             self.btnGuarda()
         elif signal == 'Guardar como...':
             self.btnGuardaComo()
+    # -------------------------------------------------------------------------------------------------- MENU "RECIENTES" ------------------------------
+    def recentsFiles(self):
+        # ---- Vacía el menu "Recientes" ----
+        self.recents.clear()
+        # ---- Agrega los items a "RECIENTES" ----
+        listaRecientes = list(set(fileManager.dataInicial['Recientes']))
+        for ac in listaRecientes:
+            laAction = QAction(ac, self)
+            self.recents.addAction(laAction)
+        # ---- Click de los items de "RECIENTES" ----
+        self.recents.triggered.connect(self.respRecents)
+
+    def respRecents(self, q):
+        signal = q.text()
+        fileManager.abreReciente(signal)
+        self.limpiaMenu()
+        self.limpiaCabezal()
+        self.limpiaPantalla()
+    # ---------------------------------------------------------------------------------------------------- MENU "PIELES" ------------------------------
+    # ---- Carga la lista de pieles y agrega el tilde a la piel en uso ----
+    def skinsLista(self):
+        # ---- Agrega los items a "SKINS / PIELES"
+        self.skins.clear()
+        listaPieles = fileManager.skins
+        for ac in listaPieles:
+            unAction = QAction(ac, self)
+            unAction.setCheckable(True)
+            if ac == fileManager.dataInicial['Skin']:
+                unAction.setChecked(True)
+            else:
+                unAction.setChecked(False)
+            self.skins.addAction(unAction)
+        # ---- Click de los items de "SKINS / PIELES"
+        self.skins.triggered.connect(self.respSkins)
 
     def respSkins(self, q):
         global skin
         signal = q.text()
         fileManager.guardaSkin(signal)
         skin = fileManager.skins[fileManager.dataInicial['Skin']]
-        self.menuBar.setStyleSheet(skin['menuBar'])
         self.centralwidget.setStyleSheet(skin['centralwidget'])
+        self.w_Menu.setStyleSheet(skin['w_Menu'])
+        self.w_Reloj.setStyleSheet(skin['w_Reloj'])
+        self.sAWC_Botonera.setStyleSheet(skin['sAWC_Botonera'])
+        self.w_ticketsTitulo.setStyleSheet(skin['w_ticketsTitulo'])
         self.l_ticketsTitulo.setStyleSheet(skin['l_ticketsTitulo'])
         self.line_Tickets.setStyleSheet(skin['line_Tickets'])
         self.l_ticketsDescripcion.setStyleSheet(skin['l_ticketsDescripcion'])
         self.sAWC_Tickets.setStyleSheet(skin['sAWC_Tickets'])
+        self.menuBar.setStyleSheet(skin['menuBar'])
+        # ---- Limpia el menuBar para que no se ponga lento todito ----
+        self.limpiaMenu()
         self.limpiaCabezal()
         self.limpiaPantalla()
-
+    # -------------------------------------------------------------------------------------------------- MENU "PRESETEO" ------------------------------
     def respEdit(self, q):
+        global indiceP
+        global indiceT
         signal = q.text()
+        # ---- Tickets ----
         if signal == 'Ideas Generales':
             fileManager.creaTicket(indiceP, indiceT, 0, "Ideas generales", "(En un TXT) Cerrar las ideas generales de lo que sería la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.", [[1, "Ideas generales"], [1, "Ideas de Capitulos"]])
             self.limpiaPantalla()
@@ -362,10 +462,47 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
             fileManager.creaTicket(indiceP, indiceT, 0, "Guión", "Crear el guión.", [[1, "Idea general"], [1, "Refinamiento"]])
             self.limpiaPantalla()
         elif signal == 'Storyboard':
-            fileManager.creaTicket(indiceP, indiceT, 1, "Storyboard / Animatic", "Crear el Storyboard y el Animatic", [[1, "Storyboard"], [1, "Animatic"]])
+            fileManager.creaTicket(indiceP, indiceT, 1, "Storyboard / Animatic", "Crear el Storyboard y el Animatic.", [[1, "Storyboard"], [1, "Animatic"]])
+            self.limpiaPantalla()
+        elif signal == 'Ideas de la Serie':
+            fileManager.creaTicket(indiceP, indiceT, 2, "Ideas de la Serie", "Bocetar ideas generales de la serie.", [[1, "Estilos"], [1, "Ideas"]])
             self.limpiaPantalla()
         elif signal == 'Diseño 3D':
-            fileManager.creaTicket(indiceP, indiceT, 5, "Titulo temporal", "Descripción temporal", [[1, "Modelado"], [1, "UVW"], [1, "Texturas"], [1, "Rigging"]])
+            fileManager.creaTicket(indiceP, indiceT, 5, "***Titulo temporal***", "***Descripción temporal***", [[1, "Modelado"], [1, "UVW"], [1, "Texturas"], [1, "Rigging"]])
+            self.limpiaPantalla()
+        elif signal == 'Render 3D':
+            fileManager.creaTicket(indiceP, indiceT, 7, "Render", "Hacer los renders de las tomas.", [[1, "Toma 1"], [1, "Toma 2"]])
+            self.limpiaPantalla()
+        elif signal == 'Edición':
+            fileManager.creaTicket(indiceP, indiceT, 8, "Editar", "Editar las tomas.", [[1, "Toma 1"], [1, "Toma 2"]])
+            self.limpiaPantalla()
+        elif signal == 'Audio':
+            fileManager.creaTicket(indiceP, indiceT, 9, "***Titulo temporal***", "***Descripción temporal***", [[1, "Toma 1"], [1, "Toma 2"]])
+            self.limpiaPantalla()
+        # ---- Trabajos ----
+        elif signal == 'Base de la Serie':
+            fileManager.creaTrabajo(indiceP, "Base de la serie", "***Descripción temporal***")
+            fileManager.eliminaTrabajo(indiceP, indiceT)
+            fileManager.creaTicket(indiceP, indiceT, 0, "Ideas generales", "(En un TXT) Cerrar las ideas generales de lo que sería la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.", [[1, "Ideas generales"], [1, "Ideas de Capitulos"]])
+            fileManager.creaTicket(indiceP, indiceT, 2, "Ideas de la Serie", "Bocetar ideas generales de la serie.", [[1, "Estilos"], [1, "Ideas"]])
+            self.limpiaPantalla()
+        elif signal == 'Capitulo':
+            fileManager.creaTrabajo(indiceP, "Cap X - ", "***Descripción temporal***")
+            indiceT += 1
+            fileManager.creaTicket(indiceP, indiceT, 0, "Guión", "Crear el guión.", [[1, "Idea general"], [1, "Refinamiento"]])
+            fileManager.creaTicket(indiceP, indiceT, 1, "Storyboard / Animatic", "Crear el Storyboard y el Animatic.", [[1, "Storyboard"], [1, "Animatic"]])
+            self.limpiaPantalla()
+        # ---- Proyectos ----
+        elif signal == 'Proyecto Serie':
+            indiceP = len(fileManager.data['Proyectos'])
+            fileManager.creaProyecto("Titulo del proyecto", "Descripción del proyecto")
+            fileManager.creaTrabajo(indiceP, "Base de la serie", "***Descripción temporal***")
+            fileManager.creaTicket(indiceP, indiceT, 0, "Ideas generales", "(En un TXT) Cerrar las ideas generales de lo que sería la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.", [[1, "Ideas generales"], [1, "Ideas de Capitulos"]])
+            fileManager.creaTicket(indiceP, indiceT, 2, "Ideas de la Serie", "Bocetar ideas generales de la serie.", [[1, "Estilos"], [1, "Ideas"]])
+            indiceT += 1
+            fileManager.creaTrabajo(indiceP, "Cap X - ", "***Descripción temporal***")
+            fileManager.creaTicket(indiceP, indiceT, 0, "Guión", "Crear el guión.", [[1, "Idea general"], [1, "Refinamiento"]])
+            fileManager.creaTicket(indiceP, indiceT, 1, "Storyboard / Animatic", "Crear el Storyboard y el Animatic.", [[1, "Storyboard"], [1, "Animatic"]])
             self.limpiaPantalla()
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -386,8 +523,12 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
     def limpiaPantalla(self):
         # ---- LIMPIA BOTONERA Y VUELVE A MOSTRAR LA BOTONERA NUEVA CON EL INDICE SELECCIONADO ----
         self.unfill(self.vL_sAWC_Botonera)
-        # # ---- LIMPIA TICKETS Y VUELVE A MOSTRAR LOS TICKETS DEL PROYECTO SELECCIONADO ----
+        # ---- LIMPIA TICKETS Y VUELVE A MOSTRAR LOS TICKETS DEL PROYECTO SELECCIONADO ----
         self.unfill(self.vL_sAWC_Tickets)
+        # # ---- Vuelve a cargar el skin del "centralwidget", porque sino queda con el skin anterior ----
+        # self.centralwidget.setStyleSheet(skin['centralwidget'])
+        # ---- Limpia el menuBar para que no se ponga lento todito ----
+        self.limpiaMenu()
         fileManager.resetData()
         self.iniciaPizarra()
         if fileManager.igualData:
@@ -403,6 +544,12 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         btnMenu.menuBotones(self.w_Menu, self.hL_Menu, lambda: self.btnNuevo(), lambda: self.btnAbre(), lambda: self.btnGuarda(), lambda: self.btnGuardaComo(), skin)
         # ---- Agrega el reloj ----
         reloj.reloj(self.w_Reloj, self.hL_Reloj, skin)
+    def limpiaMenu(self):
+        self.bar.clear()
+        # self.menuBarFull(self.quit_trigger, self.respond, self.respEdit)
+        # self.file.clear()
+        # self.presets.clear()
+        # self.skins.clear()
 
     # ---- Metodo para obtener la posición de la ventana en la pantalla ----
     def moveEvent(self, e):
@@ -433,6 +580,14 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         pixmap = QPixmap("images/splash_v2b.png")
         splash.Splash(Dialogo, pixmap, lambda: self.btn_close(Dialogo), skin)
         Dialogo.setWindowFlags(Dialogo.windowFlags() | Qt.FramelessWindowHint)
+        # # Dialogo.move(-310, 10)
+        # Dialogo.move(fileManager.dataInicial['PosWindow'][0], fileManager.dataInicial['PosWindow'][1])
+        # # ---- Centra en la pantalla la ventana "Splash" ----
+        # frameGm = Dialogo.frameGeometry()
+        # screen = QApplication.desktop().screenNumber(QApplication.desktop().cursor().pos())
+        # centerPoint = QApplication.desktop().screenGeometry(screen).center()
+        # frameGm.moveCenter(centerPoint)
+        # Dialogo.move(frameGm.topLeft())
         Dialogo.show()
         self.clockGetClose(Dialogo)
         Dialogo.exec_()
@@ -454,12 +609,28 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         # ---- print("User has clicked the red x on the main window") ----
         self.quit_trigger()
 
-
-
-if __name__ == '__main__':
-    # main()
+def main():
     app = QApplication(sys.argv)
     ventana = Organizator()
     ventana.show()
-    # sys.exit(app.exec_())
     sys.exit(ventana.closeEvent(app.exec_()))
+
+
+if __name__ == '__main__':
+    main()
+#
+# if __name__ == '__main__':
+#     # main()
+#     app = QApplication(sys.argv)
+#     ventana = Organizator()
+#     ventana.show()
+#     # sys.exit(app.exec_())
+#
+#     screen_resolution = app.desktop().screenGeometry()
+#     widthRes, heightRes = screen_resolution.width(), screen_resolution.height()
+#     pantallazoX, pantallazoY = screen_resolution.width(), screen_resolution.height()
+#     # print(widthRes)
+#     # print(type(widthRes))
+#     # print(heightRes)
+#
+#     sys.exit(ventana.closeEvent(app.exec_()))
