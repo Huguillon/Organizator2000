@@ -1,0 +1,138 @@
+{
+    "Proyectos": [
+        [
+            "Archivo AAA",
+            "",
+            2,
+            [
+                [
+                    "Trabajo Base",
+                    "Descripci\u00f3n Base",
+                    [
+                        [
+                            0,
+                            "Ideas generales",
+                            "(En un TXT) Cerrar las ideas generales de lo que ser\u00eda la serie, y anotar ideas sueltas de los capitulos que se me vayan ocurriendo.",
+                            [
+                                [
+                                    1,
+                                    "Ideas generales"
+                                ],
+                                [
+                                    1,
+                                    "Ideas de Capitulos"
+                                ]
+                            ]
+                        ],
+                        [
+                            2,
+                            "Ideas de la Serie",
+                            "Bocetar ideas generales de la serie.",
+                            [
+                                [
+                                    1,
+                                    "Estilos"
+                                ],
+                                [
+                                    1,
+                                    "Ideas"
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                [
+                    "Cap X - 01",
+                    "***Descripci\u00f3n temporal***",
+                    [
+                        [
+                            0,
+                            "Gui\u00f3n",
+                            "Crear el gui\u00f3n.",
+                            [
+                                [
+                                    1,
+                                    "Idea general"
+                                ],
+                                [
+                                    1,
+                                    "Refinamiento"
+                                ]
+                            ]
+                        ],
+                        [
+                            1,
+                            "Storyboard / Animatic",
+                            "Crear el Storyboard y el Animatic.",
+                            [
+                                [
+                                    1,
+                                    "Storyboard"
+                                ],
+                                [
+                                    1,
+                                    "Animatic"
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                [
+                    "Cap X - 02",
+                    "***Descripci\u00f3n temporal***",
+                    [
+                        [
+                            0,
+                            "Gui\u00f3n",
+                            "Crear el gui\u00f3n.",
+                            [
+                                [
+                                    1,
+                                    "Idea general"
+                                ],
+                                [
+                                    1,
+                                    "Refinamiento"
+                                ]
+                            ]
+                        ],
+                        [
+                            1,
+                            "Storyboard / Animatic",
+                            "Crear el Storyboard y el Animatic.",
+                            [
+                                [
+                                    1,
+                                    "Storyboard"
+                                ],
+                                [
+                                    1,
+                                    "Animatic"
+                                ]
+                            ]
+                        ],
+                        [
+                            0,
+                            "",
+                            "",
+                            []
+                        ],
+                        [
+                            0,
+                            "",
+                            "",
+                            []
+                        ],
+                        [
+                            0,
+                            "",
+                            "",
+                            []
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ],
+    "Indice": 0
+}

@@ -1,0 +1,206 @@
+{
+    "Proyectos": [
+        [
+            "VunnyBoom",
+            "Canal de animaci\u00f3n para chicos",
+            0,
+            [
+                [
+                    "Canal",
+                    "Tareas a realizar para el mantenimiento y actualizaci\u00f3n del canal VunnyBoom",
+                    [
+                        [
+                            11,
+                            "Cambiar nombre \"Vunny Fun Kids",
+                            "Cambiar el nombre del canal, y todos los apartados visuales del mismo (Logo, encabezado, pantallas finales, etc). El nuevo nombre es \"Vunny Boom\" o \"VunnyBoom\"",
+                            [
+                                [
+                                    0,
+                                    "Isotipo"
+                                ],
+                                [
+                                    0,
+                                    "Logo"
+                                ],
+                                [
+                                    1,
+                                    "Encabezado"
+                                ],
+                                [
+                                    1,
+                                    "Pantalla final"
+                                ]
+                            ]
+                        ],
+                        [
+                            12,
+                            "SOCIAL VunnyBoom",
+                            "Crear usuarios en las redes sociales para el canal VunnyBoom",
+                            [
+                                [
+                                    1,
+                                    "Twitter"
+                                ],
+                                [
+                                    1,
+                                    "Facebook"
+                                ],
+                                [
+                                    1,
+                                    "Instagram"
+                                ],
+                                [
+                                    1,
+                                    "Tumblr"
+                                ],
+                                [
+                                    1,
+                                    "Snapchat"
+                                ],
+                                [
+                                    1,
+                                    "Minds"
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ],
+        [
+            "TutorEs Guill\u00f3n",
+            "",
+            0,
+            [
+                [
+                    "Canal",
+                    "Tareas a realizar para el mantenimiento y actualizaci\u00f3n del canal TutorEs Guill\u00f3n.",
+                    [
+                        [
+                            11,
+                            "Ideas de tutoriales",
+                            "Algunas ideas de los tutoriales que puedo hacer separados en tipos:\n- Series.\n- Aprendamos juntos.",
+                            [
+                                [
+                                    1,
+                                    "Software Catalogo QtDesigner"
+                                ],
+                                [
+                                    1,
+                                    "Software Organizator"
+                                ],
+                                [
+                                    1,
+                                    "Corto animaci\u00f3n"
+                                ],
+                                [
+                                    1,
+                                    "Blender Camera Track"
+                                ],
+                                [
+                                    1,
+                                    "Dibujar anatomia"
+                                ],
+                                [
+                                    1,
+                                    "Dibujar Comics"
+                                ],
+                                [
+                                    1,
+                                    "Tipos de animaci\u00f3n"
+                                ],
+                                [
+                                    1,
+                                    "Animaciones sueltas"
+                                ],
+                                [
+                                    1,
+                                    "Animaci\u00f3n Pelota rebota"
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                [
+                    "Corto Animaci\u00f3n",
+                    "",
+                    []
+                ],
+                [
+                    "Programaci\u00f3n Python",
+                    "Tareas a realizar para el mantenimiento y actualizaci\u00f3n del canal TutorEs Guill\u00f3n.",
+                    []
+                ],
+                [
+                    "Blender - Camera Tracker",
+                    "",
+                    []
+                ],
+                [
+                    "Tipos de animaci\u00f3n",
+                    "Mostrar los diferentes tipos de animaci\u00f3n y explicar como se anima con cada una (Tradicional, Cut-Out, Stop Motion, 3D)",
+                    [
+                        [
+                            8,
+                            "Explicacion base",
+                            "Explicar los dos modos de animar (Puntas y Hacia adelante), y luego los tipos de animaci\u00f3n.",
+                            [
+                                [
+                                    1,
+                                    "Animaci\u00f3n Puntas"
+                                ],
+                                [
+                                    1,
+                                    "Animaci\u00f3n Hacia adelante"
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ],
+        [
+            "Juani Fun Kids TV",
+            "",
+            0,
+            [
+                [
+                    "Canal",
+                    "Tareas a realizar para el mantenimiento y actualizaci\u00f3n del canal Juani Fun Kids TV.",
+                    [
+                        [
+                            11,
+                            "Contenido temporal",
+                            "Crear contenido temporal para el canal, usando mis personajes nuevos para hacer frascos con colores, cambios de cabezas, encastres en mesa de madera, etc.",
+                            [
+                                [
+                                    1,
+                                    "Zebras - Frascos"
+                                ],
+                                [
+                                    1,
+                                    "Zebras - Cabezas"
+                                ],
+                                [
+                                    1,
+                                    "Animales - Cabezas"
+                                ],
+                                [
+                                    1,
+                                    "Endless Runner"
+                                ]
+                            ]
+                        ],
+                        [
+                            6,
+                            "Endless runner",
+                            "Crear un Endless Runner con mis personajes similar a lo que hacen en estos videos \"https://www.youtube.com/watch?v=qy4PUe3OoWc\"",
+                            []
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ],
+    "Indice": 1
+}
