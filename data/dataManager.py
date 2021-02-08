@@ -1,17 +1,9 @@
 # -*- coding: utf-8 -*-
 import json
-import codecs
 from pathlib import Path
-import os
-import sys
 
-my_file = Path("data/Proyecto.json")
+my_file = Path("Proyecto.json")
 data = {}
-
-class OrgaApp():
-    def __init__(self):
-        dataProject = ManejaArchivos.cargaArchivo(self)
-
 
 class ManejaArchivos():
     def __init__(self):
@@ -23,12 +15,17 @@ class ManejaArchivos():
                 data = json.load(f)
         else:
             # ---- Genera el diccionario Base para meter en el JSON ----
-            #data = {"Proyectos": [{"Titulo": "Titulo del proyecto", "Descripcion": "Descripción del proyecto.", "Tickets": []}]}
-            data = {"Proyectos": []}
+            data = {"Proyectos": [], "Indice": 0}
             # ---- Crea el archivo JSON y le mete los datos del diccionario "data" ----
             with open(my_file, 'w') as f:
                 json.dump(data, f, indent=2)
         return data
+
+    # ****************** GUARDA EL VALOR DEL INDICE EN EL ARCHIVO ******************
+    def guardaIndice(self, mDatos, vIndice):
+        mDatos['Indice'] = vIndice
+        with open(my_file, 'w') as f:
+            json.dump(mDatos, f, indent=2)
 
     # ****************** CREA UN PROYECTO NUEVO EN EL ARCHIVO ******************
     def creaProyecto(self, mDatos, tituloValor, descValor):
@@ -90,27 +87,7 @@ class ManejaArchivos():
             mDatos['Proyectos'][indProyecto]['Tickets'][indTrabajo]['Items'][indItem][0] = 1
         with open(my_file, 'w') as f:
             json.dump(mDatos, f, indent=2)
-    '''
-    def creaItems(self, mDatos, indProyecto, indTrabajo):
-        verifica = "Si"
-        while verifica != 'No':
-            texto = input('Tipear el item del trabajo a realizar: ')
-            mDatos['Proyectos'][indProyecto]['Tickets'][indTrabajo]['Items'].append(texto)
-            verifica = input('¿Crear un item de trabajo? (Tipear Si o No): ')
-        with open(my_file, 'w') as f:
-            json.dump(mDatos, f, indent=2)
-            
-    def eliminaItems(self, mDatos, indProyecto, indTrabajo, indItem):
-        del mDatos['Proyectos'][indProyecto]['Tickets'][indTrabajo]['Items'][indItem]
-        with open(my_file, 'w') as f:
-            json.dump(mDatos, f, indent=2)
-            
-    def editaItems(self, mDatos, indProyecto, indTrabajo, indItem):
-        mDatos['Proyectos'][indProyecto]['Tickets'][indTrabajo]['Items'][indItem] = input('Tipear la modificacion en el item: ')
-        with open(my_file, 'w') as f:
-            json.dump(mDatos, f, indent=2)
-    '''
 
 
 if __name__ == '__main__':
-    app = OrgaApp()
+    app = ManejaArchivos()

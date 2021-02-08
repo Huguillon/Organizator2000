@@ -434,5 +434,6 @@
       "Descripcion": "Probando que al crear un proyecto, el indice se acomoda con respecto al valor final y se muestra este mismo proyecto.",
       "Tickets": []
     }
-  ]
+  ],
+  "Indice": 7
 }

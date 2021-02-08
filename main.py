@@ -1,6 +1,7 @@
 import sys
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.Qt import *
+from pathlib import Path
 
 import dataManager
 import ui_contenedor, ui_assets, ui_Dialog_Proyecto, ui_Dialog_Ticket, ui_Dialog_Item, ui_splash
@@ -17,8 +18,10 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         super(Organizator, self).__init__(parent)
         self.setupUi(self)
 
-        self.setWindowTitle("Organizator 2000 (v1.01)")
-        self.setWindowIcon(QtGui.QIcon('data/organizator.ico'))
+        #dataManager.my_file = Path("Proyecto.json")
+
+        self.setWindowTitle("Organizator 2000 (v1.02)")
+        self.setWindowIcon(QtGui.QIcon('images/icon256.png'))
         self.showMaximized()
         self.clockGet()
 
@@ -35,9 +38,13 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         # ---- INICIA LOS TICKETS DEL PROYECTO INICIAL Y LOS AGREGA AL GUI ----
         self.iniciaTickets(self.funciones.cargaArchivo(self), indice)
 
+        #print("El archivo es:", dataManager.my_file)
+
 
     # **********************************************************************************************************************************
     def iniciaBotonera(self, dataProject):
+        global indice
+        indice = dataProject['Indice']
         for n in range(len(dataProject['Proyectos'])):
             if n != indice:
                 proyActual = dataProject['Proyectos'][n]
@@ -128,6 +135,7 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
     def MuestraProyecto(self, valor):
         global indice
         indice = valor
+        self.funciones.guardaIndice(self, self.funciones.cargaArchivo(self), indice)
         self.LimpiaPantalla()
 
     def CreaProyecto(self, largo):
@@ -151,6 +159,7 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         if rsp == QtWidgets.QDialog.Accepted:
             self.funciones.creaProyecto(self, self.funciones.cargaArchivo(self), uiD.iT_Titulo.text(), uiD.iT_Descripcion.toPlainText())
             indice = newIndice
+            self.funciones.guardaIndice(self, self.funciones.cargaArchivo(self), indice)
             self.LimpiaPantalla()
 
     def EditaProyecto(self, tituloP, descripcionP):
@@ -189,6 +198,7 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
             else:
                 self.l_ticketsTitulo.setText("")
                 self.l_ticketsDescripcion.setText("")
+            self.funciones.guardaIndice(self, self.funciones.cargaArchivo(self), indice)
             self.LimpiaPantalla()
 
 
@@ -341,13 +351,13 @@ class Organizator(QtWidgets.QMainWindow, ui_contenedor.Ui_MainWindow):
         splash = ui_splash.Ui_d_Splash()
         splash.setupUi(Dialogo)
         #Dialogo.setWindowTitle("Organizator 2000")
-        #Dialogo.setWindowIcon(QtGui.QIcon('data/organizator.ico'))
-        pixmap = QtGui.QPixmap("data/splash_img_big.png")
+        #Dialogo.setWindowIcon(QtGui.QIcon('images/icon16.png'))
+        pixmap = QtGui.QPixmap("images/splash_80s.png")
         splash.l_img.setPixmap(pixmap)
         Dialogo.setWindowFlags(Dialogo.windowFlags() | QtCore.Qt.FramelessWindowHint)
         splash.pb_close.clicked.connect(lambda: self.btn_close(Dialogo))
         Dialogo.show()
-        Dialogo.close()
+        #Dialogo.close()
         Dialogo.exec_()
     def btn_close(self, ventana):
         ventana.close()

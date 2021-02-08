@@ -49,7 +49,7 @@ class ui_assets():
         # ---- PUSH BUTTON para eliminar Proyecto ----
         self.btn_del = QPushButton("", self.w_base)
         self.btn_del.setStyleSheet("QPushButton{\n"
-                                    "background-image:url('data/del_project.png');\n"
+                                    "background-image:url('images/del_project.png');\n"
                                     "background-color:rgba(255, 255, 0, 0);\n"
                                     "border-radius:none;\n"
                                     "width:52px;\n"
@@ -57,11 +57,11 @@ class ui_assets():
                                     "}\n"
                                     "\n"
                                     "QPushButton:Hover{\n"
-                                    "background-image:url('data/del_project_over.png');\n"
+                                    "background-image:url('images/del_project_over.png');\n"
                                     "color:black;\n"
                                     "}\n"
                                     "QPushButton:Pressed{\n"
-                                    "background-image:url('data/del_project.png');\n"
+                                    "background-image:url('images/del_project.png');\n"
                                     "color:white;\n"
                                     "}")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -74,7 +74,7 @@ class ui_assets():
         # ---- PUSH BUTTON para ver el Proyecto ----
         self.btn_proj = QPushButton("", self.w_base)
         self.btn_proj.setGeometry(QRect(0, 0, 285, 75))
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         sizePolicy.setHeightForWidth(self.btn_proj.sizePolicy().hasHeightForWidth())
         self.btn_proj.setSizePolicy(sizePolicy)
         self.btn_proj.setMinimumSize(QSize(0, 75))
@@ -131,7 +131,7 @@ class ui_assets():
         # ---- PUSH BUTTON para eliminar Proyecto ----
         self.btn_del = QPushButton("", self.w_base)
         self.btn_del.setStyleSheet("QPushButton{\n"
-                                    "background-image:url('data/del_project.png');\n"
+                                    "background-image:url('images/del_project.png');\n"
                                     "background-color:rgba(0, 0, 0, 0);\n"
                                     "border-radius:none;\n"
                                     "width:52px;\n"
@@ -139,11 +139,11 @@ class ui_assets():
                                     "}\n"
                                     "\n"
                                     "QPushButton:Hover{\n"
-                                    "background-image:url('data/del_project_over.png');\n"
+                                    "background-image:url('images/del_project_over.png');\n"
                                     "color:black;\n"
                                     "}\n"
                                     "QPushButton:Pressed{\n"
-                                    "background-image:url('data/del_project.png');\n"
+                                    "background-image:url('images/del_project.png');\n"
                                     "color:white;\n"
                                     "}")
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
@@ -161,7 +161,7 @@ class ui_assets():
     def BotonAgregar(self, click_btn_add, scrollContainer, layoutContainer):
         self.btn_add = QPushButton("Nuevo\n Proyecto", scrollContainer)
         self.btn_add.setStyleSheet("QPushButton{\n"
-                                    "background-image:url('data/add_project.png');\n"
+                                    "background-image:url('images/add_project.png');\n"
                                     "background-repeat: no-repeat;\n"
                                     "background-position: right;\n"
                                     "background-color:rgba(125, 0, 0, 255);\n"
@@ -187,7 +187,7 @@ class ui_assets():
     def BotonEditar(self, click_btn_edit, scrollContainer, layoutContainer):
         self.btn_edit = QPushButton("", scrollContainer)
         self.btn_edit.setStyleSheet("QPushButton{\n"
-                                   "background-image:url('data/edit_project.png');\n"
+                                   "background-image:url('images/edit_project.png');\n"
                                    "background-color:rgba(0, 0, 0, 0);\n"
                                    "border-radius:none;\n"
                                    "width:35px;\n"
@@ -195,11 +195,11 @@ class ui_assets():
                                    "}\n"
                                    "\n"
                                    "QPushButton:Hover{\n"
-                                   "background-image:url('data/edit_project_over.png');\n"
+                                   "background-image:url('images/edit_project_over.png');\n"
                                    "color:black;\n"
                                    "}\n"
                                    "QPushButton:Pressed{\n"
-                                   "background-image:url('data/edit_project.png');\n"
+                                   "background-image:url('images/edit_project.png');\n"
                                    "color:white;\n"
                                    "}")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -238,62 +238,62 @@ class ui_assets():
         self.w_Barra.setMaximumSize(QSize(498, 75))
         if tipoSel == 0:
             self.w_Barra.setStyleSheet("background-color: rgb(195, 156, 0);\n"
-                                       "background-image:url('data/guion.png')\n;"
+                                       "background-image:url('images/guion.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 1:
             self.w_Barra.setStyleSheet("background-color: rgb(122, 69, 34);\n"
-                                        "background-image:url('data/story.png')\n;"
+                                        "background-image:url('images/story.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 2:
             self.w_Barra.setStyleSheet("background-color: rgb(44, 133, 146);\n"
-                                       "background-image:url('data/boct.png')\n;"
+                                       "background-image:url('images/boct.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 3:
             self.w_Barra.setStyleSheet("background-color: rgb(172, 10, 10);\n"
-                                       "background-image:url('data/dis2D.png')\n;"
+                                       "background-image:url('images/dis2D.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 4:
             self.w_Barra.setStyleSheet("background-color: rgb(159, 0, 74);\n"
-                                        "background-image:url('data/ani2D.png')\n;"
+                                        "background-image:url('images/ani2D.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 5:
             self.w_Barra.setStyleSheet("background-color: rgb(30, 100, 30);\n"
-                                       "background-image:url('data/dis3D.png')\n;"
+                                       "background-image:url('images/dis3D.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 6:
             self.w_Barra.setStyleSheet("background-color: rgb(26, 104, 91);\n"
-                                       "background-image:url('data/ani3D.png')\n;"
+                                       "background-image:url('images/ani3D.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 7:
             self.w_Barra.setStyleSheet("background-color: rgb(107, 114, 16);\n"
-                                       "background-image:url('data/ren3D.png')\n;"
+                                       "background-image:url('images/ren3D.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 8:
             self.w_Barra.setStyleSheet("background-color: rgb(218, 88, 0);\n"
-                                       "background-image:url('data/ediV.png')\n;"
+                                       "background-image:url('images/ediV.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 9:
             self.w_Barra.setStyleSheet("background-color: rgb(7, 50, 135);\n"
-                                       "background-image:url('data/audio.png')\n;"
+                                       "background-image:url('images/audio.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 10:
             self.w_Barra.setStyleSheet("background-color: rgb(90, 0, 91);\n"
-                                        "background-image:url('data/renV.png')\n;"
+                                        "background-image:url('images/renV.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         elif tipoSel == 11:
             self.w_Barra.setStyleSheet("background-color: rgb(84, 84, 84);\n"
-                                       "background-image:url('data/otros.png')\n;"
+                                       "background-image:url('images/otros.png')\n;"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: right bottom;")
         else:
@@ -390,7 +390,7 @@ class ui_assets():
         # ------------------------------------------------------------------------------------------------- BOTON EDITAR -----------------
         self.btn_edit = QPushButton("", self.w_Botones)
         self.btn_edit.setStyleSheet("QPushButton{\n"
-                                   "background-image:url('data/edit_ticket.png');\n"
+                                   "background-image:url('images/edit_ticket.png');\n"
                                    "background-color:rgba(0, 0, 0, 0);\n"
                                    "border-radius:none;\n"
                                    "width:70px;\n"
@@ -398,11 +398,11 @@ class ui_assets():
                                    "}\n"
                                    "\n"
                                    "QPushButton:Hover{\n"
-                                   "background-image:url('data/edit_ticket_over.png');\n"
+                                   "background-image:url('images/edit_ticket_over.png');\n"
                                    "color:black;\n"
                                    "}\n"
                                    "QPushButton:Pressed{\n"
-                                   "background-image:url('data/edit_ticket.png');\n"
+                                   "background-image:url('images/edit_ticket.png');\n"
                                    "color:white;\n"
                                    "}")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -414,7 +414,7 @@ class ui_assets():
         # ----------------------------------------------------------------------------------------------- BOTON ELIMINAR -----------------
         self.btn_del = QPushButton("", self.w_Botones)
         self.btn_del.setStyleSheet("QPushButton{\n"
-                                    "background-image:url('data/del_ticket.png');\n"
+                                    "background-image:url('images/del_ticket.png');\n"
                                     "background-color:rgba(0, 0, 0, 0);\n"
                                     "border-radius:none;\n"
                                     "width:52px;\n"
@@ -422,11 +422,11 @@ class ui_assets():
                                     "}\n"
                                     "\n"
                                     "QPushButton:Hover{\n"
-                                    "background-image:url('data/del_ticket_over.png');\n"
+                                    "background-image:url('images/del_ticket_over.png');\n"
                                     "color:black;\n"
                                     "}\n"
                                     "QPushButton:Pressed{\n"
-                                    "background-image:url('data/del_ticket.png');\n"
+                                    "background-image:url('images/del_ticket.png');\n"
                                     "color:white;\n"
                                     "}")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -449,7 +449,7 @@ class ui_assets():
         self.btn_tck_add.setSizePolicy(sizePolicy)
         self.btn_tck_add.setMinimumSize(QSize(504, 230))
         self.btn_tck_add.setStyleSheet("QPushButton{\n"
-                                       "background-image:url('data/add_ticket.png');\n"
+                                       "background-image:url('images/add_ticket.png');\n"
                                        "background-repeat: no-repeat;\n"
                                        "background-position: center;\n"
                                        "background-color: rgba(204, 204, 204, 18);\n"
@@ -458,7 +458,7 @@ class ui_assets():
                                        "}\n"
                                        "\n"
                                         "QPushButton:Hover{\n"
-                                       "background-image:url('data/add_ticket_over.png');\n"
+                                       "background-image:url('images/add_ticket_over.png');\n"
                                        "background-color:rgba(224, 224, 224, 48);\n"
                                        "}\n"
                                        "QPushButton:Pressed{\n"
@@ -791,59 +791,3 @@ class ui_assets():
                                 "background-color: rgba(82, 131, 16, 255);")
 
         lineStyle.setStyleSheet("color: rgba(255, 255, 255, 55);")
-
-
-
-'''
-class SplashScreen(QWidget):
-    def __init__(self):
-        super().__init__()
-
-        self.initUI()
-
-    def initUI(self):
-
-        hbox = QHBoxLayout(self)
-        pixmap = QPixmap("redrock.jpg")
-
-        lbl = QLabel(self)
-        lbl.setPixmap(pixmap)
-
-        hbox.addWidget(lbl)
-        self.setLayout(hbox)
-
-        self.move(300, 200)
-        self.setWindowTitle('Red Rock')
-        self.show()
-
-
-class OkDialog(QDialog):
-    def __init__(self, parent):
-        super(OkDialog, self).__init__(parent)
-        #self.resize(640, 480)
-
-        self.ok = False
-
-        self.lbl = QLabel("Vemos", self)
-        self.lbl.move(200, 0)
-
-        self.inpTxt = QPlainTextEdit(self)
-        self.inpTxt.move(10, 100)
-
-        self.btn_ok = QPushButton("Aceptar", self)
-        self.btn_ok.clicked.connect(self.button_press)
-        self.btn_cancel = QPushButton("Cancelar", self)
-        self.btn_cancel.clicked.connect(self.button_press)
-        self.btn_cancel.move(80, 0)
-
-    def button_press(self):
-        if self.sender() == self.btn_ok:
-            self.ok = True
-        self.close()
-
-    @classmethod
-    def isOkay(cls, parent):
-        dialog = cls(parent)
-        dialog.exec_()
-        return dialog.ok
-'''
