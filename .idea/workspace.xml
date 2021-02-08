@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eebb5298-dc8d-4f91-bf5d-ec307e1c5bcf" name="Default Changelist" comment="" />
+    <list default="true" id="7df35887-fa00-41e2-b4a3-40d00e249fc4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="1PLoVxqxJokomAo6AiORTw2pdLg" />
+  <component name="ProjectId" id="1Pn8auOjeBs8F7sKBDw2SBFE6fC" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../v2-15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../v2-16" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Activos\Software\Organizador\Codigo\v2-14\data" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -30,9 +25,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="v2-14" />
+      <module name="v2-15" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -52,31 +47,9 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gui_MainWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="v2-14" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/gui_MainWindow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.gui_MainWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -85,11 +58,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eebb5298-dc8d-4f91-bf5d-ec307e1c5bcf" name="Default Changelist" comment="" />
-      <created>1565662769091</created>
+      <changelist id="7df35887-fa00-41e2-b4a3-40d00e249fc4" name="Default Changelist" comment="" />
+      <created>1566498566028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1565662769091</updated>
+      <updated>1566498566028</updated>
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-# Organizator2000 v2.1.4
+# Organizator2000 v2.1.5
 Software escrito en Python utilizando la librería PyQt5 (Qt5).</b>
 El programa sirve como organizador de proyectos personales (similar a Trello).</b></b>
 
@@ -14,4 +14,4 @@ Features de la versión 2.0+
 - Re ordenamiento de Proyectos, Trabajos y Tickets.</b></b>
 
 ------------------------
-Version actual: v2.1.4
+Version actual: v2.1.5

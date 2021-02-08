@@ -36,7 +36,7 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
 
         self.mainWindow(self, skin)
         # ---- Setea el titulo y el icono de la ventana ----
-        self.textoFijo = "Organizator 2000 (v2.1.4) - "
+        self.textoFijo = "Organizator 2000 (v2.1.5) - "
         if fileManager.igualData:
             self.setWindowTitle(self.textoFijo + fileManager.actual_file)
             self.setWindowIcon(QIcon('images/icon256.png'))
@@ -238,7 +238,7 @@ class Organizator(QMainWindow, gui_MainWindow.Ui_MainWindow):
         dialogos.dialogoProyecto(self, True, "Escribir un Titulo del Proyecto", "Describir el Proyecto", "Crear un nuevo Proyecto", agregaFinal, agregaFinal, skin)
         if dialogos.rspDialogP == QDialog.Accepted:
             fileManager.creaProyecto(dialogos.le_TituloP.text(), dialogos.te_DescripcionP.toPlainText())
-            fileManager.ordenaProyecto(agregaFinal, dialogos.spinBox.value())
+            #fileManager.ordenaProyecto(agregaFinal, dialogos.spinBox.value())
             indiceP = fileManager.data['Indice']
             # ---- Crea un Trabajo automaticamente para que no crashee al usar el menú "Tickets" ----
             fileManager.creaTrabajo(indiceP, "Trabajo Base", "Descripción Base")

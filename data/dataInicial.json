@@ -20,22 +20,18 @@
         735
     ],
     "PosWindow": [
-        -1,
-        -8
+        440,
+        47
     ],
     "Recientes": [
-        "D:/Activos/Software/Organizador/Codigo/v2-10/VunnyBoom_testeo.json",
-        "D:/Activos/Software/Organizador/Codigo/_BACKUPs 2.0/v2-00 - copia (8)/nuevo proyecto.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/YouTube.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/Organizator datos.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/VunnyBoom.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/VunnyBoom FINAL.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/pizarraNueva.json",
         "D:/Activos/Software/Organizador/Codigo/_BACKUPs 2.0/v2-00 - copia (2)/proyecto_full.json",
+        "D:/Activos/Software/Organizador/Codigo/_BACKUPs 2.0/v2-00 - copia (8)/nuevo proyecto.json",
         "D:/Activos/Software/Organizador/Codigo/v2-10/nuevoTest.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-10/test.json",
         "D:/Activos/Software/Organizador/Codigo/_BACKUPs 2.0/v2-00 +/Otro nuevo.json",
-        "D:/Activos/Software/Organizador/Codigo/v2-14/VunnyBoom.json"
+        "D:/Activos/Software/Organizador/Codigo/v2-15/test.json",
+        "D:/Activos/Software/Organizador/Codigo/v2-10/test.json",
+        "D:/Activos/Software/Organizador/Codigo/v2-10/pizarraNueva.json",
+        "D:/Activos/Software/Organizador/Codigo/v2-10/Organizator datos.json"
     ],
-    "Ultimo": "D:/Activos/Software/Organizador/Codigo/v2-14/VunnyBoom.json"
+    "Ultimo": "D:/Activos/Software/Organizador/Codigo/v2-10/nuevoTest.json"
 }

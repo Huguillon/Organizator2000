@@ -261,6 +261,7 @@ class Ui_Dialogos(object):
             self.comboBox_Tipo.addItem(tipo)
         self.comboBox_Tipo.setCurrentIndex(indexCombo)
         self.comboBox_Tipo.setMaxVisibleItems(len(listaItems))
+        # self.comboBox_Tipo.setStyleSheet(estilo['comboBox_Tipo'])
         self.vL_w_baseCombo.addWidget(self.comboBox_Tipo)
         # --------------------------------------------------------------------------------------------------------------
 
